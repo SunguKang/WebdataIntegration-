@@ -1,2 +1,2 @@
 # Web Data Integration Project Group 3
-* Team member :F lorian, Jiyeon, Lara, Leon, Sunggu
+* Team member :Florian, Jiyeon, Lara, Leon, Sunggu
