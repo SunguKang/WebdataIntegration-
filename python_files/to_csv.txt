@@ -47,6 +47,8 @@ def xml_to_csv(path_to_folder, attributes = ['id','name','platform','publishers'
                                         csv_line.append(",".join(sub_list))
                                     else: 
                                         csv_line.append(locals()[a].text)
+                                else:
+                                    csv_line.append("")
                                     #print("line after append:",csv_line)
                         # ADD A NEW ROW TO CSV FILE
                         #csvfile_writer.writerow(csv_line)
