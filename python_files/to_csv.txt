@@ -13,7 +13,7 @@ def xml_to_csv(path_to_folder, attributes = ['id','name','platform','publishers'
         list_att : list of names of the attributes in attributes which are list attributes 
         '''
         path_to_folder = path_to_folder.replace("\\","/")
-        paths = [str1+"/"+name for name in os.listdir(str1) if ".xml" in name]
+        paths = [path_to_folder+"/"+name for name in os.listdir(path_to_folder) if ".xml" in name]
 
         for f in paths:
             # PARSE XML
