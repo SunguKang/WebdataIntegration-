@@ -34,7 +34,6 @@ public class IR_using_linear_combination
 	 * 		trace:		level TRACE     - console
 	 * 		infoFile:	level INFO	- console/file
 	 * 		traceFile:	level TRACE	- console/file
-	 *
 	 *  
 	 * To set the log level to trace and write the log to winter.log and console, 
 	 * activate the "traceFile" logger as follows:
@@ -42,7 +41,7 @@ public class IR_using_linear_combination
 	 *
 	 */
 
-	private static final Logger logger = WinterLogManager.activateLogger("default");
+	private static final Logger logger = WinterLogManager.activateLogger("trace");
 	
     public static void main( String[] args ) throws Exception
     {
@@ -62,6 +61,7 @@ public class IR_using_linear_combination
 		// create a matching rule
 		LinearCombinationMatchingRule<Movie, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
 				0.7);
+		//this exports the debug report
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", 1000, gsTest);
 		
 		// add comparators

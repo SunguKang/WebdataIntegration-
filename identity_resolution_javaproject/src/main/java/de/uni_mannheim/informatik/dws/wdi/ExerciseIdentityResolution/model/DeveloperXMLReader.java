@@ -11,31 +11,30 @@
  */
 package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 
-import de.uni_mannheim.informatik.dws.winter.model.io.XMLFormatter;
+import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
+import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
 
 /**
- * {@link XMLFormatter} for {@link Actor}s.
+ * A {@link XMLMatchableReader} for {@link Developer}s.
  * 
  * @author Oliver Lehmberg (oli@dwslab.de)
  * 
  */
-public class ActorXMLFormatter extends XMLFormatter<Actor> {
+public class DeveloperXMLReader extends XMLMatchableReader<Developer, Attribute> {
 
 	@Override
-	public Element createRootElement(Document doc) {
-		return doc.createElement("actors");
-	}
+	public Developer createModelFromElement(Node node, String provenanceInfo) {
+		String id = getValueFromChildElement(node, "id");
 
-	@Override
-	public Element createElementFromRecord(Actor record, Document doc) {
-		Element actor = doc.createElement("actor");
+		// create the object with id and provenance information
+		Developer developer = new Developer(id, provenanceInfo);
 
-		actor.appendChild(createTextElement("name", record.getName(), doc));
+		// fill the attributes
+		developer.setDeveloperName(getValueFromChildElement(node, "name"));
 
-		return actor;
+		return developer;
 	}
 
 }
