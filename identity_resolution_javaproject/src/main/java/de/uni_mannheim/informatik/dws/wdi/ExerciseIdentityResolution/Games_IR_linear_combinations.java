@@ -4,11 +4,12 @@ import java.io.File;
 
 import org.slf4j.Logger;
 
+import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Blocking.MovieBlockingKeyByTitleGenerator;
-import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieDateComparator2Years;
-import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.MovieTitleComparatorJaccard;
+import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators.GameNameComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.GameXMLReader;
+import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Movie;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;
@@ -39,11 +40,29 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     			HashedDataSet<Game, Attribute> data_B = new HashedDataSet<>();
     			new GameXMLReader().loadFromXML(new File("data/input/integrated_target_schema_Windows.xml"), "/videogames/videogame", data_B);
 
-    			/* load the gold standard (test set)
+    			//load the gold standard (test set)
     			logger.info("*\tLoading gold standard\t*");
     			MatchingGoldStandard gsTest = new MatchingGoldStandard();
     			gsTest.loadFromCSVFile(new File(
-    					"data/goldstandard/gs_academy_awards_2_actors_test.csv"));
-				*/
+    					"data/goldstandard/A-B.csv"));
+				
+    			// create a matching rule
+    			LinearCombinationMatchingRule<Game, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
+    					0.7);
+    			
+    			//this exports the debug report
+    			matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", 1000, gsTest);
+    			    			
+//More rules?    		
+    			matchingRule.addComparator(new GameNameComparatorLevenshtein(), 1);
+    			
+    			// create a blocker (blocking strategy)
+    			StandardRecordBlocker<Game, Attribute> blocker = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformGenerator());
+    			// NoBlocker<Movie, Attribute> blocker = new NoBlocker<>();
+    			//SortedNeighbourhoodBlocker<Movie, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new MovieBlockingKeyByTitleGenerator(), 1);
+    			blocker.setMeasureBlockSizes(true);
+    			//Write debug results to file:
+    			blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+
     }
 }
