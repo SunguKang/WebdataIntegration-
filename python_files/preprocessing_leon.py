@@ -31,7 +31,7 @@ r"C-E.csv"]
 
 #preprocessing the pathnames for gold_stadard
 for i in range(0,len(paths)):
-    paths[i] = path_xml+"/"+paths[i]
+    paths[i] = path_scema_csv+"/"+paths[i]
 
 for i in range(0,len(c_paths)):
     c_paths[i] = gold_path+"/"+c_paths[i]
@@ -113,7 +113,7 @@ for n in names:
 #export them
 #pd.DataFrame(all_platforms).to_csv(path_to_folder+ "/" + "platforms"+".csv",index=False, sep=";")  
 #reimport them (after they were edited and matched by hand)
-platforms = pd.read_csv(prePro_path+"platforms.csv", sep =";", header=None)
+platforms = pd.read_csv(prePro_path+"/platforms.csv", sep =";", header=None)
 #transpose
 platforms = platforms.transpose()
 #select ony the ones in c (imputed for the ones in a)
@@ -162,12 +162,11 @@ for j in range(5):
             sample2 = csv_2.iloc[random.sample(range(0,csv_2.shape[0]),num)]
             pd.concat([sample1.reset_index(drop=True),
                        sample2.reset_index(drop=True)],axis=1).to_csv(gold_path+
-                                                                      "/random_draws/" +
+                                                                      "/../random_combinations/" +
                                                                       "-".join(compare[i]) +
                                                                       "_"+str(num)+"_random_combinations"+
                                                                       str(j+1)+"_fith.csv",
-                                                                      index=False, sep =";")      
-    
+                                                                      index=False, sep =";")  
 #look up found matches from goldstandard files and put their rows in a table
 for i in range(0,len(c_paths)):               
     csv_1 = pd.read_csv(paths[compare[i][0]])
@@ -177,8 +176,7 @@ for i in range(0,len(c_paths)):
     for j in range(0,len(compare_csv)):
         temprow1 = csv_1[compare_csv.iloc[j][0] == csv_1["id"]]
         temprow2 = csv_2[compare_csv.iloc[j][1] == csv_2["id"]]
-        merged =pd.concat([temprow1.reset_index(drop=True),temprow2.reset_index(drop=True)], axis=2)
+        merged =pd.concat([temprow1.reset_index(drop=True),temprow2.reset_index(drop=True)], axis=1)
         merged_csv = pd.concat([merged_csv,merged], axis=0)
     #save as dataset1-dataset2_new.csv
     merged_csv.to_csv(c_paths[i].replace(r".csv", "_full_rows.csv"), index=False, sep=";")
-    
