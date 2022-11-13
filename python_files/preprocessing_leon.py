@@ -3,7 +3,6 @@ import csv
 import math
 import os
 import random
-import re
 from xml.etree import ElementTree
 
 import numpy as np
@@ -13,7 +12,7 @@ import pandas as pd
 path_xml = r"..\data\schema_mapping\integrated_target_schema_xml".replace("\\","/")
 path_mapping = r"../data/schema_mapping"
 path_scema_csv = r"../data/schema_mapping/integrated_target_schema_csv"
-
+gold_path = r"../data/gold_standard/gold_standard_leon"
 #the paths to the original .csv datasets  
 paths = [r"integrated_target_schema_Windows.csv"
 ,r"integrated_target_schemaPS4.csv"
@@ -21,7 +20,7 @@ paths = [r"integrated_target_schema_Windows.csv"
 ,r"target_schema_Video_Games_Sales.csv"
 ,r"wikidata_integrated_target_schema.csv"]
 
-#path to preprocessed folder
+#path to godl folder
 prePro_path = r"../data/preprocessing".replace("\\","/")
 #the paths to the matches
 c_paths= [r"A-B.csv",
@@ -30,12 +29,12 @@ r"B-C.csv",
 r"C-D.csv",
 r"C-E.csv"]
 
-#preprocessing the pathnames
+#preprocessing the pathnames for gold_stadard
 for i in range(0,len(paths)):
     paths[i] = path_xml+"/"+paths[i]
 
 for i in range(0,len(c_paths)):
-    c_paths[i] = prePro_path+"/"+c_paths[i]
+    c_paths[i] = gold_path+"/"+c_paths[i]
 
 #Naming the paths
 names = ["B","D","A","C","E"]
@@ -162,7 +161,7 @@ for j in range(5):
             sample1 = csv_1.iloc[random.sample(range(j*csv_1.shape[0]//5,(((j+1)*csv_1.shape[0]//5)-1)),num)]
             sample2 = csv_2.iloc[random.sample(range(0,csv_2.shape[0]),num)]
             pd.concat([sample1.reset_index(drop=True),
-                       sample2.reset_index(drop=True)],axis=1).to_csv(prePro_path+
+                       sample2.reset_index(drop=True)],axis=1).to_csv(gold_path+
                                                                       "/random_draws/" +
                                                                       "-".join(compare[i]) +
                                                                       "_"+str(num)+"_random_combinations"+
@@ -182,3 +181,4 @@ for i in range(0,len(c_paths)):
         merged_csv = pd.concat([merged_csv,merged], axis=0)
     #save as dataset1-dataset2_new.csv
     merged_csv.to_csv(c_paths[i].replace(r".csv", "_full_rows.csv"), index=False, sep=";")
+    
