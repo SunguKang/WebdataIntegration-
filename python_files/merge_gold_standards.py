@@ -4,7 +4,7 @@ import re
 path = "data/gold_standard/"
 dataset_names = ["A-B", "A-D", "B-C", "C-D", "C-E"]
 
-postfix_ls = [["sunggu", ","], ["1of5", ";"], ["florian", ";"], ["jiyeon", ","], ["lara", ","]]
+postfix_ls = [["sunggu", ","], ["leon", ";"], ["florian", ";"], ["jiyeon", ","], ["lara", ","]]
 
 def get_string_match(s:str):
     if isinstance(s, str):
