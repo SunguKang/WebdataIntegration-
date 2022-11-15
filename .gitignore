@@ -3,5 +3,5 @@ tmp/
 .vscode
 .idea
 /.metadata/
-java
+java/.metadata
 python_files/Leon preprocessing and Gold standard.ipynb
