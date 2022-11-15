@@ -2,21 +2,15 @@
 import pandas as pd
 import numpy as np 
 
-# file for preprocessing the data files 
-
-#import libraries
 import csv
 import math
 import os
 from xml.etree import ElementTree
 
-import numpy as np
-import pandas as pd
-
 #path to folder with 
 path_xml = r"..\data\schema_mapping\integrated_target_schema_xml".replace("\\","/")
 path_mapping = r"../data/schema_mapping"
-path_scema_csv = r"../data/schema_mapping/integrated_target_schema_csv"
+path_schema_csv = r"../data/schema_mapping/integrated_target_schema_csv"
 gold_path = r"../data/gold_standard/gold_standard_leon"
 #the paths to the original .csv datasets  
 paths = [r"integrated_target_schema_Windows.csv"
@@ -26,7 +20,8 @@ paths = [r"integrated_target_schema_Windows.csv"
 ,r"wikidata_integrated_target_schema.csv"]
 
 #path to godl folder
-prePro_path = r"../data/preprocessing".replace("\\","/")
+pre_pro_path = r"../data/preprocessing".replace("\\","/")
+
 #the paths to the matches
 c_paths= [r"A-B.csv",
 r"A-D.csv",
@@ -36,7 +31,7 @@ r"C-E.csv"]
 
 #preprocessing the pathnames for gold_stadard
 for i in range(0,len(paths)):
-    paths[i] = path_scema_csv+"/"+paths[i]
+    paths[i] = path_schema_csv+"/"+paths[i]
 
 for i in range(0,len(c_paths)):
     c_paths[i] = gold_path+"/"+c_paths[i]
@@ -105,11 +100,11 @@ def xml_to_csv(path_source_folder, path_target_folder = "", attributes = ['id','
                 #csvfile.close()
                 
 #create .csv Files from the .xml files using the function
-xml_to_csv(path_source_folder=path_xml, path_target_folder=path_scema_csv)
+xml_to_csv(path_source_folder=path_xml, path_target_folder=path_schema_csv)
 #save integrated scemas also as Dataset_X.csv (make shure the subfolder "integratet_target_schema_csv" exists)
 for n in names:
     csv = pd.read_csv(paths[n])
-    csv.to_csv(path_scema_csv+"/Dataset_"+n+".csv", sep=";", index=False)
+    csv.to_csv(path_schema_csv+"/Dataset_"+n+".csv", sep=";", index=False)
     
 
 #find all platform names in dataset
@@ -118,7 +113,8 @@ for n in names:
 #export them
 #pd.DataFrame(all_platforms).to_csv(path_to_folder+ "/" + "platforms"+".csv",index=False, sep=";")  
 #reimport them (after they were edited and matched by hand)
-platforms = pd.read_csv(prePro_path+"/platforms.csv", sep =";", header=None)
+platforms = pd.read_csv(pre_pro_path+"/platforms.csv", sep =";", header=None)
+
 #transpose
 platforms = platforms.transpose()
 #select ony the ones in c (imputed for the ones in a)
@@ -132,25 +128,30 @@ for j in range (0,len(platforms.columns)):
             platforms.iloc[i,j] = platforms.iloc[i,j].split(",")
         except AttributeError:
             if not math.isnan(platforms.iloc[i,j]):
-                print("col:",j,"row:",i, platforms.iloc[i,j])    
+                print("ERROR was not detected as string, col:",j,"row:",i, platforms.iloc[i,j])    
     
 
 #change platform names, only keep the ones present in A and C (platforms[3])
 #for all datesets
-for i in range(0,5):
-    csv = pd.read_csv(paths[names[i]])
-#for all platform names
+for i in range(len(names)):
+    data_csv = pd.read_csv(paths[names[i]])
+    #for all platform names
     for j in range(0,len(platforms)):
     #if the platform is in this dataframe
         if type(platforms.iloc[j,i]) == list:
-            #find matching platform name and replace with entrie from dataset C
-            csv["platform"] = np.where(csv["platform"].isin(platforms.iloc[j,i]),platforms.iloc[j,3],csv["platform"])
+            #find matching platform name and replace with entry from dataset C
+            data_csv["platform"] = np.where(data_csv["platform"].isin(platforms.iloc[j,i]),platforms.iloc[j,3],data_csv["platform"])
     #delete from dataset5
-    if(4==i):
+    if("E"== names[i]):
         p = [item for sublist in platforms[3] for item in sublist]
-        csv = csv[csv["platform"].isin(p)]
+        cdata_csvsv = data_csv[data_csv["platform"].isin(p)]
     #save as _uni_plat.csv
-    csv.to_csv(prePro_path+"/uniform_platform_names/Dataset_"+names[i]+".csv", index=False, sep=";")
+    #############################################################
+    # TODO insert other preprocessing here 
+    
+    ##############################################################
+    data_csv.to_csv(pre_pro_path+"/uniform_platform_names/Dataset_"+names[i]+".csv", index=False, sep=";")
+
 
 
 
