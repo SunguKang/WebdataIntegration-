@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np 
 
@@ -145,11 +144,12 @@ for i in range(len(names)):
     if("E"== names[i]):
         p = [item for sublist in platforms[3] for item in sublist]
         cdata_csvsv = data_csv[data_csv["platform"].isin(p)]
-    #save as _uni_plat.csv
     #############################################################
     # TODO insert other preprocessing here 
     
+    
     ##############################################################
+    #TODO save in folder preprocessed_csv
     data_csv.to_csv(pre_pro_path+"/uniform_platform_names/Dataset_"+names[i]+".csv", index=False, sep=";")
 
 
