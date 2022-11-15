@@ -1,2 +1,4 @@
 .vscode/launch.json
 tmp/
+.vscode
+.idea
