@@ -37,33 +37,35 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     	// loading data
     			logger.info("*\tLoading datasets\t*");
     			HashedDataSet<Game, Attribute> data_A = new HashedDataSet<>();
-    			new GameXMLReader().loadFromXML(new File("data/input/target_schema_metacritic.xml"), "/videogames/videogame", data_A);
     			HashedDataSet<Game, Attribute> data_B = new HashedDataSet<>();
-    			new GameXMLReader().loadFromXML(new File("data/input/integrated_target_schema_Windows.xml"), "/videogames/videogame", data_B);
     			HashedDataSet<Game, Attribute> data_C = new HashedDataSet<>();
-    			new GameXMLReader().loadFromXML(new File("data/input/target_schema_Video_Games_Sales.xml"), "/videogames/videogame", data_C);
     			HashedDataSet<Game, Attribute> data_D = new HashedDataSet<>();
-    			new GameXMLReader().loadFromXML(new File("data/input/integrated_target_schemaPS4.xml"), "/videogames/videogame", data_D);
     			HashedDataSet<Game, Attribute> data_E = new HashedDataSet<>();
-    			new GameXMLReader().loadFromXML(new File("data/input/wikidata_integrated_target_schema.xml"), "/videogames/videogame", data_E);
+    			//relative paths within the git folder
+    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schema_Windows.xml"), "/videogames/videogame", data_B);
+    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_metacritic.xml"), "/videogames/videogame", data_A);
+    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_Video_Games_Sales.xml"), "/videogames/videogame", data_C);
+    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schemaPS4.xml"), "/videogames/videogame", data_D);
+    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/wikidata_integrated_target_schema.xml"), "/videogames/videogame", data_E);
+
     			
-    			//load the gold standard (test set)
+    			//load the gold standard (test set) from the git folder structure
     			logger.info("*\tLoading gold standard\t*");
     			MatchingGoldStandard gsTestA_B = new MatchingGoldStandard();
     			gsTestA_B.loadFromCSVFile(new File(
-    					"data/goldstandard/A-B.csv"));
+    					"../data/gold_standard/merged/A-B.csv"));
     			MatchingGoldStandard gsTestA_D = new MatchingGoldStandard();
     			gsTestA_D.loadFromCSVFile(new File(
-    					"data/goldstandard/A-D.csv"));
+    					"../data/gold_standard/merged/A-D.csv"));
     			MatchingGoldStandard gsTestB_C = new MatchingGoldStandard();
     			gsTestB_C.loadFromCSVFile(new File(
-    					"data/goldstandard/B-C.csv"));
+    					"../data/gold_standard/merged/B-C.csv"));
     			MatchingGoldStandard gsTestC_D = new MatchingGoldStandard();
     			gsTestC_D.loadFromCSVFile(new File(
-    					"data/goldstandard/C-D.csv"));
+    					"../data/gold_standard/merged/C-D.csv"));
     			MatchingGoldStandard gsTestC_E = new MatchingGoldStandard();
     			gsTestC_E.loadFromCSVFile(new File(
-    	    			"data/goldstandard/C-E.csv"));
+    	    			"../data/gold_standard/merged/C-E.csv"));
 				
     			// create a matching rule
     			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
@@ -155,12 +157,12 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 //    			 maxWeight.run();
 //    			 correspondences = maxWeight.getResult();
 
-    			// write the correspondences to the output file
-    			new CSVCorrespondenceFormatter().writeCSV(new File("data/output/A_B_correspondences.csv"), correspondencesA_B);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("data/output/A_D_correspondences.csv"), correspondencesA_D);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("data/output/B_C_correspondences.csv"), correspondencesB_C);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("data/output/C_D_correspondences.csv"), correspondencesC_D);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("data/output/C_E_correspondences.csv"), correspondencesC_E);		
+    			// write the correspondences to the output file (in the data folder of the git repository)
+    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/A_B_correspondences.csv"), correspondencesA_B);		
+    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/A_D_correspondences.csv"), correspondencesA_D);		
+    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/B_C_correspondences.csv"), correspondencesB_C);		
+    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/C_D_correspondences.csv"), correspondencesC_D);		
+    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/C_E_correspondences.csv"), correspondencesC_E);		
 
     			logger.info("*\tEvaluating result\t*");
     			// evaluate your result

@@ -1,2 +1,5 @@
 .vscode/launch.json
 tmp/
+/.metadata/
+java
+python_files/Leon preprocessing and Gold standard.ipynb
