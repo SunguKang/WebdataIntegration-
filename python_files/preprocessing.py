@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np 
 
@@ -49,7 +48,7 @@ def lower_text(text):
     text=text.lower()
     return text 
 
-#function that remove punctuations
+#function that remove punctuation
 def remove_punctuations(text):
     for punctuation in string.punctuation:
         text = text.replace(punctuation, '')
@@ -182,13 +181,14 @@ for i in range(len(names)):
     if("E"== names[i]):
         p = [item for sublist in platforms[3] for item in sublist]
         cdata_csvsv = data_csv[data_csv["platform"].isin(p)]
-    #save as _uni_plat.csv
     #############################################################
     # TODO insert other preprocessing here 
     
     #Run the text cleaning functions(df need to be given)
     data_csv = text_cleaning_run(data_csv, ["name"])
+    
     ##############################################################
+    #TODO save in folder preprocessed_csv
     data_csv.to_csv(pre_pro_path+"/uniform_platform_names/Dataset_"+names[i]+".csv", index=False, sep=";")
 
 
