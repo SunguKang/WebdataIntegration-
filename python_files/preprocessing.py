@@ -5,6 +5,8 @@ import numpy as np
 import csv
 import math
 import os
+import re
+import string 
 from xml.etree import ElementTree
 
 #path to folder with 
@@ -13,6 +15,7 @@ path_mapping = r"../data/schema_mapping"
 path_schema_csv = r"../data/schema_mapping/integrated_target_schema_csv"
 gold_path = r"../data/gold_standard/gold_standard_leon"
 #the paths to the original .csv datasets  
+
 paths = [r"integrated_target_schema_Windows.csv"
 ,r"integrated_target_schemaPS4.csv"
 ,r"target_schema_metacritic.csv"
@@ -41,8 +44,42 @@ names = ["B","D","A","C","E"]
 paths = dict(zip(names,paths))
 compare = [["A","B"],["A","D"],["B","C"],["C","D"],["C","E"]]
 
-#function that creates .csv files from .xml files
+#function that lower the text
+def lower_text(text):
+    text=text.lower()
+    return text 
 
+#function that remove punctuations
+def remove_punctuations(text):
+    for punctuation in string.punctuation:
+        text = text.replace(punctuation, '')
+    return text
+
+#function that remove double spaces   
+def double_space(text):
+    for i in range(0, len(text)):
+        text= text.replace(' +', ' ')
+    return text
+
+#function that remove special characters 
+def remove_special(text):
+    ls=[]
+    for k in text.split("\n"):
+        ls.append(re.sub(r"[^a-zA-Z0-9]+", ' ', k))
+    text= " ".join(ls)
+    return text
+
+#function that runs all cleaning functions
+def text_cleaning_run(df:pd.DataFrame, column_ls:list):
+    for col in column_ls:
+        df[col + '_preprocessed'] = df[col].apply(lower_text).apply(remove_punctuations).apply(double_space).apply(remove_special)
+    return df
+    
+
+        
+
+
+#function that creates .csv files from .xml files
 def xml_to_csv(path_source_folder, path_target_folder = "", attributes = ['id','name','platform','publishers','publicationDate',
       'globallySoldUnits','genres','criticScore','userScore',
       'developers','summary','rating','series'], list_att= ["publishers","genres","developers"] ):
@@ -149,6 +186,8 @@ for i in range(len(names)):
     #############################################################
     # TODO insert other preprocessing here 
     
+    #Run the text cleaning functions(df need to be given)
+    data_csv = text_cleaning_run(data_csv, ["name"])
     ##############################################################
     data_csv.to_csv(pre_pro_path+"/uniform_platform_names/Dataset_"+names[i]+".csv", index=False, sep=";")
 
