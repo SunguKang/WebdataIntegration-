@@ -1,5 +1,3 @@
-
-package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators;
 /*
  * Copyright (c) 2017 Data and Web Science Group, University of Mannheim, Germany (http://dws.informatik.uni-mannheim.de/)
  *
@@ -11,22 +9,31 @@ package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparator
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and limitations under the License.
  */
+package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators;
 
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
-import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Game;
 
+/**
+ * {@link Comparator} for {@link Movie}s based on the
+ * {@link Movie#getDirector()} values, and their {@link LevenshteinSimilarity}
+ * similarity.
+ * 
+ * @author Oliver Lehmberg (oli@dwslab.de)
+ * 
+ */
 public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute> {
-
+	
 	private static final long serialVersionUID = 1L;
-	TokenizingJaccardSimilarity sim = new TokenizingJaccardSimilarity();
+	private LevenshteinSimilarity sim = new LevenshteinSimilarity();
 	
 	private ComparatorLogger comparisonLog;
-	
+
 	@Override
 	public double compare(
 			Game record1,
@@ -35,18 +42,9 @@ public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute
 		
 		String s1 = record1.getName();
 		String s2 = record2.getName();
-
-		// calculate similarity
-		double similarity = sim.calculate(s1, s2);
-
-		// postprocessing
-		int postSimilarity = 1;
-		if (similarity <= 0.3) {
-			postSimilarity = 0;
-		}
-
-		postSimilarity *= similarity;
-		
+    	
+    	double similarity = sim.calculate(s1, s2);
+    	
 		if(this.comparisonLog != null){
 			this.comparisonLog.setComparatorName(getClass().getName());
 		
@@ -54,9 +52,8 @@ public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute
 			this.comparisonLog.setRecord2Value(s2);
     	
 			this.comparisonLog.setSimilarity(Double.toString(similarity));
-			this.comparisonLog.setPostprocessedSimilarity(Double.toString(postSimilarity));
 		}
-		return postSimilarity;
+		return similarity;
 	}
 
 	@Override
@@ -68,5 +65,6 @@ public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute
 	public void setComparisonLog(ComparatorLogger comparatorLog) {
 		this.comparisonLog = comparatorLog;
 	}
-	
+
+
 }
