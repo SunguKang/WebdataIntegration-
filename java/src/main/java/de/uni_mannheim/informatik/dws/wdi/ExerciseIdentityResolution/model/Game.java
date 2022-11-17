@@ -4,12 +4,13 @@ import java.io.Serializable;
 import java.util.LinkedList;
 
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
+import de.uni_mannheim.informatik.dws.winter.model.Fusible;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Game implements Matchable {
+public class Game implements Matchable, Fusible {
 	
 	protected String id;
 	protected String provenance;
@@ -149,5 +150,11 @@ public class Game implements Matchable {
 			return this.getIdentifier().equals(((Movie) obj).getIdentifier());
 		}else
 			return false;
+	}
+
+	@Override
+	public boolean hasValue(Object o) {
+		//  TODO has to be implemented
+		return false;
 	}
 }
