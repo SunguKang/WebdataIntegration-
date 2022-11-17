@@ -1,12 +1,13 @@
-import pandas as pd
-import numpy as np 
-
 import csv
 import math
 import os
 import re
 import string 
+from datetime import datetime
 from xml.etree import ElementTree
+
+import pandas as pd
+import numpy as np 
 
 #path to folder with 
 path_xml = r".\data\schema_mapping\integrated_target_schema_xml".replace("\\","/")
@@ -73,6 +74,22 @@ def text_cleaning_run(df:pd.DataFrame, column_ls:list):
     for col in column_ls:
         df[col + '_preprocessed'] = df[col].apply(lower_text).apply(remove_punctuations).apply(double_space).apply(remove_special)
     return df
+
+def format_date(s:str):
+    #format string as datetime type
+    if type(s) != str and (math.isnan(s) or s is None):
+        return np.nan
+    else:
+        try: 
+            return datetime.strptime(s, '%Y-%m-%d')
+        except ValueError as e:
+            if "TBA" in s or "N/A" in s:
+                    return np.nan
+            try: 
+                return datetime.strptime(s, '%B %d, %Y')
+            except:
+                print("uncaught: {}".format(s))
+                return np.nan
     
 
 def xml_to_csv(path_source_folder, path_target_folder = "", attributes = ['id','name','platform','publishers','publicationDate',
@@ -151,8 +168,8 @@ for col in platforms.columns:
 
 #change platform names, only keep the ones present in A and C (platforms[3])
 #for all datesets
-i = 0
-for dataset_name in names:
+for i in range(len(names)):
+    dataset_name = names[i]
     #save integrated schemas also as Dataset_X.csv (make sure the subfolder "integratet_target_schema_csv" exists)
     data_df = pd.read_csv(paths[dataset_name])
     data_df.to_csv(path_schema_csv+"/Dataset_"+ dataset_name +".csv", sep=";", index=False)
@@ -180,18 +197,21 @@ for dataset_name in names:
 
     #############################################################
     # TODO insert other preprocessing here 
-    
-    
+    #preprocess data to the data type
+    data_df["publicationDate"] = data_df["publicationDate"].apply(lambda x: format_date(x))
+    data_df["publicationDate"] = pd.to_datetime(data_df['publicationDate'], errors='coerce').dt.strftime('%Y-%m-%d')
+                        
     #Run the text cleaning functions(df need to be given)
     data_df = text_cleaning_run(data_df, ["name"])
     
-    df_obj = data_df.select_dtypes(['object'])
+    #strip leading and trailing spaces
+    data_df_obj = data_df.select_dtypes(['object'])
+    data_df[data_df_obj.columns] = data_df_obj.apply(lambda x: x.str.strip())
     
     ##############################################################
     #save preprocessed data again
     data_df.to_csv(pre_pro_path+"/preprocessed_csv_files/Dataset_"+ dataset_name + ".csv", index=False, sep=";")
-    
-    i += 1
+    data_df.to_xml(pre_pro_path+"/preprocessed_csv_files/Dataset_"+ dataset_name + ".xml", index=False, elem_cols=["publishers","genres","developers"])
 
 
 
