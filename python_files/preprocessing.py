@@ -43,46 +43,44 @@ names = ["B","D","A","C","E"]
 paths = dict(zip(names,paths))
 compare = [["A","B"],["A","D"],["B","C"],["C","D"],["C","E"]]
 
-#function that lower the text
 def lower_text(text):
+    #function that lower the text
     text=text.lower()
     return text 
 
-#function that remove punctuation
 def remove_punctuations(text):
+    #function that remove punctuation
     for punctuation in string.punctuation:
         text = text.replace(punctuation, '')
     return text
 
-#function that remove double spaces   
 def double_space(text):
+    #function that remove double spaces  
     for i in range(0, len(text)):
         text= text.replace(' +', ' ')
     return text
 
-#function that remove special characters 
 def remove_special(text):
+    #function that remove special characters
     ls=[]
     for k in text.split("\n"):
         ls.append(re.sub(r"[^a-zA-Z0-9]+", ' ', k))
     text= " ".join(ls)
     return text
 
-#function that runs all cleaning functions
 def text_cleaning_run(df:pd.DataFrame, column_ls:list):
+    #function that runs all cleaning functions
     for col in column_ls:
         df[col + '_preprocessed'] = df[col].apply(lower_text).apply(remove_punctuations).apply(double_space).apply(remove_special)
     return df
     
 
-        
-
-
-#function that creates .csv files from .xml files
 def xml_to_csv(path_source_folder, path_target_folder = "", attributes = ['id','name','platform','publishers','publicationDate',
       'globallySoldUnits','genres','criticScore','userScore',
       'developers','summary','rating','series'], list_att= ["publishers","genres","developers"] ):
         '''
+        function that creates .csv files from .xml files
+        
         path_source_folder : is the path to the folder with the .xml files
         attributes : list of names of the attributes in the .xml files
         list_att : list of names of the attributes in attributes which are list attributes 
@@ -137,48 +135,28 @@ def xml_to_csv(path_source_folder, path_target_folder = "", attributes = ['id','
                 
 #create .csv Files from the .xml files using the function
 xml_to_csv(path_source_folder=path_xml, path_target_folder=path_schema_csv)
-#save integrated schemas also as Dataset_X.csv (make shure the subfolder "integratet_target_schema_csv" exists)
-for n in names:
-    csv_df = pd.read_csv(paths[n])
-    csv_df.to_csv(path_schema_csv+"/Dataset_"+ n +".csv", sep=";", index=False)
-
 
 #find all platform names in dataset
-
 #all_platforms = [set(pd.read_csv(p)["platform"]) for p in paths.values()]
 #export them
 #pd.DataFrame(all_platforms).to_csv(path_to_folder+ "/" + "platforms"+".csv",index=False, sep=";")  
 #reimport them (after they were edited and matched by hand)
 platforms = pd.read_csv(pre_pro_path+"/platforms2.csv", sep =";", index_col=None)
 
-#transpose
-
 unified_platforms_column = 2
-#platforms.columns = platforms.iloc[0]
-#drop the first row
-#platforms = platforms.iloc[1:]
 
 #select only the ones in c (imputed for the ones in a)
-#platforms = platforms.loc[~platforms.isnull()[truth_platforms_column],range(len(names))]
-
-#replace strings in with string lists
-# for j in range (0,len(platforms.columns)):
-#     for i in range(0,len(platforms)):
-#         try:
-#             platforms.iloc[i,j] = platforms.iloc[i,j].split(",")
-#         except AttributeError:
-#             if not math.isnan(platforms.iloc[i,j]):
-#                 print("ERROR was not detected as string, col:",j,"row:",i, platforms.iloc[i,j])    
 for col in platforms.columns:
     platforms[col] = platforms[col].apply(lambda x: x.split(',') if type(x) == str else x)
-
-
 
 #change platform names, only keep the ones present in A and C (platforms[3])
 #for all datesets
 i = 0
 for dataset_name in names:
+    #save integrated schemas also as Dataset_X.csv (make sure the subfolder "integratet_target_schema_csv" exists)
     data_df = pd.read_csv(paths[dataset_name])
+    data_df.to_csv(path_schema_csv+"/Dataset_"+ dataset_name +".csv", sep=";", index=False)
+    #data_df = pd.read_csv(paths[dataset_name])
     #for all platform names
     for j, row in platforms.iterrows():
         #if the platform is in this dataframe
@@ -203,8 +181,11 @@ for dataset_name in names:
     #############################################################
     # TODO insert other preprocessing here 
     
+    
     #Run the text cleaning functions(df need to be given)
-    data_csv = text_cleaning_run(data_csv, ["name"])
+    data_df = text_cleaning_run(data_df, ["name"])
+    
+    df_obj = data_df.select_dtypes(['object'])
     
     ##############################################################
     #save preprocessed data again
