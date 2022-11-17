@@ -5,6 +5,7 @@ import re
 import string 
 from datetime import datetime
 from xml.etree import ElementTree
+from lxml import etree
 
 import pandas as pd
 import numpy as np 
@@ -153,6 +154,40 @@ def xml_to_csv(path_source_folder, path_target_folder = "", attributes = ['id','
 #create .csv Files from the .xml files using the function
 xml_to_csv(path_source_folder=path_xml, path_target_folder=path_schema_csv)
 
+def df_to_xml(df: pd.DataFrame, root_name: str="videogames", filepath="tst.xml"):
+    root = etree.Element(root_name)
+    
+    ls_cols_dict = {"publishers": ["publisher", "namePublisher"],
+                    "genres": ["genre", "genreName"],
+                    "developers": ["developer","nameDeveloper"]}
+    single_val_cols = list(set(df.columns) - ls_cols_dict.keys())
+    # for each row create a sub element 
+    for index, row in df.iterrows():
+        game =  etree.SubElement(root, 'videogame')
+        for col_name, value in row.items():
+            attr_node = etree.SubElement(game, col_name)
+            if col_name in ls_cols_dict.keys():
+                if not pd.isna(value):
+                    if type(value) == str:
+                        value = value.split(",")
+                    if type(value) != list:
+                        value = [value]
+                    for ls_item in value:
+                        ls_item_node = etree.SubElement(attr_node, ls_cols_dict.get(col_name)[0])
+                        name_ls_item_node = etree.SubElement(ls_item_node, ls_cols_dict.get(col_name)[1])
+                        name_ls_item_node.text = str(ls_item)
+                else: 
+                    ls_item_node = etree.SubElement(attr_node, ls_cols_dict.get(col_name)[0])
+            else:
+                if not pd.isna(value):
+                    attr_node.text = str(value)
+    xml_str = etree.tostring(root, pretty_print=True)
+    
+    xml_tree = etree.ElementTree(root)
+    xml_tree.write(filepath, pretty_print=True,encoding="utf-8", xml_declaration=True, )
+    return xml_str
+
+
 #find all platform names in dataset
 #all_platforms = [set(pd.read_csv(p)["platform"]) for p in paths.values()]
 #export them
@@ -183,7 +218,7 @@ for i in range(len(names)):
             cur_platform = row[i][0]
             #if cur_platform in truth_platforms_cur:
             #find matching platform name and replace with entry from dataset C
-            print("platform: {}".format(row[i]))
+            # print("platform: {}".format(row[i]))
             selection = data_df.loc[data_df["platform"] == cur_platform, :] 
             
             data_df.loc[data_df["platform"] == cur_platform, 'platform'] = unified_platforms_cur[0]
@@ -196,7 +231,6 @@ for i in range(len(names)):
         data_df = data_df[data_df["platform"].isin(p)]
 
     #############################################################
-    # TODO insert other preprocessing here 
     #preprocess data to the data type
     data_df["publicationDate"] = data_df["publicationDate"].apply(lambda x: format_date(x))
     data_df["publicationDate"] = pd.to_datetime(data_df['publicationDate'], errors='coerce').dt.strftime('%Y-%m-%d')
@@ -211,7 +245,7 @@ for i in range(len(names)):
     ##############################################################
     #save preprocessed data again
     data_df.to_csv(pre_pro_path+"/preprocessed_csv_files/Dataset_"+ dataset_name + ".csv", index=False, sep=";")
-    data_df.to_xml(pre_pro_path+"/preprocessed_csv_files/Dataset_"+ dataset_name + ".xml", index=False, elem_cols=["publishers","genres","developers"])
+    df_to_xml(df=data_df, filepath=pre_pro_path+"/preprocessed_csv_files/Dataset_"+ dataset_name + ".xml")
 
 
 
