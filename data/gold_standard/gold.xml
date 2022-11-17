@@ -21,72 +21,99 @@
 			<developer>
 				<nameDeveloper>Alex Maier</nameDeveloper>
 			</developer>
-			<developer>
-				<nameDeveloper>Mike Dauer</nameDeveloper>
-			</developer>
 		</developers>
 		<summary>blablabla</summary>
 		<rating>bliblablub</rating>
 		<series>sports</series>
 	</videogame>
   	<videogame>
-		<id>all_games14497</id>
-		<name>Wii Sports</name>
-		<platform>Wii</platform>
+		<id>all_games14497</id>			
+		<name>Mass Effect 2: Arrival</name>
+		<platform>PC</platform>
 		<publishers>
 			<publisher>
-				<namePublisher>Nintendo</namePublisher>
+				<namePublisher></namePublisher>
 			</publisher>
 		</publishers>			
-		<publicationDate>31.01.2019</publicationDate>
-		<globallySoldUnits>150.1</globallySoldUnits>
+		<publicationDate></publicationDate>
+		<globallySoldUnits></globallySoldUnits>
 		<genres>
 			<genre>
-				<genreName>sports</genreName>
+				<genreName></genreName>
 			</genre>
 		</genres>	
-		<criticScore>24.3</criticScore>
-		<userScore>1.2</userScore>
+		<criticScore></criticScore>
+		<userScore></userScore>
 		<developers>
 			<developer>
-				<nameDeveloper>Alex Maier</nameDeveloper>
-			</developer>
-			<developer>
-				<nameDeveloper>Mike Dauer</nameDeveloper>
+				<nameDeveloper></nameDeveloper>
 			</developer>
 		</developers>
-		<summary>blablabla</summary>
-		<rating>bliblablub</rating>
-		<series>sports</series>
+		<summary></summary>
+		<rating></rating>
+		<series></series>
 	</videogame>
   	<videogame>
-		<id>all_games14497</id>
-		<name>Wii Sports</name>
-		<platform>Wii</platform>
+		<id>all_games53</id>
+		<name></name>
+		<platform>Xbox</platform>
 		<publishers>
 			<publisher>
-				<namePublisher>Nintendo</namePublisher>
+				<namePublisher>Microsoft Studios</namePublisher>
 			</publisher>
 		</publishers>			
-		<publicationDate>31.01.2019</publicationDate>
-		<globallySoldUnits>150.1</globallySoldUnits>
+		<publicationDate>2004-11-09</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
 		<genres>
 			<genre>
-				<genreName>sports</genreName>
+				<genreName>Ego-Shooter</genreName>
+			</genre>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+			<genre>
+				<genreName>Adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Science-Fiction</genreName>
 			</genre>
 		</genres>	
-		<criticScore>24.3</criticScore>
-		<userScore>1.2</userScore>
+		<criticScore></criticScore>
+		<userScore>8.7</userScore>
 		<developers>
 			<developer>
-				<nameDeveloper>Alex Maier</nameDeveloper>
-			</developer>
-			<developer>
-				<nameDeveloper>Mike Dauer</nameDeveloper>
+				<nameDeveloper>Bungie</nameDeveloper>
 			</developer>
 		</developers>
-		<summary>blablabla</summary>
-		<rating>bliblablub</rating>
-		<series>sports</series>
+		<summary></summary>
+		<rating>M</rating>
+		<series>Halo</series>
+	</videogame>
+	 	<videogame>
+		<id></id>
+		<name></name>
+		<platform></platform>
+		<publishers>
+			<publisher>
+				<namePublisher></namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate></publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName></genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper></nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating></rating>
+		<series></series>
 	</videogame>
 <videogames>
