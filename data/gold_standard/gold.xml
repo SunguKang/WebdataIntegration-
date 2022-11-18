@@ -72,7 +72,7 @@
 		<series>Mass Effect</series>
 	</videogame>
   	<videogame>
-		<id>all_games53</id>
+		<id>Video_games_sales81</id>
 		<name>Halo 2</name>
 		<platform>Xbox</platform>
 		<publishers>
@@ -106,6 +106,65 @@
 		<summary></summary>
 		<rating>M</rating>
 		<series>Halo</series>
+	</videogame>		
+	 	<videogame>
+		<id>Video_games_sales7774</id>
+		<name>Family Guy</name>
+		<platform>PlayStation Portable</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>2k Games</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2006-10-17</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>High Voltage Software</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series></series>
+	</videogame>
+	</videogame>
+	 	<videogame>
+		<id>Video_games_sales16810</id>
+		<name>Score International: Baja 1000</name>
+		<platform>Playstation 2</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Activision</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2008-10-28</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Racing</genreName>
+			</genre>
+			<genre>
+				<genreName>Driving</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Left Field Productions</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
 	</videogame>
 	 	<videogame>
 		<id></id>
