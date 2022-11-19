@@ -7,6 +7,7 @@ import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
 import java.util.Locale;
 
+//TODO write + import classes for Game attributes
 import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.evaluation.ActorsEvaluationRule;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.evaluation.DateEvaluationRule;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.evaluation.DirectorEvaluationRule;
@@ -17,17 +18,26 @@ import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.fusers.DateFuserVot
 import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.fusers.DirectorFuserLongestString;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.fusers.TitleFuserShortestString;
 import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Game;
+//TODO adapt class
 import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.GameXMLReader;
+//TODO adapt class
+import de.uni_mannheim.informatik.dws.wdi.ExerciseDataFusion.model.GameXMLFormatter;
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy;
-import de.uni_mannheim.informatik.dws.winter.model.*;
+//import de.uni_mannheim.informatik.dws.winter.model.*;
+import de.uni_mannheim.informatik.dws.winter.model.DataSet;
+import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
+import de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet;
+import de.uni_mannheim.informatik.dws.winter.model.RecordGroupFactory;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 import org.slf4j.Logger;
 
-public class DataFusion_Main 
+
+
+public class Games_DataFusion_Main 
 {
 	/*
 	 * Logging Options:
@@ -48,7 +58,7 @@ public class DataFusion_Main
     {
 		// Load the Data into FusibleDataSet, data set A as HashedDataset and the rest are FusibleDataset (might not work)
 		logger.info("*\tLoading datasets\t*");
-		HashedDataSet<Game, Attribute> data_A = new HashedDataSet<>();
+		FusibleDataSet<Game, Attribute> data_A = new FusibleHashedDataSet<>();
 		FusibleDataSet<Game, Attribute> data_B = new FusibleHashedDataSet<>();
 		FusibleDataSet<Game, Attribute> data_C = new FusibleHashedDataSet<>();
 		FusibleDataSet<Game, Attribute> data_D = new FusibleHashedDataSet<>();
@@ -60,8 +70,7 @@ public class DataFusion_Main
 		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_Video_Games_Sales.xml"), "/videogames/videogame", data_C);
 		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schemaPS4.xml"), "/videogames/videogame", data_D);
 		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/wikidata_integrated_target_schema.xml"), "/videogames/videogame", data_E);
-
-	
+		
 		data_A.printDataSetDensityReport();
 		data_B.printDataSetDensityReport();
 		data_C.printDataSetDensityReport();
@@ -75,6 +84,11 @@ public class DataFusion_Main
 		data_C.setScore(3.0);
 		data_D.setScore(3.0);
 		data_E.setScore(3.0);
+		
+//		TODO: Take dates of provenance files
+//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
+//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
+//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
 
 
 		// load correspondences
@@ -93,26 +107,36 @@ public class DataFusion_Main
 		// load the gold standard
 		logger.info("*\tEvaluating results\t*");
 		DataSet<Game, Attribute> gs = new FusibleHashedDataSet<>();
-		new MovieXMLReader().loadFromXML(new File("data/goldstandard/gold.xml"), "/movies/movie", gs);
-		
-		new GameCSVReader().loadFromCSV(new File("../data/goldstandard/A-B.csv"), "/videogames/videogame", data_E);
-		for(Movie m : gs.get()) {
-			logger.info(String.format("gs: %s", m.getIdentifier()));
+		new GameXMLReader().loadFromXML(new File("../data/goldstandard/gold.xml"), "/videogames/videogame", gs);
+				
+		for(Game g : gs.get()) {
+			logger.info(String.format("gs: %s", g.getIdentifier()));
 		}
 
 		// define the fusion strategy
-		DataFusionStrategy<Movie, Attribute> strategy = new DataFusionStrategy<>(new MovieXMLReader());
+		DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
 		// write debug results to file
 		strategy.activateDebugReport("data/output/debugResultsDatafusion.csv", -1, gs);
 		
 		// add attribute fusers
-		strategy.addAttributeFuser(Movie.TITLE, new TitleFuserShortestString(),new TitleEvaluationRule());
-		strategy.addAttributeFuser(Movie.DIRECTOR,new DirectorFuserLongestString(), new DirectorEvaluationRule());
-		strategy.addAttributeFuser(Movie.DATE, new DateFuserFavourSource(),new DateEvaluationRule());
-		strategy.addAttributeFuser(Movie.ACTORS,new ActorsFuserUnion(),new ActorsEvaluationRule());
+		
+		//TODO Adapt
+		//TODO create the mentioned Fusers and Evaluators
+		strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
+		strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
+		strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(),new PublishersEvaluationRule());
+		strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationdateEvaluationRule());
+		strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballysoldunitsEvaluationRule());
+		strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(),new GenresEvaluationRule());
+		strategy.addAttributeFuser(Game.CRITICSCORE, new CriticscoreFuserFavourSource(),new CriticscoreEvaluationRule());
+		strategy.addAttributeFuser(Game.USERSCORE, new UserscoreFuserFavourSource(),new UserscoreEvaluationRule());
+		strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(),new DevelopersEvaluationRule());
+		strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(),new SummaryEvaluationRule());
+		strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(),new RatingEvaluationRule());
+		strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(),new SeriesEvaluationRule());
 		
 		// create the fusion engine
-		DataFusionEngine<Movie, Attribute> engine = new DataFusionEngine<>(strategy);
+		DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
 		// print consistency report
 		engine.printClusterConsistencyReport(correspondences, null);
@@ -122,16 +146,17 @@ public class DataFusion_Main
 
 		// run the fusion
 		logger.info("*\tRunning data fusion\t*");
-		FusibleDataSet<Movie, Attribute> fusedDataSet = engine.run(correspondences, null);
+		FusibleDataSet<Game, Attribute> fusedDataSet = engine.run(correspondences, null);
 
 		// write the result
-		new MovieXMLFormatter().writeXML(new File("data/output/fused.xml"), fusedDataSet);
+		//TODO create GameXMLFormatter
+		new GameXMLFormatter().writeXML(new File("../data/fused/fused.xml"), fusedDataSet);
 
 		// evaluate
-		DataFusionEvaluator<Movie, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Movie, Attribute>());
+		DataFusionEvaluator<Game, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Movie, Attribute>());
 		
 		double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
 
 		logger.info(String.format("*\tAccuracy: %.2f", accuracy));
-    }
+    }	    
 }

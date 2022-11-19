@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
-import de.uni_mannheim.informatik.dws.winter.model.Fusible;
-import de.uni_mannheim.informatik.dws.winter.model.Matchable;
+//import de.uni_mannheim.informatik.dws.winter.model.Fusible;
+//import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -17,7 +17,15 @@ import org.apache.commons.lang3.StringUtils;
 
 public class Game extends AbstractRecord<Attribute> implements Serializable{
 	
-	protected String id;
+	private static final long serialVersionUID = 1L;
+	
+	public Game(String identifier, String provenance) {
+		super(identifier, provenance);
+		genres = new LinkedList<>();
+		developers = new LinkedList<>();
+		publishers = new LinkedList<>();
+	}
+
 	private String name;
 	private String platform;
 	private List<Publisher> publishers;
@@ -31,19 +39,12 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	private String rating;
 	private String series;
 	
-	public Game(String identifier, String provenance) {
-		super(identifier, provenance);
-		genres = new LinkedList<>();
-		developers = new LinkedList<>();
-		publishers = new LinkedList<>();
-	}
 
-	
-	@Override
-	public String getIdentifier() {
-		return id;
-	}
-
+//	Those are not in the Movie Model of Data Fusion
+//	@Override
+//	public String getIdentifier() {
+//		return id;
+//	}
 //	@Override
 //	public String getProvenance() {
 //		return provenance;
@@ -168,13 +169,18 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 		}
 	}
 
-	public static final Attribute NAME= new Attribute("name");
+	public static final Attribute NAME = new Attribute("name");
 	public static final Attribute PLATFORM = new Attribute("platform");
 	public static final Attribute PUBLISHERS = new Attribute("publishers");
 	public static final Attribute PUBLICATIONDATE = new Attribute("publicationDate");
+	public static final Attribute GLOBALLYSOLDUNITS = new Attribute("globallySoldUnits");
 	public static final Attribute GENRES = new Attribute("genres");
-	public static final Attribute DEVELOPERS = new Attribute("developers");	
-	
+	public static final Attribute CRITICSCORE = new Attribute("criticScore");
+	public static final Attribute USERSCORE = new Attribute("userScore");
+	public static final Attribute DEVELOPERS = new Attribute("developers");
+	public static final Attribute SUMMARY = new Attribute("summary");
+	public static final Attribute RATING = new Attribute("rating");
+	public static final Attribute SERIES = new Attribute("series");
 	
 	@Override
 	public String toString() {
@@ -187,16 +193,29 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	public boolean hasValue(Attribute attribute) {
 		if(attribute==NAME)
 			return getName() != null && !getName().isEmpty();
+
 		else if(attribute==PLATFORM)
 			return getPlatform() != null && !getPlatform().isEmpty();
-		else if(attribute==PUBLICATIONDATE)
-			return getPublicationDate() != null;
 		else if(attribute==PUBLISHERS)
 			return getPublishers() != null && getPublishers().size() > 0;
+		else if(attribute==PUBLICATIONDATE)
+			return getPublicationDate() != null;
+		else if(attribute==GLOBALLYSOLDUNITS)
+			return getGloballySoldUnits() != 0.0f;
 		else if(attribute==GENRES)
 			return getGenres() != null && getGenres().size() > 0;
+		else if(attribute==CRITICSCORE)
+			return getCriticScore() != 0.0f;
+		else if(attribute==USERSCORE)
+			return getUserScore() != 0.0f;
 		else if(attribute==DEVELOPERS)
 			return getDevelopers() != null && getDevelopers().size() > 0;
+		else if(attribute==SUMMARY)
+			return getSummary() != null && !getSummary().isEmpty();
+		else if(attribute==RATING)
+			return getRating() != null && !getRating().isEmpty();
+		else if(attribute==SERIES)
+			return getSeries() != null && !getSeries().isEmpty();
 		else
 			return false;
 	}

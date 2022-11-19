@@ -34,9 +34,9 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 
 	/*
 	 * example entry <movie> <id>academy_awards_2</id> <title>True Grit</title>
-	 * <director> <name>Joel Coen and Ethan Coen</name> </director> <actors>
-	 * <actor> <name>Jeff Bridges</name> </actor> <actor> <name>Hailee
-	 * Steinfeld</name> </actor> </actors> <date>2010-01-01</date> </movie>
+	 * <director> <name>Joel Coen and Ethan Coen</name> </director> <actors> <actor>
+	 * <name>Jeff Bridges</name> </actor> <actor> <name>Hailee Steinfeld</name>
+	 * </actor> </actors> <date>2010-01-01</date> </movie>
 	 */
 
 	private static final long serialVersionUID = 1L;
@@ -68,8 +68,8 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setDirector(String director) {
-		if(director!=null && director.isEmpty()) {
-			//  replace empty string with 'null'
+		if (director != null && director.isEmpty()) {
+			// replace empty string with 'null'
 			director = null;
 		} else {
 			this.director = director;
@@ -91,7 +91,7 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 	public void setActors(List<Actor> actors) {
 		this.actors = actors;
 	}
-	
+
 	public String getStudio() {
 		return studio;
 	}
@@ -135,8 +135,7 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 		return recordProvenance;
 	}
 
-	public void setAttributeProvenance(Attribute attribute,
-			Collection<String> provenance) {
+	public void setAttributeProvenance(Attribute attribute, Collection<String> provenance) {
 		this.provenance.put(attribute, provenance);
 	}
 
@@ -158,16 +157,16 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 	public static final Attribute DIRECTOR = new Attribute("Director");
 	public static final Attribute DATE = new Attribute("Date");
 	public static final Attribute ACTORS = new Attribute("Actors");
-	
+
 	@Override
 	public boolean hasValue(Attribute attribute) {
-		if(attribute==TITLE)
+		if (attribute == TITLE)
 			return getTitle() != null && !getTitle().isEmpty();
-		else if(attribute==DIRECTOR)
+		else if (attribute == DIRECTOR)
 			return getDirector() != null && !getDirector().isEmpty();
-		else if(attribute==DATE)
+		else if (attribute == DATE)
 			return getDate() != null;
-		else if(attribute==ACTORS)
+		else if (attribute == ACTORS)
 			return getActors() != null && getActors().size() > 0;
 		else
 			return false;
@@ -175,8 +174,8 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 
 	@Override
 	public String toString() {
-		return String.format("[Movie %s: %s / %s / %s]", getIdentifier(), getTitle(),
-				getDirector(), getDate().toString());
+		return String.format("[Movie %s: %s / %s / %s]", getIdentifier(), getTitle(), getDirector(),
+				getDate().toString());
 	}
 
 	@Override
@@ -186,12 +185,10 @@ public class Movie extends AbstractRecord<Attribute> implements Serializable {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Movie){
+		if (obj instanceof Movie) {
 			return this.getIdentifier().equals(((Movie) obj).getIdentifier());
-		}else
+		} else
 			return false;
 	}
-	
-	
-	
+
 }
