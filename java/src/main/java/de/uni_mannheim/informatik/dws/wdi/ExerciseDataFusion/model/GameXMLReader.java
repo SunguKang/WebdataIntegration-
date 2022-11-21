@@ -35,7 +35,7 @@ import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
  * @author Oliver Lehmberg (oli@dwslab.de)
  * 
  */
-public class MovieXMLReader extends XMLMatchableReader<Movie, Attribute> implements
+public class GameXMLReader extends XMLMatchableReader<Movie, Attribute> implements
 FusibleFactory<Movie, Attribute> {
 
 /* (non-Javadoc)
