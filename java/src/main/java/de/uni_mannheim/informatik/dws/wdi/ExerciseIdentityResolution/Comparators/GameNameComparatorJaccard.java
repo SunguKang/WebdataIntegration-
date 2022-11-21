@@ -11,26 +11,27 @@
  */
 package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators;
 
+import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Game;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
-import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Game;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
 /**
  * {@link Comparator} for {@link Game}s based on the
- * {@link Game#getName()} values, and their {@link LevenshteinSimilarity}
+ * {@link Game#getName()} values, and their {@link TokenizingJaccardSimilarity}
  * similarity.
  * 
  *
  * 
  */
-public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute> {
+public class GameNameComparatorJaccard implements Comparator<Game, Attribute> {
 	
 	private static final long serialVersionUID = 1L;
-	private LevenshteinSimilarity sim = new LevenshteinSimilarity();
+	private TokenizingJaccardSimilarity sim = new TokenizingJaccardSimilarity();
 	
 	private ComparatorLogger comparisonLog;
 
