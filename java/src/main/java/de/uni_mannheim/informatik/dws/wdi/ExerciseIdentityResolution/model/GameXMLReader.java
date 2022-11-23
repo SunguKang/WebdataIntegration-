@@ -62,8 +62,8 @@ public class GameXMLReader extends XMLMatchableReader<Game, Attribute>  {
 				"genre", new GenreXMLReader(), provenanceInfo);
 		game.setGenres(genres);
 		// load the list of developer
-		List<Developer> developer = getObjectListFromChildElement(node, "genres",
-				"genre", new DeveloperXMLReader(), provenanceInfo);
+		List<Developer> developer = getObjectListFromChildElement(node, "developers",
+				"developer", new DeveloperXMLReader(), provenanceInfo);
 		game.setDevelopers(developer);		
 
 		return game;
