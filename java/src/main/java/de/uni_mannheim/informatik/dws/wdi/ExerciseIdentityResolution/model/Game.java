@@ -10,7 +10,7 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class Game implements Matchable, Fusible {
+public class Game extends AbstractRecord<Attribute> implements Serializable{ {
 	
 	protected String id;
 	protected String provenance;
@@ -112,35 +112,36 @@ public class Game implements Matchable, Fusible {
 
    public void setDevelopers(List<Developer> developers) {
         this.developers = developers;
-    }    
-    
+    }
+
 	public String getSummary() {
-	        return summary;
-	    }
-	    
+		return summary;
+	}
+
 	public void setSummary(String summary) {
-	        this.summary = summary;
-	    }    
-	    
+		this.summary = summary;
+	}
+
 	public String getRating() {
-	        return rating;
-	    }
-	    
+		return rating;
+	}
+
 	public void setRating(String rating) {
-	        this.rating = rating;
-	    }
-	    
+		this.rating = rating;
+	}
+
 	public String getSeries() {
-	        return series;
-	    }
-	    
+		return series;
+	}
+
 	public void setSeries(String series) {
-	        this.series = series;
-	    }   
+		this.series = series;
+	}
+
 	@Override
 	public String toString() {
 		return String.format("[Game %s: %s / %s ]", getIdentifier(), getName(),
-				getPlatform().toString());
+				getPlatform());
 	}
 
 	@Override
@@ -150,15 +151,17 @@ public class Game implements Matchable, Fusible {
 
 	@Override
 	public boolean equals(Object obj) {
-		if(obj instanceof Movie){
-			return this.getIdentifier().equals(((Movie) obj).getIdentifier());
-		}else
+		if (obj instanceof Game) {
+			return this.getIdentifier().equals(((Game) obj).getIdentifier());
+		} else
 			return false;
 	}
 
 	@Override
 	public boolean hasValue(Object o) {
-		//  TODO has to be implemented
-		return false;
+		if (o instanceof Game) {
+			return this.getIdentifier().equals(((Game) o).getIdentifier());
+		} else
+			return false;
 	}
 }

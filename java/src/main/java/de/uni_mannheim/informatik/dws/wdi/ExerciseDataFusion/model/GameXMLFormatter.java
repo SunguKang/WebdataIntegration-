@@ -17,39 +17,39 @@ import org.w3c.dom.Element;
 import de.uni_mannheim.informatik.dws.winter.model.io.XMLFormatter;
 
 /**
- * {@link XMLFormatter} for {@link Movie}s.
+ * {@link XMLFormatter} for {@link Game}s.
  * 
- * @author Oliver Lehmberg (oli@dwslab.de)
+ *
  * 
  */
-public class MovieXMLFormatter extends XMLFormatter<Movie> {
+public class GameXMLFormatter extends XMLFormatter<Game> {
 
 	ActorXMLFormatter actorFormatter = new ActorXMLFormatter();
 
 	@Override
 	public Element createRootElement(Document doc) {
-		return doc.createElement("movies");
+		return doc.createElement("videogames");
 	}
 
 	@Override
-	public Element createElementFromRecord(Movie record, Document doc) {
-		Element movie = doc.createElement("movie");
+	public Element createElementFromRecord(Game record, Document doc) {
+		Element Game = doc.createElement("Game");
 
-		movie.appendChild(createTextElement("id", record.getIdentifier(), doc));
+		Game.appendChild(createTextElement("id", record.getIdentifier(), doc));
 
-		movie.appendChild(createTextElementWithProvenance("title",
+		Game.appendChild(createTextElementWithProvenance("title",
 				record.getTitle(),
-				record.getMergedAttributeProvenance(Movie.TITLE), doc));
-		movie.appendChild(createTextElementWithProvenance("director",
+				record.getMergedAttributeProvenance(Game.TITLE), doc));
+		Game.appendChild(createTextElementWithProvenance("director",
 				record.getDirector(),
-				record.getMergedAttributeProvenance(Movie.DIRECTOR), doc));
-		movie.appendChild(createTextElementWithProvenance("date", record
+				record.getMergedAttributeProvenance(Game.DIRECTOR), doc));
+		Game.appendChild(createTextElementWithProvenance("date", record
 				.getDate().toString(), record
-				.getMergedAttributeProvenance(Movie.DATE), doc));
+				.getMergedAttributeProvenance(Game.DATE), doc));
 
-		movie.appendChild(createActorsElement(record, doc));
+		Game.appendChild(createActorsElement(record, doc));
 
-		return movie;
+		return Game;
 	}
 
 	protected Element createTextElementWithProvenance(String name,
@@ -59,10 +59,10 @@ public class MovieXMLFormatter extends XMLFormatter<Movie> {
 		return elem;
 	}
 
-	protected Element createActorsElement(Movie record, Document doc) {
+	protected Element createActorsElement(Game record, Document doc) {
 		Element actorRoot = actorFormatter.createRootElement(doc);
 		actorRoot.setAttribute("provenance",
-				record.getMergedAttributeProvenance(Movie.ACTORS));
+				record.getMergedAttributeProvenance(Game.ACTORS));
 
 		for (Actor a : record.getActors()) {
 			actorRoot.appendChild(actorFormatter

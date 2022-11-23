@@ -11,46 +11,50 @@
  */
 package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.Comparators;
 
+import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Game;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
-import de.uni_mannheim.informatik.dws.winter.similarity.date.YearSimilarity;
-import de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model.Movie;
+import de.uni_mannheim.informatik.dws.winter.similarity.EqualsSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
 /**
- * {@link Comparator} for {@link Movie}s based on the {@link Movie#getDate()}
- * value, with a maximal difference of 2 years.
+ * {@link Comparator} for {@link Game}s based on the
+ * {@link Game#getName()} values, and their {@link EqualsSimilarity}
+ * similarity.
  * 
- * @author Oliver Lehmberg (oli@dwslab.de)
+ *
  * 
  */
-public class MovieDateComparator2Years implements Comparator<Movie, Attribute> {
-
+public class GameNameComparatorEqual implements Comparator<Game, Attribute> {
+	
 	private static final long serialVersionUID = 1L;
-	private YearSimilarity sim = new YearSimilarity(2);
+	private EqualsSimilarity sim = new EqualsSimilarity();
 	
 	private ComparatorLogger comparisonLog;
 
 	@Override
 	public double compare(
-			Movie record1,
-			Movie record2,
+			Game record1,
+			Game record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
+		
+		String s1 = record1.getName();
+		String s2 = record2.getName();
     	
-    	double similarity = sim.calculate(record1.getDate(), record2.getDate());
+    	double similarity = sim.calculate(s1, s2);
     	
 		if(this.comparisonLog != null){
 			this.comparisonLog.setComparatorName(getClass().getName());
 		
-			this.comparisonLog.setRecord1Value(record1.getDate().toString());
-			this.comparisonLog.setRecord2Value(record2.getDate().toString());
+			this.comparisonLog.setRecord1Value(s1);
+			this.comparisonLog.setRecord2Value(s2);
     	
 			this.comparisonLog.setSimilarity(Double.toString(similarity));
 		}
 		return similarity;
-
 	}
 
 	@Override
@@ -62,5 +66,6 @@ public class MovieDateComparator2Years implements Comparator<Movie, Attribute> {
 	public void setComparisonLog(ComparatorLogger comparatorLog) {
 		this.comparisonLog = comparatorLog;
 	}
+
 
 }
