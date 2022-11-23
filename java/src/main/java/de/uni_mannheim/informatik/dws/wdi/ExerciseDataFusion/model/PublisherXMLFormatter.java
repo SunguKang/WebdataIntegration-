@@ -17,31 +17,24 @@ import org.w3c.dom.Element;
 import de.uni_mannheim.informatik.dws.winter.model.io.XMLFormatter;
 
 /**
- * {@link XMLFormatter} for {@link Actor}s.
+ * {@link XMLFormatter} for {@link Publisher}s.
  * 
  * @author Oliver Lehmberg (oli@dwslab.de)
  * 
  */
-public class ActorXMLFormatter extends XMLFormatter<Actor> {
+public class PublisherXMLFormatter extends XMLFormatter<Publisher> {
 
 	@Override
 	public Element createRootElement(Document doc) {
-		return doc.createElement("actors");
+		return doc.createElement("publishers");
 	}
 
 	@Override
-	public Element createElementFromRecord(Actor record, Document doc) {
-		Element actor = doc.createElement("actor");
+	public Element createElementFromRecord(Publisher record, Document doc) {
+		Element publisher = doc.createElement("publisher");
 
-		actor.appendChild(createTextElement("name", record.getName(), doc));
-		if(record.getBirthplace()!=null) {
-			actor.appendChild(createTextElement("birthplace", record.getBirthplace(), doc));
-		}
-		if(record.getBirthday()!=null) {
-			actor.appendChild(createTextElement("birthday", record.getBirthday().toString(), doc));
-		}
-
-		return actor;
+		publisher.appendChild(createTextElement("publisherName", record.getPublisherName(), doc));
+		return publisher;
 	}
 
 }

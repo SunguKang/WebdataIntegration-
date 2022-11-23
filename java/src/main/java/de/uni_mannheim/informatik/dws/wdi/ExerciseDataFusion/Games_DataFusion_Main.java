@@ -153,7 +153,7 @@ public class Games_DataFusion_Main
 		new GameXMLFormatter().writeXML(new File("../data/fused/fused.xml"), fusedDataSet);
 
 		// evaluate
-		DataFusionEvaluator<Game, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Movie, Attribute>());
+		DataFusionEvaluator<Game, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Game, Attribute>());
 		
 		double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
 

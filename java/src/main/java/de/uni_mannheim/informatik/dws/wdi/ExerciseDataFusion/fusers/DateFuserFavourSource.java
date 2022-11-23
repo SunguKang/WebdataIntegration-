@@ -30,6 +30,8 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
  * @author Oliver Lehmberg (oli@dwslab.de)
  * 
  */
+
+//class only left in for orientation
 public class DateFuserFavourSource extends AttributeValueFuser<LocalDateTime, Movie, Attribute> {
 
 	public DateFuserFavourSource() {
