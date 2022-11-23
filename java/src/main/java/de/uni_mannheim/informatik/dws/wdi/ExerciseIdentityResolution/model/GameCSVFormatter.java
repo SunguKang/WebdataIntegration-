@@ -18,34 +18,38 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVDataSetFormatter;
 
 /**
- * @author Oliver Lehmberg (oli@dwslab.de)
  *
  */
-public class MovieCSVFormatter extends CSVDataSetFormatter<Movie, Attribute> {
+public class GameCSVFormatter extends CSVDataSetFormatter<Game, Attribute> {
 
 	/* (non-Javadoc)
 	 * @see de.uni_mannheim.informatik.wdi.model.io.CSVDataSetFormatter#getHeader(de.uni_mannheim.informatik.wdi.model.DataSet)
 	 */
 	@Override
 	public String[] getHeader(List<Attribute> orderedHeader) {
-		return new String[] { "id", "title", "studio", "genre", "budget", "gross", "director", "date" };
+		return new String[] { "id", "name", "platform", "publicationDate", "criticScore", "userScore", "rating",
+				"summary", "series", "genres", "developers", "publishers"};
 	}
 
 	/* (non-Javadoc)
 	 * @see de.uni_mannheim.informatik.wdi.model.io.CSVDataSetFormatter#format(de.uni_mannheim.informatik.wdi.model.Matchable, de.uni_mannheim.informatik.wdi.model.DataSet)
 	 */
 	@Override
-	public String[] format(Movie record, DataSet<Movie, Attribute> dataset, List<Attribute> orderedHeader) {
+	public String[] format(Game record, DataSet<Game, Attribute> dataset, List<Attribute> orderedHeader) {
 		return new String[] {
 				record.getIdentifier(),
-				record.getTitle(),
-				record.getStudio(),
-				record.getGenre(),
-				Double.toString(record.getBudget()),
-				Double.toString(record.getGross()),
-				record.getDirector(),
-				record.getDate()==null ? "" : record.getDate().toString() 
-		};
+				record.getName(),
+				record.getPlatform(),
+				record.getPublicationDate().toString(),
+				record.getCriticScore().toString(),
+				record.getUserScore().toString(),
+				record.getRating(),
+				record.getSummary(),
+				record.getSeries(),
+				record.getGenres().toString(),
+				record.getDevelopers().toString(),
+				record.getPublishers().toString()};
+
 	}
 
 }
