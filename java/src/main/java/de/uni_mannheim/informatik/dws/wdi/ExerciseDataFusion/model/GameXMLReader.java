@@ -73,7 +73,7 @@ String id = getValueFromChildElement(node, "id");
 	game.setName(getValueFromChildElement(node, "name"));
 	game.setPlatform(getValueFromChildElement(node, "platform"));
 	//Numeric Variables have to be parsed
-	game.setGloballyySoldUnits(Integer.parseInt(getValueFromChildElement(node, "globallySoldUnits")));
+	game.setGloballyySoldUnits(Float.parseFloat(getValueFromChildElement(node, "globallySoldUnits")));
 	game.setCriticScore(Float.parseFloat(getValueFromChildElement(node, "criticScore")));
 	game.setUserScore(Float.parseFloat(getValueFromChildElement(node, "userScore")));
 	game.setSummary(getValueFromChildElement(node, "summary"));

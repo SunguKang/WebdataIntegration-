@@ -10,22 +10,22 @@ import de.uni_mannheim.informatik.dws.winter.model.FusibleFactory;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
-public class FusibleMovieFactory implements FusibleFactory<Movie, Attribute> {
+public class FusibleGameFactory implements FusibleFactory<Game, Attribute> {
 
 	@Override
-	public Movie createInstanceForFusion(RecordGroup<Movie, Attribute> cluster) {
+	public Game createInstanceForFusion(RecordGroup<Game, Attribute> cluster) {
 
 		List<String> ids = new LinkedList<>();
 
-		for (Movie m : cluster.getRecords()) {
-			ids.add(m.getIdentifier());
+		for (Game g : cluster.getRecords()) {
+			ids.add(g.getIdentifier());
 		}
 
 		Collections.sort(ids);
 
 		String mergedId = StringUtils.join(ids, '+');
 
-		return new Movie(mergedId, "fused");
+		return new Game(mergedId, "fused");
 	}
 	
 }

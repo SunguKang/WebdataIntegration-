@@ -3,7 +3,6 @@ package de.uni_mannheim.informatik.dws.wdi.ExerciseIdentityResolution.model;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
-import java.time.temporal.ChronoField;
 import java.util.List;
 import java.util.Locale;
 
@@ -68,4 +67,5 @@ public class GameXMLReader extends XMLMatchableReader<Game, Attribute>  {
 
 		return game;
 	}
+	
 }

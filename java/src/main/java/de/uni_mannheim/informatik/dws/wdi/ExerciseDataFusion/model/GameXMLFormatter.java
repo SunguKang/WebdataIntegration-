@@ -17,39 +17,62 @@ import org.w3c.dom.Element;
 import de.uni_mannheim.informatik.dws.winter.model.io.XMLFormatter;
 
 /**
- * {@link XMLFormatter} for {@link Movie}s.
+ * {@link XMLFormatter} for {@link Game}s.
  * 
  * @author Oliver Lehmberg (oli@dwslab.de)
  * 
  */
-public class MovieXMLFormatter extends XMLFormatter<Movie> {
+public class GameXMLFormatter extends XMLFormatter<Game> {
 
-	ActorXMLFormatter actorFormatter = new ActorXMLFormatter();
-
+	PublisherXMLFormatter publisherFormatter = new PublisherXMLFormatter();
+	GenreXMLFormatter genreFormatter = new GenreXMLFormatter();
+	DeveloperXMLFormatter developerFormatter = new DeveloperXMLFormatter();
+	
 	@Override
 	public Element createRootElement(Document doc) {
-		return doc.createElement("movies");
+		return doc.createElement("games");
 	}
 
 	@Override
-	public Element createElementFromRecord(Movie record, Document doc) {
-		Element movie = doc.createElement("movie");
+	public Element createElementFromRecord(Game record, Document doc) {
+		Element game = doc.createElement("game");
+		game.appendChild(createTextElement("id", record.getIdentifier(), doc));
 
-		movie.appendChild(createTextElement("id", record.getIdentifier(), doc));
+		game.appendChild(createTextElementWithProvenance("name",
+				record.getName(),
+				record.getMergedAttributeProvenance(Game.NAME), doc));
+		game.appendChild(createTextElementWithProvenance("platform",
+				record.getPlatform(),
+				record.getMergedAttributeProvenance(Game.PLATFORM), doc));
+		game.appendChild(createTextElementWithProvenance("publicationDate",
+				record.getPublicationDate().toString(),
+				record.getMergedAttributeProvenance(Game.PUBLICATIONDATE), doc));
+		game.appendChild(createTextElementWithProvenance("globallySoldUnits",
+				Float.toString(record.getGloballySoldUnits()),
+				record.getMergedAttributeProvenance(Game.GLOBALLYSOLDUNITS), doc));
+		game.appendChild(createTextElementWithProvenance("criticScore",
+				Float.toString(record.getCriticScore()),
+				record.getMergedAttributeProvenance(Game.CRITICSCORE), doc));
+		game.appendChild(createTextElementWithProvenance("userScore",
+				Float.toString(record.getUserScore()),
+				record.getMergedAttributeProvenance(Game.USERSCORE), doc));
+		game.appendChild(createTextElementWithProvenance("summary",
+				record.getSummary(),
+				record.getMergedAttributeProvenance(Game.SUMMARY), doc));
+		game.appendChild(createTextElementWithProvenance("rating",
+				record.getRating(),
+				record.getMergedAttributeProvenance(Game.RATING), doc));
+		game.appendChild(createTextElementWithProvenance("series",
+				record.getSeries(),
+				record.getMergedAttributeProvenance(Game.SERIES), doc));
 
-		movie.appendChild(createTextElementWithProvenance("title",
-				record.getTitle(),
-				record.getMergedAttributeProvenance(Movie.TITLE), doc));
-		movie.appendChild(createTextElementWithProvenance("director",
-				record.getDirector(),
-				record.getMergedAttributeProvenance(Movie.DIRECTOR), doc));
-		movie.appendChild(createTextElementWithProvenance("date", record
-				.getDate().toString(), record
-				.getMergedAttributeProvenance(Movie.DATE), doc));
 
-		movie.appendChild(createActorsElement(record, doc));
+		game.appendChild(createPublisherElement(record, doc));
+		game.appendChild(createGenreElement(record, doc));
+		game.appendChild(createDeveloperElement(record, doc));
 
-		return movie;
+
+		return game;
 	}
 
 	protected Element createTextElementWithProvenance(String name,
@@ -59,17 +82,43 @@ public class MovieXMLFormatter extends XMLFormatter<Movie> {
 		return elem;
 	}
 
-	protected Element createActorsElement(Movie record, Document doc) {
-		Element actorRoot = actorFormatter.createRootElement(doc);
-		actorRoot.setAttribute("provenance",
-				record.getMergedAttributeProvenance(Movie.ACTORS));
+	
+	protected Element createPublisherElement(Game record, Document doc) {
+	Element publishersRoot = publisherFormatter.createRootElement(doc);
+	publishersRoot.setAttribute("provenance",
+			record.getMergedAttributeProvenance(Game.PUBLISHERS));
 
-		for (Actor a : record.getActors()) {
-			actorRoot.appendChild(actorFormatter
-					.createElementFromRecord(a, doc));
-		}
-
-		return actorRoot;
+	for (Publisher p : record.getPublishers()) {
+		publishersRoot.appendChild(publisherFormatter
+				.createElementFromRecord(p, doc));
 	}
-
+	
+		return publishersRoot;
+	}
+	
+	protected Element createGenreElement(Game record, Document doc) {
+		Element genresRoot = genreFormatter.createRootElement(doc);
+		genresRoot.setAttribute("provenance",
+				record.getMergedAttributeProvenance(Game.GENRES));
+	
+		for (Genre g : record.getGenres()) {
+			genresRoot.appendChild(genreFormatter
+					.createElementFromRecord(g, doc));
+		}
+	
+		return genresRoot;
+	}
+	
+	protected Element createDeveloperElement(Game record, Document doc) {
+		Element developersRoot = developerFormatter.createRootElement(doc);
+		developersRoot.setAttribute("provenance",
+				record.getMergedAttributeProvenance(Game.DEVELOPERS));
+	
+		for (Developer d : record.getDevelopers()) {
+			developersRoot.appendChild(developerFormatter
+					.createElementFromRecord(d, doc));
+		}
+	
+		return developersRoot;
+	}
 }
