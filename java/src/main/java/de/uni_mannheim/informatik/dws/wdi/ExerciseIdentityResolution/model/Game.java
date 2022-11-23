@@ -18,10 +18,10 @@ public class Game implements Matchable, Fusible {
 	private String platform;
 	private List<Publisher> publishers;
 	private LocalDateTime publicationDate;
-	private float globallySoldUnits;
+	private Float globallySoldUnits;
 	private List<Genre> genres;
-	private float criticScore;
-	private float userScore;
+	private Float criticScore;
+	private Float userScore;
 	private List<Developer> developers;
 	private String summary;
 	private String rating;
@@ -57,6 +57,10 @@ public class Game implements Matchable, Fusible {
 	public LocalDateTime getPublicationDate(){
 		return publicationDate;
 	}
+
+	public int getPublicationYear(){
+		return publicationDate.getYear();
+	}
 	public void setName(String name){
 		this.name = name;
 	}
@@ -70,11 +74,11 @@ public class Game implements Matchable, Fusible {
 		this.publicationDate = publicationDate;
 	}
 	
-	public float getGloballySoldUnits() {
+	public Float getGloballySoldUnits() {
         return globallySoldUnits;
     }
     
-	public void setGloballyySoldUnits(float globallySoldUnits) {
+	public void setGloballyySoldUnits(Float globallySoldUnits) {
 	        this.globallySoldUnits = globallySoldUnits;
 	    }    
 	    
@@ -86,19 +90,19 @@ public class Game implements Matchable, Fusible {
 	        this.genres = genres;
 	    }    
 	    
-	public float getCriticScore() {
+	public Float getCriticScore() {
 	        return criticScore;
 	    }
 	    
-	public void setCriticScore(float criticScore) {
+	public void setCriticScore(Float criticScore) {
 	        this.criticScore = criticScore;
 	    }    
 	    
-	public float getUserScore() {
+	public Float getUserScore() {
 	        return userScore;
 	    }
 	    
-	public void setUserScore(float userScore) {
+	public void setUserScore(Float userScore) {
 	        this.userScore = userScore;
 	    }
 	    
