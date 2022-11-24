@@ -32,6 +32,7 @@ public class GameBlockingKeyByPlatformGenerator extends
 		
 		//resultCollector.next(new Pair<>(record.getPlatform(), record));
 		//include year here because lazy, only include year if it is not null
+		// TODO fix either name or fix implementation
 		if (null != record.getPublicationDate()) { 
 		resultCollector.next(new Pair<>(record.getPlatform()+Integer.toString(record.getPublicationDate().getYear()-1), record));
 		resultCollector.next(new Pair<>(record.getPlatform()+Integer.toString(record.getPublicationDate().getYear()), record));

@@ -38,31 +38,34 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     			HashedDataSet<Game, Attribute> data_C = new HashedDataSet<>();
     			HashedDataSet<Game, Attribute> data_D = new HashedDataSet<>();
     			HashedDataSet<Game, Attribute> data_E = new HashedDataSet<>();
+
+
     			//relative paths within the git folder
-    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schema_Windows.xml"), "/videogames/videogame", data_B);
-    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_metacritic.xml"), "/videogames/videogame", data_A);
-    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_Video_Games_Sales.xml"), "/videogames/videogame", data_C);
-    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schemaPS4.xml"), "/videogames/videogame", data_D);
-    			new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/wikidata_integrated_target_schema.xml"), "/videogames/videogame", data_E);
+    			String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
+				new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_B.xml"),
+						"/videogames/videogame", data_B);
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_A.xml"),
+						"/videogames/videogame", data_A);
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_C.xml"),
+						"/videogames/videogame", data_C);
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_D.xml"),
+						"/videogames/videogame", data_D);
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_E.xml"),
+						"/videogames/videogame", data_E);
 
     			
     			//load the gold standard (test set) from the git folder structure
     			logger.info("*\tLoading gold standard\t*");
     			MatchingGoldStandard gsTestA_B = new MatchingGoldStandard();
-    			gsTestA_B.loadFromCSVFile(new File(
-    					"../data/gold_standard/merged/A-B.csv"));
+    			gsTestA_B.loadFromCSVFile(new File("../data/gold_standard/merged/A-B.csv"));
     			MatchingGoldStandard gsTestA_D = new MatchingGoldStandard();
-    			gsTestA_D.loadFromCSVFile(new File(
-    					"../data/gold_standard/merged/A-D.csv"));
+    			gsTestA_D.loadFromCSVFile(new File("../data/gold_standard/merged/A-D.csv"));
     			MatchingGoldStandard gsTestB_C = new MatchingGoldStandard();
-    			gsTestB_C.loadFromCSVFile(new File(
-    					"../data/gold_standard/merged/B-C.csv"));
+    			gsTestB_C.loadFromCSVFile(new File("../data/gold_standard/merged/B-C.csv"));
     			MatchingGoldStandard gsTestC_D = new MatchingGoldStandard();
-    			gsTestC_D.loadFromCSVFile(new File(
-    					"../data/gold_standard/merged/C-D.csv"));
+    			gsTestC_D.loadFromCSVFile(new File("../data/gold_standard/merged/C-D.csv"));
     			MatchingGoldStandard gsTestC_E = new MatchingGoldStandard();
-    			gsTestC_E.loadFromCSVFile(new File(
-    	    			"../data/gold_standard/merged/C-E.csv"));
+    			gsTestC_E.loadFromCSVFile(new File("../data/gold_standard/merged/C-E.csv"));
 				
     			// create a matching rule
     			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
@@ -77,15 +80,20 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     					0.7);
     			
     			//this exports the debug report
-    			matchingRuleA_B.activateDebugReport("data/output/debugResultsMatchingRuleA_B.csv", 1000, gsTestA_B);
+    			matchingRuleA_B.activateDebugReport("data/output/debugResultsMatchingRuleA_B.csv",
+						1000, gsTestA_B);
     			matchingRuleA_B.addComparator(new GameNameComparatorLevenshtein(), 1);
-    			matchingRuleA_D.activateDebugReport("data/output/debugResultsMatchingRuleA_D.csv", 1000, gsTestA_D);
+    			matchingRuleA_D.activateDebugReport("data/output/debugResultsMatchingRuleA_D.csv",
+						1000, gsTestA_D);
     			matchingRuleA_D.addComparator(new GameNameComparatorLevenshtein(), 1);
-    			matchingRuleB_C.activateDebugReport("data/output/debugResultsMatchingRuleB_C.csv", 1000, gsTestB_C);
+    			matchingRuleB_C.activateDebugReport("data/output/debugResultsMatchingRuleB_C.csv",
+						1000, gsTestB_C);
     			matchingRuleB_C.addComparator(new GameNameComparatorLevenshtein(), 1);
-    			matchingRuleC_D.activateDebugReport("data/output/debugResultsMatchingRuleC_D.csv", 1000, gsTestC_D);
+    			matchingRuleC_D.activateDebugReport("data/output/debugResultsMatchingRuleC_D.csv",
+						1000, gsTestC_D);
     			matchingRuleC_D.addComparator(new GameNameComparatorLevenshtein(), 1);
-    			matchingRuleC_E.activateDebugReport("data/output/debugResultsMatchingRuleC_E.csv", 1000, gsTestC_E);
+    			matchingRuleC_E.activateDebugReport("data/output/debugResultsMatchingRuleC_E.csv",
+						1000, gsTestC_E);
     			matchingRuleC_E.addComparator(new GameNameComparatorLevenshtein(), 1);
     		
     			// create a blocker (blocking strategy)
@@ -130,20 +138,15 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     			// Execute the matching
     			logger.info("*\tRunning identity resolution\t*");
     			Processable<Correspondence<Game, Attribute>> correspondencesA_B = engineA_B.runIdentityResolution(
-    					data_A, data_B, null, matchingRuleA_B,
-    					blockerA_B);
+    					data_A, data_B, null, matchingRuleA_B, blockerA_B);
     			Processable<Correspondence<Game, Attribute>> correspondencesA_D = engineA_D.runIdentityResolution(
-    					data_A, data_D, null, matchingRuleA_D,
-    					blockerA_D);
+    					data_A, data_D, null, matchingRuleA_D, blockerA_D);
     			Processable<Correspondence<Game, Attribute>> correspondencesB_C = engineB_C.runIdentityResolution(
-    					data_B, data_C, null, matchingRuleB_C,
-    					blockerB_C);
+    					data_B, data_C, null, matchingRuleB_C, blockerB_C);
     			Processable<Correspondence<Game, Attribute>> correspondencesC_D = engineC_D.runIdentityResolution(
-    					data_C, data_D, null, matchingRuleC_D,
-    					blockerC_D);
+    					data_C, data_D, null, matchingRuleC_D, blockerC_D);
     			Processable<Correspondence<Game, Attribute>> correspondencesC_E = engineC_E.runIdentityResolution(
-    					data_C, data_E, null, matchingRuleC_E,
-    					blockerC_E);
+    					data_C, data_E, null, matchingRuleC_E, blockerC_E);
     			
     			
     			// Create a top-1 global matching

@@ -30,10 +30,10 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	private String platform;
 	private List<Publisher> publishers;
 	private LocalDateTime publicationDate;
-	private float globallySoldUnits;
+	private Float globallySoldUnits;
 	private List<Genre> genres;
-	private float criticScore;
-	private float userScore;
+	private Float criticScore;
+	private Float userScore;
 	private List<Developer> developers;
 	private String summary;
 	private String rating;
@@ -53,33 +53,40 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	public String getName(){
 		return name;
 	}
-	public String getPlatform(){
-		return platform;
-	}
-	public List<Publisher> getPublishers(){
-		return publishers;
-	}
-	public LocalDateTime getPublicationDate(){
-		return publicationDate;
-	}
+
 	public void setName(String name){
 		this.name = name;
 	}
+
+	public String getPlatform(){
+		return platform;
+	}
+
 	public void setPlatform(String platform){
 		this.platform = platform;
 	}
+
+	public List<Publisher> getPublishers(){
+		return publishers;
+	}
+
 	public void setPublishers(List<Publisher> publishers){
 		this.publishers = publishers;
 	}
+
+	public LocalDateTime getPublicationDate(){
+		return publicationDate;
+	}
+
 	public void setPublicationDate(LocalDateTime publicationDate){
 		this.publicationDate = publicationDate;
 	}
-	
+
 	public float getGloballySoldUnits() {
         return globallySoldUnits;
     }
     
-	public void setGloballyySoldUnits(float globallySoldUnits) {
+	public void setGloballyySoldUnits(Float globallySoldUnits) {
 	        this.globallySoldUnits = globallySoldUnits;
 	    }    
 	    
@@ -95,15 +102,15 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	        return criticScore;
 	    }
 	    
-	public void setCriticScore(float criticScore) {
-	        this.criticScore = criticScore;
+	public void setCriticScore(Float criticScore) {
+		this.criticScore = criticScore;
 	    }    
 	    
 	public float getUserScore() {
 	        return userScore;
 	    }
 	    
-	public void setUserScore(float userScore) {
+	public void setUserScore(Float userScore) {
 	        this.userScore = userScore;
 	    }
 	    

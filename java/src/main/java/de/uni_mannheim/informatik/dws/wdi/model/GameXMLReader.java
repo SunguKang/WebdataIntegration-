@@ -73,9 +73,29 @@ String id = getValueFromChildElement(node, "id");
 	game.setName(getValueFromChildElement(node, "name"));
 	game.setPlatform(getValueFromChildElement(node, "platform"));
 	//Numeric Variables have to be parsed
-	game.setGloballyySoldUnits(Float.parseFloat(getValueFromChildElement(node, "globallySoldUnits")));
-	game.setCriticScore(Float.parseFloat(getValueFromChildElement(node, "criticScore")));
-	game.setUserScore(Float.parseFloat(getValueFromChildElement(node, "userScore")));
+	Float soldUnits = null;
+	try{
+		soldUnits = Float.parseFloat(getValueFromChildElement(node, "globallySoldUnits"));
+	}catch (NumberFormatException e){
+		// TODO log error
+	}
+	game.setGloballyySoldUnits(soldUnits);
+
+	Float criticScore = null;
+	try{
+		criticScore = Float.parseFloat(getValueFromChildElement(node, "criticScore"));
+	} catch	(NumberFormatException e){
+		// TODO log error
+	}
+	game.setCriticScore(criticScore);
+
+	Float userScore = null;
+	try{
+		userScore = Float.parseFloat(getValueFromChildElement(node, "userScore"));
+	} catch (NumberFormatException e){
+		//TODO log error
+	}
+	game.setUserScore(userScore);
 	game.setSummary(getValueFromChildElement(node, "summary"));
 	game.setRating(getValueFromChildElement(node, "rating"));
 	game.setSeries(getValueFromChildElement(node, "series"));

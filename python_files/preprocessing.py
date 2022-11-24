@@ -246,8 +246,9 @@ for i in range(len(names)):
     #save preprocessed data again
     data_df.to_csv(pre_pro_path+"/preprocessed_csv_files/Dataset_"+ dataset_name + ".csv", index=False, sep=";")
     df_to_xml(df=data_df, filepath=pre_pro_path+"/preprocessed_xml_files/Dataset_"+ dataset_name + ".xml")
+    print("... Preprocessing done for Dataset: {}".format(dataset_name))
     
-    print("... Preprocessing finished ...")
+print("... Preprocessing finished ...")
 
 
 
