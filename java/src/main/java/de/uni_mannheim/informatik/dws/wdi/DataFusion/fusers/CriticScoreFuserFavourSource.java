@@ -9,7 +9,8 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class GloballysoldunitsFuserLongestString extends AttributeFuser<Game, Attribute> {
+public class CriticScoreFuserFavourSource extends AttributeFuser<Game, Attribute> {
+    //attribute only in dataset A
     @Override
     public void fuse(RecordGroup<Game, Attribute> recordGroup, Game game, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
         // TODO implement

@@ -1,6 +1,22 @@
 package de.uni_mannheim.informatik.dws.wdi.DataFusion.evaluation;
 
-public class GloballySoldUnitsEvaluationRule {
-x
-//I think this is only in dataset C, but not completely shure
+import de.uni_mannheim.informatik.dws.wdi.model.Game;
+import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
+import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
+import de.uni_mannheim.informatik.dws.winter.model.Matchable;
+import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
+
+public class GloballySoldUnitsEvaluationRule extends EvaluationRule<Game, Attribute> {
+    // TODO I think this is only in dataset C, but not completely shure
+    @Override
+    public boolean isEqual(Game game, Game recordType1, Attribute attribute) {
+        // TODO implement
+        return false;
+    }
+
+    @Override
+    public boolean isEqual(Game game, Game recordType1, Correspondence<Attribute, Matchable> correspondence) {
+        return false;
+    }
+
 }

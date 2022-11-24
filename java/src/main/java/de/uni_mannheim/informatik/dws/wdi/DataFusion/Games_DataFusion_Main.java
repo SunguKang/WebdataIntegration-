@@ -74,10 +74,10 @@ public class Games_DataFusion_Main
 		data_D.setScore(3.0);
 		data_E.setScore(3.0);
 		
-//		TODO: Take dates of provenance files
-//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
-//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
-//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
+		//		TODO: Take dates of provenance files
+		//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
+		//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
+		//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
 
 
 		// load correspondences
@@ -115,10 +115,10 @@ public class Games_DataFusion_Main
 		strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
 		strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(),new PublishersEvaluationRule());
 		strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationDateEvaluationRule());
-		strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballysoldunitsEvaluationRule());
+		strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballySoldUnitsEvaluationRule());
 		strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(),new GenresEvaluationRule());
-		strategy.addAttributeFuser(Game.CRITICSCORE, new CriticscoreFuserFavourSource(),new CriticscoreEvaluationRule());
-		strategy.addAttributeFuser(Game.USERSCORE, new UserscoreFuserFavourSource(),new UserscoreEvaluationRule());
+		strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(),new CriticScoreEvaluationRule());
+		strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(),new UserScoreEvaluationRule());
 		strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(),new DevelopersEvaluationRule());
 		strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(),new SummaryEvaluationRule());
 		strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(),new RatingEvaluationRule());
