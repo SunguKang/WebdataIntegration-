@@ -107,7 +107,7 @@
 		<rating>M</rating>
 		<series>Halo</series>
 	</videogame>		
-	 	<videogame>
+	 <videogame>
 		<id>Video_games_sales7774</id>
 		<name>Family Guy</name>
 		<platform>PlayStation Portable</platform>
@@ -134,8 +134,7 @@
 		<rating>M</rating>
 		<series></series>
 	</videogame>
-	</videogame>
-	 	<videogame>
+	<videogame>
 		<id>Video_games_sales16810</id>
 		<name>Score International: Baja 1000</name>
 		<platform>Playstation 2</platform>
@@ -165,8 +164,7 @@
 		<rating>E</rating>
 		<series></series>
 	</videogame>
-	</videogame>
-	 	<videogame>
+	<videogame>
 		<id></id>
 		<name></name>
 		<platform></platform>
@@ -193,4 +191,4 @@
 		<rating></rating>
 		<series></series>
 	</videogame>
-<videogames>
+</videogames>

@@ -120,7 +120,8 @@ public class Games_DataFusion_Main
 			// load the gold standard
 			logger.info("*\tEvaluating results\t*");
 			DataSet<Game, Attribute> gs = new FusibleHashedDataSet<>();
-			new GameXMLReader().loadFromXML(new File(goldStandardFusionPath + "gold.xml"), "/videogames/videogame", gs);
+			new GameXMLReader().loadFromXML(new File(goldStandardFusionPath + "gold.xml"),
+					"/videogames/videogame", gs);
 
 			for (Game g : gs.get()) {
 				logger.info(String.format("gs: %s", g.getIdentifier()));
@@ -172,6 +173,6 @@ public class Games_DataFusion_Main
 			logger.info(String.format("*\tAccuracy: %.2f", accuracy));
 		} catch (IOException ex) {
 			ex.printStackTrace();
-}
-}
+		}
+	}
 }
