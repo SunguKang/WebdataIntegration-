@@ -54,5 +54,3 @@ public class GameCSVFormatter extends CSVDataSetFormatter<Game, Attribute> {
 				record.getPublishers().toString()};
 		};
 	}
-
-}
