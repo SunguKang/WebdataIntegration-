@@ -22,16 +22,24 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.DataIterator;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class GameBlockingKeyByYearGenerator extends
-			RecordBlockingKeyGenerator<Game, Attribute> {
+public class GameBlockingKeyByYearGenerator extends RecordBlockingKeyGenerator<Game, Attribute> {
 
 	private static final long serialVersionUID = 1L;
+
+
 	@Override
 	public void generateBlockingKeys(Game record, Processable<Correspondence<Attribute, Matchable>> correspondences,
 			DataIterator<Pair<String, Game>> resultCollector) {
-		resultCollector.next(new Pair<>(Integer.toString(record.getPublicationDate().getYear()-1), record));
-		resultCollector.next(new Pair<>(Integer.toString(record.getPublicationDate().getYear()), record));
-		resultCollector.next(new Pair<>(Integer.toString(record.getPublicationDate().getYear()+1), record));	
-		
+		Integer publicationYear;
+		if (record.hasValue(Game.PUBLICATIONDATE)){
+			publicationYear = record.getPublicationDate().getYear();
+			Integer[] yearFrame = {-1, 0, 1};
+			for (Integer yearDiff : yearFrame) {
+				resultCollector.next(new Pair<>(Integer.toString(record.getPublicationDate().getYear() + yearDiff), record));
+			}
+		}
+		else {
+			resultCollector.next(new Pair<>("0000", record));
+		}
 	}
 }

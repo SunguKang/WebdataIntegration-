@@ -13,7 +13,6 @@
 package de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
-//import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.BlockingKeyGenerator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.RecordBlockingKeyGenerator;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
@@ -22,7 +21,7 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.DataIterator;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class GameBlockingKeyByPlatformGenerator extends RecordBlockingKeyGenerator<Game, Attribute> {
+public class GameBlockingKeyByPlatformYearsGenerator extends RecordBlockingKeyGenerator<Game, Attribute> {
 
 	private static final long serialVersionUID = 1L;
 	@Override
@@ -35,7 +34,16 @@ public class GameBlockingKeyByPlatformGenerator extends RecordBlockingKeyGenerat
 		else {
 			platform = "OTHER";
 		}
-		resultCollector.next(new Pair<>(platform, record));
-			
-	}
+		Integer publicationYear;
+		if (record.hasValue(Game.PUBLICATIONDATE)){
+			publicationYear = record.getPublicationDate().getYear();
+			Integer[] yearFrame = {-1, 0, 1};
+			for (Integer yearDiff : yearFrame) {
+				resultCollector.next(new Pair<>(Integer.toString(record.getPublicationDate().getYear() + yearDiff) + platform, record));
+				}
+			}
+		else {
+			resultCollector.next(new Pair<>("0000" + platform, record));
+		}
+		}
 }
