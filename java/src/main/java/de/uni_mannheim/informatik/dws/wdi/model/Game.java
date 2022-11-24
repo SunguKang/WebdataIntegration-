@@ -82,7 +82,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 		this.publicationDate = publicationDate;
 	}
 
-	public float getGloballySoldUnits() {
+	public Float getGloballySoldUnits() {
         return globallySoldUnits;
     }
     
@@ -98,7 +98,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	        this.genres = genres;
 	    }    
 	    
-	public float getCriticScore() {
+	public Float getCriticScore() {
 	        return criticScore;
 	    }
 	    
@@ -106,7 +106,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 		this.criticScore = criticScore;
 	    }    
 	    
-	public float getUserScore() {
+	public Float getUserScore() {
 	        return userScore;
 	    }
 	    
@@ -172,6 +172,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 		if (prov != null) {
 			return StringUtils.join(prov, "+");
 		} else {
+			// TODO check if this is correct
 			return "";
 		}
 	}
@@ -200,7 +201,6 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	public boolean hasValue(Attribute attribute) {
 		if(attribute==NAME)
 			return getName() != null && !getName().isEmpty();
-
 		else if(attribute==PLATFORM)
 			return getPlatform() != null && !getPlatform().isEmpty();
 		else if(attribute==PUBLISHERS)
@@ -208,13 +208,13 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 		else if(attribute==PUBLICATIONDATE)
 			return getPublicationDate() != null;
 		else if(attribute==GLOBALLYSOLDUNITS)
-			return getGloballySoldUnits() != 0.0f;
+			return getGloballySoldUnits() != null && getGloballySoldUnits() > 0.0f;
 		else if(attribute==GENRES)
 			return getGenres() != null && getGenres().size() > 0;
 		else if(attribute==CRITICSCORE)
-			return getCriticScore() != 0.0f;
+			return getCriticScore() != null && getCriticScore() != 0.0f;
 		else if(attribute==USERSCORE)
-			return getUserScore() != 0.0f;
+			return getUserScore()  != null && getUserScore() != 0.0f;
 		else if(attribute==DEVELOPERS)
 			return getDevelopers() != null && getDevelopers().size() > 0;
 		else if(attribute==SUMMARY)

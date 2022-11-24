@@ -95,7 +95,7 @@
 ////		 correspondences = maxWeight.getResult();
 //
 //		// write the correspondences to the output file
-//		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/academy_awards_2_actors_correspondences.csv"), correspondences);		
+//		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/_academy_awards_2_actors_correspondences.csv"), correspondences);
 //		
 //		logger.info("*\tEvaluating result\t*");
 //		// evaluate your result

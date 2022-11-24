@@ -99,7 +99,7 @@
 //				blocker);
 //
 //		// write the correspondences to the output file
-//		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/academy_awards_2_actors_correspondences.csv"), correspondences);
+//		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/_academy_awards_2_actors_correspondences.csv"), correspondences);
 //
 //		// load the gold standard (test set)
 //		logger.info("*\tLoading gold standard\t*");

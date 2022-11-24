@@ -51,13 +51,19 @@ public class Games_DataFusion_Main
 		FusibleDataSet<Game, Attribute> data_C = new FusibleHashedDataSet<>();
 		FusibleDataSet<Game, Attribute> data_D = new FusibleHashedDataSet<>();
 		FusibleDataSet<Game, Attribute> data_E = new FusibleHashedDataSet<>();
-		
+
 		//relative paths within the git folder
-		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schema_Windows.xml"), "/videogames/videogame", data_B);
-		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_metacritic.xml"), "/videogames/videogame", data_A);
-		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/target_schema_Video_Games_Sales.xml"), "/videogames/videogame", data_C);
-		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/integrated_target_schemaPS4.xml"), "/videogames/videogame", data_D);
-		new GameXMLReader().loadFromXML(new File("../data/preprocessing/preprocessed_xml_files/wikidata_integrated_target_schema.xml"), "/videogames/videogame", data_E);
+		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
+		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_B.xml"),
+				"/videogames/videogame", data_B);
+		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_A.xml"),
+				"/videogames/videogame", data_A);
+		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_C.xml"),
+				"/videogames/videogame", data_C);
+		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_D.xml"),
+				"/videogames/videogame", data_D);
+		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_E.xml"),
+				"/videogames/videogame", data_E);
 		
 		data_A.printDataSetDensityReport();
 		data_B.printDataSetDensityReport();

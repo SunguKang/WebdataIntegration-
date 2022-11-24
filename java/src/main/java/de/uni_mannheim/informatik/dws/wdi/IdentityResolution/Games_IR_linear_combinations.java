@@ -158,29 +158,29 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 //    			 correspondences = maxWeight.getResult();
 
     			// write the correspondences to the output file (in the data folder of the git repository)
-    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/A_B_correspondences.csv"), correspondencesA_B);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/A_D_correspondences.csv"), correspondencesA_D);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/B_C_correspondences.csv"), correspondencesB_C);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/C_D_correspondences.csv"), correspondencesC_D);		
-    			new CSVCorrespondenceFormatter().writeCSV(new File("../data/correspondences/C_E_correspondences.csv"), correspondencesC_E);		
+    			new CSVCorrespondenceFormatter().writeCSV(
+						new File("../data/correspondences/A_B_correspondences.csv"), correspondencesA_B);
+    			new CSVCorrespondenceFormatter().writeCSV(
+						new File("../data/correspondences/A_D_correspondences.csv"), correspondencesA_D);
+    			new CSVCorrespondenceFormatter().writeCSV(
+						new File("../data/correspondences/B_C_correspondences.csv"), correspondencesB_C);
+    			new CSVCorrespondenceFormatter().writeCSV(
+						new File("../data/correspondences/C_D_correspondences.csv"), correspondencesC_D);
+    			new CSVCorrespondenceFormatter().writeCSV(
+						new File("../data/correspondences/C_E_correspondences.csv"), correspondencesC_E);
 
     			logger.info("*\tEvaluating result\t*");
     			// evaluate your result
     			MatchingEvaluator<Game, Attribute> evaluatorA_B = new MatchingEvaluator<Game, Attribute>();
-    			Performance perfTestA_B = evaluatorA_B.evaluateMatching(correspondencesA_B,
-    					gsTestA_B);
+    			Performance perfTestA_B = evaluatorA_B.evaluateMatching(correspondencesA_B, gsTestA_B);
     			MatchingEvaluator<Game, Attribute> evaluatorA_D = new MatchingEvaluator<Game, Attribute>();
-    			Performance perfTestA_D = evaluatorA_D.evaluateMatching(correspondencesA_D,
-    					gsTestA_D);
+    			Performance perfTestA_D = evaluatorA_D.evaluateMatching(correspondencesA_D, gsTestA_D);
     			MatchingEvaluator<Game, Attribute> evaluatorB_C = new MatchingEvaluator<Game, Attribute>();
-    			Performance perfTestB_C = evaluatorB_C.evaluateMatching(correspondencesB_C,
-    					gsTestB_C);
+    			Performance perfTestB_C = evaluatorB_C.evaluateMatching(correspondencesB_C, gsTestB_C);
     			MatchingEvaluator<Game, Attribute> evaluatorC_D = new MatchingEvaluator<Game, Attribute>();
-    			Performance perfTestC_D = evaluatorC_D.evaluateMatching(correspondencesC_D,
-    					gsTestC_D);
+    			Performance perfTestC_D = evaluatorC_D.evaluateMatching(correspondencesC_D, gsTestC_D);
     			MatchingEvaluator<Game, Attribute> evaluatorC_E = new MatchingEvaluator<Game, Attribute>();
-    			Performance perfTestC_E = evaluatorC_E.evaluateMatching(correspondencesC_E,
-    					gsTestC_E);
+    			Performance perfTestC_E = evaluatorC_E.evaluateMatching(correspondencesC_E, gsTestC_E);
     			// print the evaluation result
     			logger.info("data_A <-> data_B");
     			logger.info(String.format(
