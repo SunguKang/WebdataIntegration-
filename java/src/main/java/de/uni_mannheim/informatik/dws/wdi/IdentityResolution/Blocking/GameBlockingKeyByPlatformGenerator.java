@@ -12,7 +12,7 @@
 
 package de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking;
 
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.model.Game;
+import de.uni_mannheim.informatik.dws.wdi.model.Game;
 //import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.BlockingKeyGenerator;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.RecordBlockingKeyGenerator;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;

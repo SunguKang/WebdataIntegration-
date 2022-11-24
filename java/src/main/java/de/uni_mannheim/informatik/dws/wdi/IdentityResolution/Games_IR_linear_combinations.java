@@ -2,12 +2,12 @@ package de.uni_mannheim.informatik.dws.wdi.IdentityResolution;
 
 import java.io.File;
 
+import de.uni_mannheim.informatik.dws.wdi.model.Game;
+import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
 import org.slf4j.Logger;
 
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators.GameNameComparatorLevenshtein;
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.model.Game;
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.model.GameXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 //import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;

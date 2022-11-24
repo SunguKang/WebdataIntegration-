@@ -3,9 +3,11 @@ package de.uni_mannheim.informatik.dws.wdi.DataFusion;
 import java.io.File;
 
 //TODO write + import classes for Game attributes
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.model.Game;
+import de.uni_mannheim.informatik.dws.wdi.DataFusion.evaluation.*;
+import de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers.*;
+import de.uni_mannheim.informatik.dws.wdi.model.Game;
 //TODO adapt class
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.model.GameXMLReader;
+import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
 //TODO adapt class
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLFormatter;
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
@@ -65,6 +67,7 @@ public class Games_DataFusion_Main
 
 		// Maintain Provenance
 		// Scores (e.g. from rating)
+		// TODO set valid scores
 		data_A.setScore(1.0);
 		data_B.setScore(2.0);
 		data_C.setScore(3.0);
@@ -111,7 +114,7 @@ public class Games_DataFusion_Main
 		strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
 		strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
 		strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(),new PublishersEvaluationRule());
-		strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationdateEvaluationRule());
+		strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationDateEvaluationRule());
 		strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballysoldunitsEvaluationRule());
 		strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(),new GenresEvaluationRule());
 		strategy.addAttributeFuser(Game.CRITICSCORE, new CriticscoreFuserFavourSource(),new CriticscoreEvaluationRule());
@@ -135,7 +138,6 @@ public class Games_DataFusion_Main
 		FusibleDataSet<Game, Attribute> fusedDataSet = engine.run(correspondences, null);
 
 		// write the result
-		//TODO create GameXMLFormatter
 		new GameXMLFormatter().writeXML(new File("../data/fused/fused.xml"), fusedDataSet);
 
 		// evaluate

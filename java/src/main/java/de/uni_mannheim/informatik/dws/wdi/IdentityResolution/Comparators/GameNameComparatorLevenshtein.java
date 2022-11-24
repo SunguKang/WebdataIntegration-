@@ -11,13 +11,14 @@
  */
 package de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators;
 
+import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.model.Game;
+
 
 /**
  * {@link Comparator} for {@link Game}s based on the
