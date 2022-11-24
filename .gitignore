@@ -6,3 +6,5 @@ tmp/
 java/.metadata
 python_files/Leon preprocessing and Gold standard.ipynb
 python_files/.ipynb_checkpoints/Leon preprocessing and Gold standard-checkpoint.ipynb
+java/.idea
+java/.settings

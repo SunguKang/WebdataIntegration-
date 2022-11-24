@@ -1,6 +1,11 @@
 package de.uni_mannheim.informatik.dws.wdi.DataFusion;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Properties;
 
 //TODO write + import classes for Game attributes
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.evaluation.*;
@@ -44,113 +49,129 @@ public class Games_DataFusion_Main
 	
 	public static void main( String[] args ) throws Exception
     {
-		// Load the Data into FusibleDataSet, data set A as HashedDataset and the rest are FusibleDataset (might not work)
-		logger.info("*\tLoading datasets\t*");
-		FusibleDataSet<Game, Attribute> data_A = new FusibleHashedDataSet<>();
-		FusibleDataSet<Game, Attribute> data_B = new FusibleHashedDataSet<>();
-		FusibleDataSet<Game, Attribute> data_C = new FusibleHashedDataSet<>();
-		FusibleDataSet<Game, Attribute> data_D = new FusibleHashedDataSet<>();
-		FusibleDataSet<Game, Attribute> data_E = new FusibleHashedDataSet<>();
+		try (InputStream is = Files.newInputStream(Paths.get("src/main/resources/config.properties"))) {
+			Properties prop = new Properties();
+			prop.load(is);
 
-		//relative paths within the git folder
-		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
-		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_B.xml"),
-				"/videogames/videogame", data_B);
-		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_A.xml"),
-				"/videogames/videogame", data_A);
-		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_C.xml"),
-				"/videogames/videogame", data_C);
-		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_D.xml"),
-				"/videogames/videogame", data_D);
-		new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_E.xml"),
-				"/videogames/videogame", data_E);
-		
-		data_A.printDataSetDensityReport();
-		data_B.printDataSetDensityReport();
-		data_C.printDataSetDensityReport();
-		data_D.printDataSetDensityReport();
-		data_E.printDataSetDensityReport();
+			//		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
+			//		String folderGoldStandardIR = "../data/gold_standard/merged/";
+			//		String correspondencesFolderPath = "../data/correspondences/";
+			String dataFolderPath = prop.getProperty("data.path");
+			String folderPathXMLPreprocessedFiles = dataFolderPath + prop.getProperty("data.preprocessing.path")
+					+ prop.getProperty("data.preprocessing.preprocessed_xml.path");
+			String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
+			String correspondencesFolderPath = dataFolderPath + prop.getProperty("data.correspondences.path");
+			String fusedFolderPath = dataFolderPath + prop.getProperty("data.fused.path");
+			String goldStandardFusionPath = dataFolderPath + prop.getProperty("data.gold_standard_fusion.path");
 
-		// Maintain Provenance
-		// Scores (e.g. from rating)
-		// TODO set valid scores
-		data_A.setScore(1.0);
-		data_B.setScore(2.0);
-		data_C.setScore(3.0);
-		data_D.setScore(3.0);
-		data_E.setScore(3.0);
-		
-		//		TODO: Take dates of provenance files
-		//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
-		//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
-		//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
+			// Load the Data into FusibleDataSet, data set A as HashedDataset and the rest are FusibleDataset (might not work)
+			logger.info("*\tLoading datasets\t*");
+			FusibleDataSet<Game, Attribute> data_A = new FusibleHashedDataSet<>();
+			FusibleDataSet<Game, Attribute> data_B = new FusibleHashedDataSet<>();
+			FusibleDataSet<Game, Attribute> data_C = new FusibleHashedDataSet<>();
+			FusibleDataSet<Game, Attribute> data_D = new FusibleHashedDataSet<>();
+			FusibleDataSet<Game, Attribute> data_E = new FusibleHashedDataSet<>();
+
+			//relative paths within the git folder
+			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_B.xml"),
+					"/videogames/videogame", data_B);
+			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_A.xml"),
+					"/videogames/videogame", data_A);
+			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_C.xml"),
+					"/videogames/videogame", data_C);
+			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_D.xml"),
+					"/videogames/videogame", data_D);
+			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_E.xml"),
+					"/videogames/videogame", data_E);
+
+			data_A.printDataSetDensityReport();
+			data_B.printDataSetDensityReport();
+			data_C.printDataSetDensityReport();
+			data_D.printDataSetDensityReport();
+			data_E.printDataSetDensityReport();
+
+			// Maintain Provenance
+			// Scores (e.g. from rating)
+			// TODO set valid scores
+			data_A.setScore(1.0);
+			data_B.setScore(2.0);
+			data_C.setScore(3.0);
+			data_D.setScore(3.0);
+			data_E.setScore(3.0);
+
+			//		TODO: Take dates of provenance files
+			//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
+			//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
+			//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
 
 
-		// load correspondences
-		logger.info("*\tLoading correspondences\t*");
-		CorrespondenceSet<Game, Attribute> correspondences = new CorrespondenceSet<>();
-		correspondences.loadCorrespondences(new File("../data/output/A_B_correspondences.csv"),data_A, data_B);
-		correspondences.loadCorrespondences(new File("../data/output/A_D_correspondences.csv"),data_A, data_D);
-		correspondences.loadCorrespondences(new File("../data/output/B_C_correspondences.csv"),data_B, data_C);
-		correspondences.loadCorrespondences(new File("../data/output/C_D_correspondences.csv"),data_C, data_D);
-		correspondences.loadCorrespondences(new File("../data/output/C_E_correspondences.csv"),data_C, data_E);
-	
+			// load correspondences
+			logger.info("*\tLoading correspondences\t*");
+			CorrespondenceSet<Game, Attribute> correspondences = new CorrespondenceSet<>();
+			correspondences.loadCorrespondences(new File(correspondencesFolderPath + "A_B_correspondences.csv"), data_A, data_B);
+			correspondences.loadCorrespondences(new File(correspondencesFolderPath + "A_D_correspondences.csv"), data_A, data_D);
+			correspondences.loadCorrespondences(new File(correspondencesFolderPath + "B_C_correspondences.csv"), data_B, data_C);
+			correspondences.loadCorrespondences(new File(correspondencesFolderPath + "C_D_correspondences.csv"), data_C, data_D);
+			correspondences.loadCorrespondences(new File(correspondencesFolderPath + "C_E_correspondences.csv"), data_C, data_E);
 
-		// write group size distribution
-		correspondences.printGroupSizeDistribution();
+			// write group size distribution
+			correspondences.printGroupSizeDistribution();
 
-		// load the gold standard
-		logger.info("*\tEvaluating results\t*");
-		DataSet<Game, Attribute> gs = new FusibleHashedDataSet<>();
-		new GameXMLReader().loadFromXML(new File("../data/goldstandard/gold.xml"), "/videogames/videogame", gs);
-				
-		for(Game g : gs.get()) {
-			logger.info(String.format("gs: %s", g.getIdentifier()));
-		}
+			// load the gold standard
+			logger.info("*\tEvaluating results\t*");
+			DataSet<Game, Attribute> gs = new FusibleHashedDataSet<>();
+			new GameXMLReader().loadFromXML(new File(goldStandardFusionPath + "gold.xml"), "/videogames/videogame", gs);
 
-		// define the fusion strategy
-		DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
-		// write debug results to file
-		strategy.activateDebugReport("data/output/debugResultsDatafusion.csv", -1, gs);
-		
-		// add attribute fusers
-		
-		//TODO Adapt
-		//TODO create the mentioned Fusers and Evaluators
-		strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
-		strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
-		strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(),new PublishersEvaluationRule());
-		strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationDateEvaluationRule());
-		strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballySoldUnitsEvaluationRule());
-		strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(),new GenresEvaluationRule());
-		strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(),new CriticScoreEvaluationRule());
-		strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(),new UserScoreEvaluationRule());
-		strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(),new DevelopersEvaluationRule());
-		strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(),new SummaryEvaluationRule());
-		strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(),new RatingEvaluationRule());
-		strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(),new SeriesEvaluationRule());
-		
-		// create the fusion engine
-		DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
+			for (Game g : gs.get()) {
+				logger.info(String.format("gs: %s", g.getIdentifier()));
+			}
 
-		// print consistency report
-		engine.printClusterConsistencyReport(correspondences, null);
-		
-		// print record groups sorted by consistency
-		engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
+			// define the fusion strategy
+			DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
+			// write debug results to file
+			strategy.activateDebugReport("data/output/debugResultsDatafusion.csv", -1, gs);
 
-		// run the fusion
-		logger.info("*\tRunning data fusion\t*");
-		FusibleDataSet<Game, Attribute> fusedDataSet = engine.run(correspondences, null);
+			// add attribute fusers
 
-		// write the result
-		new GameXMLFormatter().writeXML(new File("../data/fused/fused.xml"), fusedDataSet);
+			//TODO Adapt
+			//TODO create the mentioned Fusers and Evaluators
+			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
+			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
+			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
+			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationDateEvaluationRule());
+			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballySoldUnitsEvaluationRule());
+			strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(), new GenresEvaluationRule());
+			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new CriticScoreEvaluationRule());
+			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new UserScoreEvaluationRule());
+			strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(), new DevelopersEvaluationRule());
+			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new SummaryEvaluationRule());
+			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new RatingEvaluationRule());
+			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new SeriesEvaluationRule());
 
-		// evaluate
-		DataFusionEvaluator<Game, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Game, Attribute>());
-		
-		double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
+			// create the fusion engine
+			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
-		logger.info(String.format("*\tAccuracy: %.2f", accuracy));
-    }	    
+			// print consistency report
+			engine.printClusterConsistencyReport(correspondences, null);
+
+			// print record groups sorted by consistency
+			engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
+
+			// run the fusion
+			logger.info("*\tRunning data fusion\t*");
+			FusibleDataSet<Game, Attribute> fusedDataSet = engine.run(correspondences, null);
+
+			// write the result
+			new GameXMLFormatter().writeXML(new File(fusedFolderPath + "fused.xml"), fusedDataSet);
+
+			// evaluate
+			DataFusionEvaluator<Game, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Game, Attribute>());
+
+			double accuracy = evaluator.evaluate(fusedDataSet, gs, null);
+
+			logger.info(String.format("*\tAccuracy: %.2f", accuracy));
+		} catch (IOException ex) {
+			ex.printStackTrace();
+}
+}
 }

@@ -1,6 +1,12 @@
 package de.uni_mannheim.informatik.dws.wdi.IdentityResolution;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.Properties;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
@@ -31,41 +37,53 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 	
     public static void main( String[] args ) throws Exception
     {
-    	// loading data
-    			logger.info("*\tLoading datasets\t*");
-    			HashedDataSet<Game, Attribute> data_A = new HashedDataSet<>();
-    			HashedDataSet<Game, Attribute> data_B = new HashedDataSet<>();
-    			HashedDataSet<Game, Attribute> data_C = new HashedDataSet<>();
-    			HashedDataSet<Game, Attribute> data_D = new HashedDataSet<>();
-    			HashedDataSet<Game, Attribute> data_E = new HashedDataSet<>();
+		try (InputStream is = Files.newInputStream(Paths.get("src/main/resources/config.properties"))) {
+			Properties prop = new Properties();
+			prop.load(is);
+
+			//		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
+			//		String folderGoldStandardIR = "../data/gold_standard/merged/";
+			//		String correspondencesFolderPath = "../data/correspondences/";
+			String dataFolderPath = prop.getProperty("data.path");
+			String folderPathXMLPreprocessedFiles = dataFolderPath + prop.getProperty("data.preprocessing.path")
+					+ prop.getProperty("data.preprocessing.preprocessed_xml.path");
+			String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
+			String correspondencesFolderPath = dataFolderPath + prop.getProperty("data.correspondences.path");
+
+			// loading data
+			logger.info("*\tLoading datasets\t*");
+			HashedDataSet<Game, Attribute> data_A = new HashedDataSet<>();
+			HashedDataSet<Game, Attribute> data_B = new HashedDataSet<>();
+			HashedDataSet<Game, Attribute> data_C = new HashedDataSet<>();
+			HashedDataSet<Game, Attribute> data_D = new HashedDataSet<>();
+			HashedDataSet<Game, Attribute> data_E = new HashedDataSet<>();
 
 
     			//relative paths within the git folder
-    			String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
-				new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_B.xml"),
+				new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_B.xml"),
 						"/videogames/videogame", data_B);
-    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_A.xml"),
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_A.xml"),
 						"/videogames/videogame", data_A);
-    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_C.xml"),
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_C.xml"),
 						"/videogames/videogame", data_C);
-    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_D.xml"),
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_D.xml"),
 						"/videogames/videogame", data_D);
-    			new GameXMLReader().loadFromXML(new File(folderPathXMLSourceFiles + "Dataset_E.xml"),
+    			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_E.xml"),
 						"/videogames/videogame", data_E);
 
     			
     			//load the gold standard (test set) from the git folder structure
     			logger.info("*\tLoading gold standard\t*");
     			MatchingGoldStandard gsTestA_B = new MatchingGoldStandard();
-    			gsTestA_B.loadFromCSVFile(new File("../data/gold_standard/merged/A-B.csv"));
+    			gsTestA_B.loadFromCSVFile(new File(folderGoldStandardIR + "A-B.csv"));
     			MatchingGoldStandard gsTestA_D = new MatchingGoldStandard();
-    			gsTestA_D.loadFromCSVFile(new File("../data/gold_standard/merged/A-D.csv"));
+    			gsTestA_D.loadFromCSVFile(new File(folderGoldStandardIR + "../data/gold_standard/merged/A-D.csv"));
     			MatchingGoldStandard gsTestB_C = new MatchingGoldStandard();
-    			gsTestB_C.loadFromCSVFile(new File("../data/gold_standard/merged/B-C.csv"));
+    			gsTestB_C.loadFromCSVFile(new File(folderGoldStandardIR + "B-C.csv"));
     			MatchingGoldStandard gsTestC_D = new MatchingGoldStandard();
-    			gsTestC_D.loadFromCSVFile(new File("../data/gold_standard/merged/C-D.csv"));
+    			gsTestC_D.loadFromCSVFile(new File(folderGoldStandardIR + "C-D.csv"));
     			MatchingGoldStandard gsTestC_E = new MatchingGoldStandard();
-    			gsTestC_E.loadFromCSVFile(new File("../data/gold_standard/merged/C-E.csv"));
+    			gsTestC_E.loadFromCSVFile(new File(folderGoldStandardIR + "C-E.csv"));
 				
     			// create a matching rule
     			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
@@ -150,24 +168,24 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     			
     			
     			// Create a top-1 global matching
-//    			  correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
+				// correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
 
-//    			 Alternative: Create a maximum-weight, bipartite matching
-//    			 MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
-//    			 maxWeight.run();
-//    			 correspondences = maxWeight.getResult();
+				// Alternative: Create a maximum-weight, bipartite matching
+				// MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
+				// maxWeight.run();
+				// correspondences = maxWeight.getResult();
 
     			// write the correspondences to the output file (in the data folder of the git repository)
     			new CSVCorrespondenceFormatter().writeCSV(
-						new File("../data/correspondences/A_B_correspondences.csv"), correspondencesA_B);
+						new File(correspondencesFolderPath+ "A_B_correspondences.csv"), correspondencesA_B);
     			new CSVCorrespondenceFormatter().writeCSV(
-						new File("../data/correspondences/A_D_correspondences.csv"), correspondencesA_D);
+						new File(correspondencesFolderPath + "A_D_correspondences.csv"), correspondencesA_D);
     			new CSVCorrespondenceFormatter().writeCSV(
-						new File("../data/correspondences/B_C_correspondences.csv"), correspondencesB_C);
+						new File(correspondencesFolderPath + "B_C_correspondences.csv"), correspondencesB_C);
     			new CSVCorrespondenceFormatter().writeCSV(
-						new File("../data/correspondences/C_D_correspondences.csv"), correspondencesC_D);
+						new File(correspondencesFolderPath + "C_D_correspondences.csv"), correspondencesC_D);
     			new CSVCorrespondenceFormatter().writeCSV(
-						new File("../data/correspondences/C_E_correspondences.csv"), correspondencesC_E);
+						new File(correspondencesFolderPath + "C_E_correspondences.csv"), correspondencesC_E);
 
     			logger.info("*\tEvaluating result\t*");
     			// evaluate your result
@@ -217,6 +235,8 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
     					"Recall: %.4f",	perfTestC_E.getRecall()));
     			logger.info(String.format(
     					"F1: %.4f",perfTestC_E.getF1()));
-    			
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		}
     }
 }
