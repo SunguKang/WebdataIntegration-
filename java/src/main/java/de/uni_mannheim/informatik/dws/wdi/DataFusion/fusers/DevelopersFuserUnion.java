@@ -9,17 +9,32 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class DevelopersFuserUnion extends AttributeFuser<Game, Attribute> {
+public class DevelopersFuserUnion extends AttributeFuser<List<Developer>, Game, Attribute> {
+
+    public DevelopersFuserUnion() {
+		super(new Union<Developer, Game, Attribute>());
+	}
+
     @Override
-    public void fuse(RecordGroup<Game, Attribute> recordGroup, Game game, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+    public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
         //TODO implement
-    }
+        FusedValue<List<Developer>, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
+		gameFused.setDevelopers(fused.getValue());
+		gameFused.setAttributeProvenance(Game.DEVELOPERS, fused.getOriginalIds());
+    }   
 
     @Override
     public boolean hasValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-        return false;
+        //return false;
+        return game.hasValue(Game.DEVELOPERS);
     }
 
+    public List<Developer> getValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
+		return game.getDevelopers();
+	}
+
+
+    //why do we have and need this?
     @Override
     public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
         return null;

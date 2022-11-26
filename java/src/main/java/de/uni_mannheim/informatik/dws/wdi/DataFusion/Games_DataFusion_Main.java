@@ -139,8 +139,8 @@ public class Games_DataFusion_Main
 			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
 			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
-			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuser(), new PublicationDateEvaluationRule());
-			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserLongestString(), new GloballySoldUnitsEvaluationRule());
+			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserMostRecent(), new PublicationDateEvaluationRule());
+			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserFavourSource(), new GloballySoldUnitsEvaluationRule());
 			strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(), new GenresEvaluationRule());
 			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new CriticScoreEvaluationRule());
 			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new UserScoreEvaluationRule());
