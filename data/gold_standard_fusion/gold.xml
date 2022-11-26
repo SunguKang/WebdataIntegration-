@@ -1,0 +1,366 @@
+<videogames>
+	<videogame>
+		<id>all_games10615</id>
+		<name>BUTCHER</name>
+		<platform>Nintendo Switch</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Crunching Koalas</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>28-09-2017</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+			<genre>
+				<genreName>Arcade</genreName>
+			</genre>
+			<genre>
+				<genreName>Shooter</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Transhuman Design</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating></rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>all_games14497</id>			
+		<name>Mass Effect 2: Arrival</name>
+		<platform>PC</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Electronic Arts</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>22-01-2010</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+			<genre>
+				<genreName>Shooter</genreName>
+			</genre>
+			<genre>
+				<genreName>Adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Science-Fiction</genreName>
+			</genre>
+			<genre>
+				<genreName>RPG</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>7.6</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>BioWare</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series>Mass Effect</series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales81</id>
+		<name>Halo 2</name>
+		<platform>Xbox</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Microsoft Studios</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>09-11-2004</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Ego-Shooter</genreName>
+			</genre>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+			<genre>
+				<genreName>Adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Science-Fiction</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>8.7</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Bungie</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series>Halo</series>
+	</videogame>		
+	 <videogame>
+		<id>Video_games_sales7774</id>
+		<name>Family Guy</name>
+		<platform>PlayStation Portable</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>2k Games</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2006-10-17</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>High Voltage Software</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series></series>
+	</videogame>
+
+	-----------------------------------------------------------------------------------------
+  	<videogame>
+		<id>Video_games_sales2412</id>
+		<name>Red Faction: Guerrilla</name>
+		<platform>Microsoft Windows</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>THQ</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>18.09.2009</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Third-person shooter</genreName>
+			</genre>
+			<genre>
+				<genreName>Sandbox</genreName>
+			</genre>
+			<genre>
+				<genreName>Adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Science-Fiction</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>7.6</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Reactor Zero</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series></series>
+	</videogame>
+
+  	<videogame>
+		<id>Video_games_sales2412</id>
+		<name>Red Faction: Guerrilla</name>
+		<platform>Playstation vita</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Disney Interactive Studios</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>18.08.2013</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action-adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Sandbox</genreName>
+			</genre>
+			<genre>
+				<genreName>Toys-to-life</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>7.5</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Avalanche Software</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales151</id>
+		<name>The Last of Us</name>
+		<platform>Playstation 3</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Sony Computer Entertainment</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>14.06.2013</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action-adventure</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>9.7</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Naughty Dog</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales14427</id>
+		<name>Disney's Hide and Sneak</name>
+		<platform>Nintendo GameCube</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Capcom</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>30.11.2003</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action-adventure</genreName>
+	<videogame>
+		<id>Video_games_sales16810</id>
+		<name>Score International: Baja 1000</name>
+		<platform>Playstation 2</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Activision</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2008-10-28</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Racing</genreName>
+			</genre>
+			<genre>
+				<genreName>Driving</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Capcom</nameDeveloper>
+				<nameDeveloper>Left Field Productions</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales9246</id>
+		<name>Virtua Tennis 4</name>
+		<platform>PlayStation 3</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Sega</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>29.04.2011</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Sports</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>6.8</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Sega</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales6532</id>
+		<name>Yakuza 6</name>
+		<platform>PlayStation 4</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Developer</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>17.04.2018</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Sports</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>8.5</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Ryu Ga Gotoku Studio</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series>The Song of Life</series>
+	</videogame>
+
+	
+	
+	 	<videogame>
+	<videogame>
+		<id></id>
+		<name></name>
+		<platform></platform>
+		<publishers>
+			<publisher>
+				<namePublisher></namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate></publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName></genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper></nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating></rating>
+		<series></series>
+	</videogame>
+</videogames>
