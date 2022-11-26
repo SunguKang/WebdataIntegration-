@@ -134,6 +134,116 @@
 		<rating>M</rating>
 		<series></series>
 	</videogame>
+  	<videogame>
+		<id>Video_games_sales2412</id>
+		<name>Red Faction: Guerrilla</name>
+		<platform>Microsoft Windows</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>THQ</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>18.09.2009</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Third-person shooter</genreName>
+			</genre>
+			<genre>
+				<genreName>Sandbox</genreName>
+			</genre>
+			<genre>
+				<genreName>Adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Science-Fiction</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>7.6</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Reactor Zero</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales2412</id>
+		<name>Red Faction: Guerrilla</name>
+		<platform>Playstation vita</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Disney Interactive Studios</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>18.08.2013</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action-adventure</genreName>
+			</genre>
+			<genre>
+				<genreName>Sandbox</genreName>
+			</genre>
+			<genre>
+				<genreName>Toys-to-life</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>7.5</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Avalanche Software</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales151</id>
+		<name>The Last of Us</name>
+		<platform>Playstation 3</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Sony Computer Entertainment</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>14.06.2013</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action-adventure</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>9.7</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Naughty Dog</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series></series>
+	</videogame>
+  	<videogame>
+		<id>Video_games_sales14427</id>
+		<name>Disney's Hide and Sneak</name>
+		<platform>Nintendo GameCube</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Capcom</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>30.11.2003</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action-adventure</genreName>
 	<videogame>
 		<id>Video_games_sales16810</id>
 		<name>Score International: Baja 1000</name>
@@ -157,6 +267,9 @@
 		<userScore></userScore>
 		<developers>
 			<developer>
+				<nameDeveloper>Capcom</nameDeveloper>
+			</developer>
+			<developer>
 				<nameDeveloper>Left Field Productions</nameDeveloper>
 			</developer>
 		</developers>
@@ -164,34 +277,60 @@
 		<rating>E</rating>
 		<series></series>
 	</videogame>
-	<videogame>
-		<id></id>
-		<name></name>
-		<platform></platform>
+  	<videogame>
+		<id>Video_games_sales9246</id>
+		<name>Virtua Tennis 4</name>
+		<platform>PlayStation 3</platform>
 		<publishers>
 			<publisher>
-				<namePublisher></namePublisher>
+				<namePublisher>Sega</namePublisher>
 			</publisher>
 		</publishers>			
-		<publicationDate></publicationDate>
+		<publicationDate>29.04.2011</publicationDate>
 		<globallySoldUnits></globallySoldUnits>
 		<genres>
 			<genre>
-				<genreName></genreName>
+				<genreName>Sports</genreName>
 			</genre>
 		</genres>	
 		<criticScore></criticScore>
-		<userScore></userScore>
+		<userScore>6.8</userScore>
 		<developers>
 			<developer>
-				<nameDeveloper></nameDeveloper>
+				<nameDeveloper>Sega</nameDeveloper>
 			</developer>
 		</developers>
 		<summary></summary>
-		<rating></rating>
+		<rating>E</rating>
 		<series></series>
 	</videogame>
-	
+  	<videogame>
+		<id>Video_games_sales6532</id>
+		<name>Yakuza 6</name>
+		<platform>PlayStation 4</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Developer</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>17.04.2018</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Sports</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>8.5</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Ryu Ga Gotoku Studio</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>M</rating>
+		<series>The Song of Life</series>
+	</videogame>
 	<videogame>
       <id>Video_games_sales2929</id>
       <name>Chocobos Dungeon 2</name>
@@ -232,7 +371,6 @@
       <rating>E</rating>
       <series></series>
    </videogame>
-   
    <videogame>
       <id>Video_games_sales9980</id>
       <name>Harukanaru Augusta 2: Masters</name>
@@ -294,5 +432,31 @@
       <rating>E</rating>
       <series></series>
    </videogame>
-
+	<videogame>
+		<id></id>
+		<name></name>
+		<platform></platform>
+		<publishers>
+			<publisher>
+				<namePublisher></namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate></publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName></genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper></nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating></rating>
+		<series></series>
+	</videogame>
 </videogames>
