@@ -201,7 +201,7 @@
             <namePublisher>Square</namePublisher>
          </publisher>
       </publishers>         
-      <publicationDate>23.12.1998</publicationDate>
+      <publicationDate>1998-12-23</publicationDate>
       <globallySoldUnits></globallySoldUnits>
       <genres>
          <genre>
@@ -232,7 +232,7 @@
       <rating>E</rating>
       <series></series>
    </videogame>
-   
+
    <videogame>
       <id>Video_games_sales9980</id>
       <name>Harukanaru Augusta 2: Masters</name>
@@ -242,7 +242,7 @@
             <namePublisher>T&E Soft</namePublisher>
          </publisher>
       </publishers>         
-      <publicationDate>22.09.1993</publicationDate>
+      <publicationDate>1993-09-22</publicationDate>
       <globallySoldUnits></globallySoldUnits>
       <genres>
          <genre>
@@ -276,7 +276,7 @@
             <namePublisher>2K Games</namePublisher>
          </publisher>
       </publishers>         
-      <publicationDate>16.07.2007</publicationDate>
+      <publicationDate>2007-07-16</publicationDate>
       <globallySoldUnits></globallySoldUnits>
       <genres>
          <genre>
