@@ -191,4 +191,108 @@
 		<rating></rating>
 		<series></series>
 	</videogame>
+	
+	<videogame>
+      <id>Video_games_sales2929</id>
+      <name>Chocobos Dungeon 2</name>
+      <platform>PS</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>Square</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>23.12.1998</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>role playing</genreName>
+         </genre>
+         <genre>
+            <genreName>action</genreName>
+         </genre>
+         <genre>
+            <genreName>adventure</genreName>
+         </genre>
+         </genre>
+         <genre>
+            <genreName>strategy</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore>6.9</userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>Square</nameDeveloper>
+         </developer>
+         <developer>
+            <nameDeveloper>Chunsoft</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>E</rating>
+      <series></series>
+   </videogame>
+   
+   <videogame>
+      <id>Video_games_sales9980</id>
+      <name>Harukanaru Augusta 2: Masters</name>
+      <platform>SNES</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>T&E Soft</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>22.09.1993</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>sport</genreName>
+         </genre>
+         <genre>
+            <genreName>golf</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore></userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>T&E Soft</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating></rating>
+      <series>harukanaru augusta</series>
+   </videogame>
+
+   <videogame>
+      <id>Video_games_sales8765</id>
+      <name>All-Pro Football 2K8</name>
+      <platform>PS3</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>2K Sports</namePublisher>
+         </publisher>
+         <publisher>
+            <namePublisher>2K Games</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>16.07.2007</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>Sport</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore>7.6</userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>Visual Concepts</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>E</rating>
+      <series></series>
+   </videogame>
+
 </videogames>
