@@ -172,6 +172,20 @@
 		<genres>
 			<genre>
 				<genreName>Action-adventure</genreName>
+			<genre>
+		<genres>
+		<criticScore></criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Capcom</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+				
 	<videogame>
 		<id>Video_games_sales16810</id>
 		<name>Score International: Baja 1000</name>
