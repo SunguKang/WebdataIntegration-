@@ -24,14 +24,14 @@
 				<genreName>Science-Fiction</genreName>
 			</genre>
 		</genres>	
-		<criticScore></criticScore>
+		<criticScore>89</criticScore>
 		<userScore>8.7</userScore>
 		<developers>
 			<developer>
 				<nameDeveloper>Bungie</nameDeveloper>
 			</developer>
 		</developers>
-		<summary></summary>
+		<summary>The Covenant alien race threatens to destroy all humankind, and the only thing standing in its way is Master Chief, a genetically enhanced supersoldier. Master Chief returns in Halo 2, which features new vehicles, weapons, environments, and more. This time, you can interact with your environment, wield two weapons at the same time, board opponents' vehicles, and even switch sides to play the role of a Covenant Elite. Halo 2 also supports broadband multiplayer action via Xbox Live.</summary>
 		<rating>M</rating>
 		<series>Halo</series>
 	</videogame>		
@@ -361,6 +361,94 @@
       <rating>E</rating>
       <series></series>
 	</videogame>
+
+   <videogame>
+      <id>Video_games_sales842</id>
+      <name>Peter Jackson's King Kong: The Official Game of the Movie</name>
+      <platform>PlayStation 2</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>Ubisoft</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>2005-11-17</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>Action-adventure</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore>7.4</userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>Ubisoft Montpellier</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>T</rating>
+      <series></series>
+	</videogame>
+
+   <videogame>
+      <id>Video_games_sales2405</id>
+      <name>Michael Jackson: The Experience</name>
+      <platform>Xbox 360</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>Ubisoft</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>2010-11-23</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>Music</genreName>
+         </genre>
+		  <genre>
+            <genreName>rhythm</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore>8.6</userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>Ubisoft Montreal</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>E</rating>
+      <series></series>
+	</videogame>	
+
+   <videogame>
+      <id>Video_games_sales5866</id>
+      <name>Army Men: World War - Land, Sea, Air</name>
+      <platform>PlayStation</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>The 3DO Company</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>2000-11-03</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>Third-person shooter</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore>6.8</userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>The 3DO Company</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>T</rating>
+      <series></series>
+	</videogame>	
+	
 	<videogame>
 		<id></id>
 		<name></name>
