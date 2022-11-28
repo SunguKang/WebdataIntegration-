@@ -34,7 +34,8 @@
 		<summary>The Covenant alien race threatens to destroy all humankind, and the only thing standing in its way is Master Chief, a genetically enhanced supersoldier. Master Chief returns in Halo 2, which features new vehicles, weapons, environments, and more. This time, you can interact with your environment, wield two weapons at the same time, board opponents' vehicles, and even switch sides to play the role of a Covenant Elite. Halo 2 also supports broadband multiplayer action via Xbox Live.</summary>
 		<rating>M</rating>
 		<series>Halo</series>
-	</videogame>		
+	</videogame>	
+
 	 <videogame>
 		<id>Video_games_sales7774</id>
 		<name>Family Guy</name>
@@ -62,6 +63,7 @@
 		<rating>M</rating>
 		<series></series>
 	</videogame>
+
   	<videogame>
 		<id>Video_games_sales2412</id>
 		<name>Red Faction: Guerrilla</name>
@@ -98,6 +100,7 @@
 		<rating>M</rating>
 		<series></series>
 	</videogame>
+
   	<videogame>
 		<id>Video_games_sales2412</id>
 		<name>Disney Infinity</name>
@@ -131,6 +134,7 @@
 		<rating>E</rating>
 		<series></series>
 	</videogame>
+
   	<videogame>
 		<id>Video_games_sales151</id>
 		<name>The Last of Us</name>
@@ -158,6 +162,7 @@
 		<rating>M</rating>
 		<series></series>
 	</videogame>
+
   	<videogame>
 		<id>Video_games_sales14427</id>
 		<name>Disney's Hide and Sneak</name>
@@ -172,6 +177,7 @@
 		<genres>
 			<genre>
 				<genreName>Action-adventure</genreName>
+				
 	<videogame>
 		<id>Video_games_sales16810</id>
 		<name>Score International: Baja 1000</name>
@@ -205,6 +211,7 @@
 		<rating>E</rating>
 		<series></series>
 	</videogame>
+
   	<videogame>
 		<id>Video_games_sales9246</id>
 		<name>Virtua Tennis 4</name>
@@ -232,6 +239,7 @@
 		<rating>E</rating>
 		<series></series>
 	</videogame>
+
   	<videogame>
 		<id>Video_games_sales6532</id>
 		<name>Yakuza 6</name>
@@ -259,6 +267,7 @@
 		<rating>M</rating>
 		<series>The Song of Life</series>
 	</videogame>
+
 	<videogame>
       <id>Video_games_sales2929</id>
       <name>Chocobos Dungeon 2</name>
@@ -448,7 +457,181 @@
       <rating>T</rating>
       <series></series>
 	</videogame>	
-	
+
+	<videogame>
+		<id>Video_games_sales2015</id>
+		<name>WipEout Pure</name>
+		<platform>PSP</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Sony Computer Entertainment</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2005-09-01</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Sport</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>6.7</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>SCE Studio Liverpool</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+
+	<videogame>
+		<id>Video_games_sales7000</id>
+		<name>Ultimate Band</name>
+		<platform>wii</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Disney Interactive Studios</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2008-11-25</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Music video game</genreName>
+			</genre>
+		</genres>	
+		<criticScore></criticScore>
+		<userScore>6.2</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Fall Line Studios</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+
+	<videogame>
+      <id>Video_games_sales11657</id>
+      <name>Far Cry Vengeance</name>
+      <platform>Wii</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>Ubisoft</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>2006-12-12</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>shooter</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore>5.4</userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>Ubisoft Montreal</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>M</rating>
+      <series>Far cry</series>
+   </videogame>
+
+	<videogame>
+      <id>Video_games_sales16644</id>
+      <name>Element Girl: Love, Fashion and Friends</name>
+      <platform>DS</platform>
+      <publishers>
+         <publisher>
+            <namePublisher>Eidos Interactive</namePublisher>
+         </publisher>
+      </publishers>         
+      <publicationDate>2008-12-14</publicationDate>
+      <globallySoldUnits></globallySoldUnits>
+      <genres>
+         <genre>
+            <genreName>Adventure</genreName>
+         </genre>
+      </genres>   
+      <criticScore></criticScore>
+      <userScore></userScore>
+      <developers>
+         <developer>
+            <nameDeveloper>Eidos Interactive</nameDeveloper>
+         </developer>
+      </developers>
+      <summary></summary>
+      <rating>PEGI 3</rating>
+      <series>Element Girls</series>
+   </videogame>
+
+	<videogame>
+		<id>Video_games_sales11696</id>
+		<name>Prey the Stars</name>
+		<platform>DS</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>	Koei</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2008-09-25</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Action</genreName>
+			</genre>
+			<genre>
+				<genreName>Puzzle</genreName>
+			</genre>
+		</genres>	
+		<criticScore>66</criticScore>
+		<userScore></userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Koei Canada</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>E</rating>
+		<series></series>
+	</videogame>
+
+	<videogame>
+		<id>Video_games_sales5628</id>
+		<name>Tropico 5</name>
+		<platform>PS4</platform>
+		<publishers>
+			<publisher>
+				<namePublisher>Kalypso Media</namePublisher>
+			</publisher>
+		</publishers>			
+		<publicationDate>2015-04-28</publicationDate>
+		<globallySoldUnits></globallySoldUnits>
+		<genres>
+			<genre>
+				<genreName>Construction and management simulation</genreName>
+			</genre>
+			<genre>
+				<genreName>government simulation</genreName>
+			</genre>
+		</genres>	
+		<criticScore>76</criticScore>
+		<userScore>7.1</userScore>
+		<developers>
+			<developer>
+				<nameDeveloper>Haemimont Games</nameDeveloper>
+			</developer>
+		</developers>
+		<summary></summary>
+		<rating>T</rating>
+		<series>Tropico</series>
+	</videogame>
+
 	<videogame>
 		<id></id>
 		<name></name>
