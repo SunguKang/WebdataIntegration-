@@ -38,6 +38,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	private String summary;
 	private String rating;
 	private String series;
+	private String namePreprocessed;
 	
 
 //	Those are not in the Movie Model of Data Fusion
@@ -144,7 +145,12 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	    
 	public void setSeries(String series) {
 	        this.series = series;
-	    }   	
+	    }
+
+	public void setNamePreprocessed(String namePreprocessed){
+		this.namePreprocessed = namePreprocessed;
+	}
+	public String getNamePreprocessed() {return this.namePreprocessed;}
 
 	private Map<Attribute, Collection<String>> provenance = new HashMap<>();
 	private Collection<String> recordProvenance;
@@ -189,6 +195,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	public static final Attribute SUMMARY = new Attribute("summary");
 	public static final Attribute RATING = new Attribute("rating");
 	public static final Attribute SERIES = new Attribute("series");
+	public static final Attribute NAME_PREPROCESSED = new Attribute("namePreprocessed");
 
 	@Override
 	public String toString() {
@@ -223,6 +230,8 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 			return getRating() != null && !getRating().isEmpty();
 		else if(attribute==SERIES)
 			return getSeries() != null && !getSeries().isEmpty();
+		else if(attribute==NAME_PREPROCESSED)
+			return getNamePreprocessed() != null && !getNamePreprocessed().isEmpty();
 		else
 			return false;
 	}

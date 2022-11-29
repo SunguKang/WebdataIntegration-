@@ -28,7 +28,7 @@ import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimila
  *
  * 
  */
-public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute> {
+public class GameNamePreprocessedComparatorLevenshtein implements Comparator<Game, Attribute> {
 	
 	private static final long serialVersionUID = 1L;
 	private LevenshteinSimilarity sim = new LevenshteinSimilarity();
@@ -40,9 +40,9 @@ public class GameNameComparatorLevenshtein implements Comparator<Game, Attribute
 			Game record1,
 			Game record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
-		
-		String s1 = record1.getName();
-		String s2 = record2.getName();
+
+		String s1 = record1.getNamePreprocessed();
+		String s2 = record2.getNamePreprocessed();
     	
     	double similarity = sim.calculate(s1, s2);
     	

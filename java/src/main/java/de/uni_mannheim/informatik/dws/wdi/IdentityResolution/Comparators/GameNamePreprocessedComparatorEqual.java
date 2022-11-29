@@ -27,7 +27,7 @@ import de.uni_mannheim.informatik.dws.winter.similarity.EqualsSimilarity;
  *
  * 
  */
-public class GameNameComparatorEqual implements Comparator<Game, Attribute> {
+public class GameNamePreprocessedComparatorEqual implements Comparator<Game, Attribute> {
 	
 	private static final long serialVersionUID = 1L;
 	private EqualsSimilarity sim = new EqualsSimilarity();
@@ -40,8 +40,8 @@ public class GameNameComparatorEqual implements Comparator<Game, Attribute> {
 			Game record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
 		
-		String s1 = record1.getName();
-		String s2 = record2.getName();
+		String s1 = record1.getNamePreprocessed();
+		String s2 = record2.getNamePreprocessed();
     	
     	double similarity = sim.calculate(s1, s2);
     	

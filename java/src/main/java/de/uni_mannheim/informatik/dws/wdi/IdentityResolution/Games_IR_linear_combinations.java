@@ -1,15 +1,14 @@
 package de.uni_mannheim.informatik.dws.wdi.IdentityResolution;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Properties;
+import java.util.*;
 
+import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.util.HelperClassComparatorWeightPair;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
+import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import org.slf4j.Logger;
 
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
@@ -30,6 +29,8 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
+
+import static java.util.Map.entry;
 
 public class Games_IR_linear_combinations 
 {
@@ -96,21 +97,48 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					0.7);
 
 			//this exports the debug report
-			matchingRuleA_B.activateDebugReport("data/output/debugResultsMatchingRuleA_B.csv",
-					1000, gsTestA_B);
-			matchingRuleA_B.addComparator(new GameNameComparatorLevenshtein(), 1);
-			matchingRuleA_D.activateDebugReport("data/output/debugResultsMatchingRuleA_D.csv",
-					1000, gsTestA_D);
-			matchingRuleA_D.addComparator(new GameNameComparatorLevenshtein(), 1);
-			matchingRuleB_C.activateDebugReport("data/output/debugResultsMatchingRuleB_C.csv",
-					1000, gsTestB_C);
-			matchingRuleB_C.addComparator(new GameNameComparatorLevenshtein(), 1);
-			matchingRuleC_D.activateDebugReport("data/output/debugResultsMatchingRuleC_D.csv",
-					1000, gsTestC_D);
-			matchingRuleC_D.addComparator(new GameNameComparatorLevenshtein(), 1);
-			matchingRuleC_E.activateDebugReport("data/output/debugResultsMatchingRuleC_E.csv",
-					1000, gsTestC_E);
-			matchingRuleC_E.addComparator(new GameNameComparatorLevenshtein(), 1);
+			Map<String, List<Serializable>> pairsDict = Map.ofEntries(
+					entry("A_B", Arrays.asList(matchingRuleA_B, gsTestA_B)),
+					entry("A_D", Arrays.asList(matchingRuleA_D, gsTestA_D)),
+					entry("B_C", Arrays.asList(matchingRuleB_C, gsTestB_C)),
+					entry("C_D", Arrays.asList(matchingRuleC_D, gsTestC_D)),
+					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
+			);
+
+			int comparatorSetChosenKey = 0;
+			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
+			List<HelperClassComparatorWeightPair> compartorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 1));
+			comparatorSetsDict.put(1, compartorSetOne);
+
+			String debugResultsOuputPath = "data/output/";
+
+			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
+			for (String datasetKey : pairsDict.keySet()){
+				List<Serializable> val = pairsDict.get(datasetKey);
+				LinearCombinationMatchingRule currentMatchingRule = (LinearCombinationMatchingRule) val.get(0);
+				MatchingGoldStandard currentGS = (MatchingGoldStandard) val.get(1);
+				currentMatchingRule.activateDebugReport(debugResultsOuputPath + "debugResultsMatchingRule" +
+								datasetKey + ".csv", 1000, currentGS);
+				for (HelperClassComparatorWeightPair comparatorWeightPair : chosenCompartorSet) {
+					currentMatchingRule.addComparator(comparatorWeightPair.getComparator(), comparatorWeightPair.getWeight());
+				}
+			}
+			//			matchingRuleA_B.activateDebugReport("data/output/debugResultsMatchingRuleA_B.csv",
+			//					1000, gsTestA_B);
+			//			matchingRuleA_B.addComparator(new GameNameComparatorLevenshtein(), 1);
+			//			matchingRuleA_D.activateDebugReport("data/output/debugResultsMatchingRuleA_D.csv",
+			//					1000, gsTestA_D);
+			//			matchingRuleA_D.addComparator(new GameNameComparatorLevenshtein(), 1);
+			//			matchingRuleB_C.activateDebugReport("data/output/debugResultsMatchingRuleB_C.csv",
+			//					1000, gsTestB_C);
+			//			matchingRuleB_C.addComparator(new GameNameComparatorLevenshtein(), 1);
+			//			matchingRuleC_D.activateDebugReport("data/output/debugResultsMatchingRuleC_D.csv",
+			//					1000, gsTestC_D);
+			//			matchingRuleC_D.addComparator(new GameNameComparatorLevenshtein(), 1);
+			//			matchingRuleC_E.activateDebugReport("data/output/debugResultsMatchingRuleC_E.csv",
+			//					1000, gsTestC_E);
+			//			matchingRuleC_E.addComparator(new GameNameComparatorLevenshtein(), 1);
 
 			// create a blocker (blocking strategy)
 			//include year in GameBlockingKeyByPlatformGenerator because lazy
