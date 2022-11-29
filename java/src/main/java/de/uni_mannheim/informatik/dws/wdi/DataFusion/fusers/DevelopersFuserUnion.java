@@ -1,15 +1,21 @@
 package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
+import de.uni_mannheim.informatik.dws.wdi.model.Developer;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
+import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.list.Union;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
+import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class DevelopersFuserUnion extends AttributeFuser<List<Developer>, Game, Attribute> {
+import java.util.List;
+
+public class DevelopersFuserUnion extends AttributeValueFuser<List<Developer>, Game, Attribute> {
 
     public DevelopersFuserUnion() {
 		super(new Union<Developer, Game, Attribute>());

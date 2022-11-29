@@ -2,14 +2,17 @@ package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
+import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.meta.FavourSources;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
+import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class CriticScoreFuserFavourSource extends AttributeFuser<Float, Game, Attribute> {
+public class CriticScoreFuserFavourSource extends AttributeValueFuser<Float, Game, Attribute> {
     //attribute only in dataset A
 
     public CriticScoreFuserFavourSource() {
@@ -26,11 +29,11 @@ public class CriticScoreFuserFavourSource extends AttributeFuser<Float, Game, At
 
     @Override
     public boolean hasValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-     	return record.hasValue(Game.CRITICSCORE);
+     	return game.hasValue(Game.CRITICSCORE);
 	}
 
 	public Float getValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-		return record.getCriticScore();
+		return game.getCriticScore();
 	}
 
     @Override

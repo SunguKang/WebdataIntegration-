@@ -2,14 +2,19 @@ package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
+import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.meta.MostRecent;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
+import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class DateFuserMostRecent extends AttributeFuser<LocalDateTime, Game, Attribute> {
+import java.time.LocalDateTime;
+
+public class DateFuserMostRecent extends AttributeValueFuser<LocalDateTime, Game, Attribute> {
     
     public DateFuserMostRecent() {
 		super(new MostRecent<LocalDateTime, Game, Attribute>());
