@@ -38,7 +38,50 @@ public class Games_IR_linear_combinations
 private static final Logger logger = WinterLogManager.activateLogger("trace");
 	
     public static void main( String[] args ) throws Exception
-    {
+    {	
+		try {
+		// loading data
+		logger.info("*\tLoading datasets\t*");
+		File file = new File("data/preprocessing/preprocessed_xml_files/Dataset_A.xml");
+		System.out.println(file.exists());
+		System.out.println(file.isDirectory());
+		System.out.println(file.canRead());
+		System.out.println(new File(".").getAbsolutePath());
+
+		HashedDataSet<Game, Attribute> data_A = new HashedDataSet<>();
+		new GameXMLReader().loadFromXML(new File("data/preprocessing/preprocessed_xml_files/Dataset_A.xml"), "/videogames/videogame", data_A);
+		HashedDataSet<Game, Attribute> data_B = new HashedDataSet<>();
+		new GameXMLReader().loadFromXML(new File("data/preprocessing/preprocessed_xml_files/Dataset_B.xml"), "/videogames/videogame", data_B);
+		HashedDataSet<Game, Attribute> data_C = new HashedDataSet<>();
+		new GameXMLReader().loadFromXML(new File("data/preprocessing/preprocessed_xml_files/Dataset_C.xml"), "/videogames/videogame", data_C);
+		HashedDataSet<Game, Attribute> data_D = new HashedDataSet<>();
+		new GameXMLReader().loadFromXML(new File("data/preprocessing/preprocessed_xml_files/Dataset_D.xml"), "/videogames/videogame", data_D);
+		HashedDataSet<Game, Attribute> data_E = new HashedDataSet<>();
+		new GameXMLReader().loadFromXML(new File("data/preprocessing/preprocessed_xml_files/Dataset_E.xml"), "/videogames/videogame", data_E);
+		
+		
+
+		String debugResultsOuputPath = "data/output/";
+
+		// load the gold standard (test set)
+		logger.info("*\tLoading gold standard\t*");
+		MatchingGoldStandard gsTestA_B = new MatchingGoldStandard();
+		gsTestA_B.loadFromCSVFile(new File(
+				"data/gold_standard/merged/A-B.csv"));
+		MatchingGoldStandard gsTestA_D = new MatchingGoldStandard();
+		gsTestA_D.loadFromCSVFile(new File(
+				"data/gold_standard/merged/A-D.csv"));
+		MatchingGoldStandard gsTestB_C = new MatchingGoldStandard();
+		gsTestB_C.loadFromCSVFile(new File(
+				"data/gold_standard/merged/B-C.csv"));
+		MatchingGoldStandard gsTestC_D = new MatchingGoldStandard();
+		gsTestC_D.loadFromCSVFile(new File(
+				"data/gold_standard/merged/C-D.csv"));
+		MatchingGoldStandard gsTestC_E = new MatchingGoldStandard();
+		gsTestC_E.loadFromCSVFile(new File(
+				"data/gold_standard/merged/C-E.csv"));
+
+		/* 
 		try (InputStream is = Files.newInputStream(Paths.get("src/main/resources/config.properties"))) {
 			Properties prop = new Properties();
 			prop.load(is);
@@ -85,6 +128,8 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			gsTestC_D.loadFromCSVFile(new File(folderGoldStandardIR + "C-D.csv"));
 			MatchingGoldStandard gsTestC_E = new MatchingGoldStandard();
 			gsTestC_E.loadFromCSVFile(new File(folderGoldStandardIR + "C-E.csv"));
+			*/
+
 
 			// create a matching rule
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
@@ -213,15 +258,15 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 
 			// write the correspondences to the output file (in the data folder of the git repository)
 			new CSVCorrespondenceFormatter().writeCSV(
-					new File(correspondencesFolderPath+ "A_B_correspondences.csv"), correspondencesA_B);
+					new File("data/correspondences/A_B_correspondences.csv"), correspondencesA_B);
 			new CSVCorrespondenceFormatter().writeCSV(
-					new File(correspondencesFolderPath + "A_D_correspondences.csv"), correspondencesA_D);
+					new File("data/correspondences/A_D_correspondences.csv"), correspondencesA_D);
 			new CSVCorrespondenceFormatter().writeCSV(
-					new File(correspondencesFolderPath + "B_C_correspondences.csv"), correspondencesB_C);
+					new File("data/correspondences/B_C_correspondences.csv"), correspondencesB_C);
 			new CSVCorrespondenceFormatter().writeCSV(
-					new File(correspondencesFolderPath + "C_D_correspondences.csv"), correspondencesC_D);
+					new File("data/correspondences/C_D_correspondences.csv"), correspondencesC_D);
 			new CSVCorrespondenceFormatter().writeCSV(
-					new File(correspondencesFolderPath + "C_E_correspondences.csv"), correspondencesC_E);
+					new File("data/correspondences/C_E_correspondences.csv"), correspondencesC_E);
 
 			logger.info("*\tEvaluating result\t*");
 			// evaluate your result
