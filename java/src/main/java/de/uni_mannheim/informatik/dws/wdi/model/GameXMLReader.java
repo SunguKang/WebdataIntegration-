@@ -99,6 +99,7 @@ String id = getValueFromChildElement(node, "id");
 	game.setSummary(getValueFromChildElement(node, "summary"));
 	game.setRating(getValueFromChildElement(node, "rating"));
 	game.setSeries(getValueFromChildElement(node, "series"));
+	game.setNamePreprocessed(getValueFromChildElement(node, "name_preprocessed"));
 	
 	// convert the publicationDate string into a DateTime object
 	try {

@@ -9,14 +9,19 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 public class GloballySoldUnitsEvaluationRule extends EvaluationRule<Game, Attribute> {
     // TODO I think this is only in dataset C, but not completely shure
     @Override
-    public boolean isEqual(Game game, Game recordType1, Attribute attribute) {
-        // TODO implement
-        return false;
+    public boolean isEqual(Game record1, Game record2, Attribute attribute) {
+        if(record1.getPublicationDate()==null && record2.getPublicationDate()==null)
+            return true;
+        else if(record1.getPublicationDate()==null ^ record2.getPublicationDate()==null)
+            return false;
+        else
+            return record1.getPublicationDate().getYear() == record2.getPublicationDate().getYear();
     }
 
     @Override
-    public boolean isEqual(Game game, Game recordType1, Correspondence<Attribute, Matchable> correspondence) {
-        return false;
+    public boolean isEqual(Game record1, Game record2, Correspondence<Attribute, Matchable> correspondence) {
+        return isEqual(record1, record2, (Attribute)null);
     }
+
 
 }

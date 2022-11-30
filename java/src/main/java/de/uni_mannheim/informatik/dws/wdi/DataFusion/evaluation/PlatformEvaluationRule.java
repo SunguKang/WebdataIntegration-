@@ -6,15 +6,6 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
-public class PlatformEvaluationRule extends EvaluationRule<Game, Attribute> {
-    @Override
-    public boolean isEqual(Game game, Game recordType1, Attribute attribute) {
-        //TODO implement
-        return false;
-    }
+public class PlatformEvaluationRule extends StringEvaluationRule{
 
-    @Override
-    public boolean isEqual(Game game, Game recordType1, Correspondence<Attribute, Matchable> correspondence) {
-        return false;
-    }
 }

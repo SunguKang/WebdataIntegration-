@@ -37,6 +37,7 @@ public class SummaryFuserFavourSource extends AttributeValueFuser<String, Game, 
 
     @Override
     public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+        //TODO implement
         return null;
     }
 ////attribute only in dataset A

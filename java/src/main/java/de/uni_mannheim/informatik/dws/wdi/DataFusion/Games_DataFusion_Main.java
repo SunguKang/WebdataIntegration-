@@ -19,7 +19,6 @@ import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy;
-//import de.uni_mannheim.informatik.dws.winter.model.*;
 import de.uni_mannheim.informatik.dws.winter.model.DataSet;
 import de.uni_mannheim.informatik.dws.winter.model.FusibleDataSet;
 import de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet;
@@ -53,9 +52,6 @@ public class Games_DataFusion_Main
 			Properties prop = new Properties();
 			prop.load(is);
 
-			//		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
-			//		String folderGoldStandardIR = "../data/gold_standard/merged/";
-			//		String correspondencesFolderPath = "../data/correspondences/";
 			String dataFolderPath = prop.getProperty("data.path");
 			String folderPathXMLPreprocessedFiles = dataFolderPath + prop.getProperty("data.preprocessing.path")
 					+ prop.getProperty("data.preprocessing.preprocessed_xml.path");
@@ -63,6 +59,9 @@ public class Games_DataFusion_Main
 			String correspondencesFolderPath = dataFolderPath + prop.getProperty("data.correspondences.path");
 			String fusedFolderPath = dataFolderPath + prop.getProperty("data.fused.path");
 			String goldStandardFusionPath = dataFolderPath + prop.getProperty("data.gold_standard_fusion.path");
+
+			String record_path = "/videogames/videogame";
+			String debugResultsOutputPath = "data/output/";
 
 			// Load the Data into FusibleDataSet, data set A as HashedDataset and the rest are FusibleDataset (might not work)
 			logger.info("*\tLoading datasets\t*");
@@ -73,16 +72,17 @@ public class Games_DataFusion_Main
 			FusibleDataSet<Game, Attribute> data_E = new FusibleHashedDataSet<>();
 
 			//relative paths within the git folder
+			logger.info("*\tLoading from XML\t*");
 			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_B.xml"),
-					"/videogames/videogame", data_B);
+					record_path, data_B);
 			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_A.xml"),
-					"/videogames/videogame", data_A);
+					record_path, data_A);
 			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_C.xml"),
-					"/videogames/videogame", data_C);
+					record_path, data_C);
 			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_D.xml"),
-					"/videogames/videogame", data_D);
+					record_path, data_D);
 			new GameXMLReader().loadFromXML(new File(folderPathXMLPreprocessedFiles + "Dataset_E.xml"),
-					"/videogames/videogame", data_E);
+					record_path, data_E);
 
 			data_A.printDataSetDensityReport();
 			data_B.printDataSetDensityReport();
@@ -121,7 +121,7 @@ public class Games_DataFusion_Main
 			logger.info("*\tEvaluating results\t*");
 			DataSet<Game, Attribute> gs = new FusibleHashedDataSet<>();
 			new GameXMLReader().loadFromXML(new File(goldStandardFusionPath + "gold.xml"),
-					"/videogames/videogame", gs);
+					record_path, gs);
 
 			for (Game g : gs.get()) {
 				logger.info(String.format("gs: %s", g.getIdentifier()));
@@ -130,24 +130,27 @@ public class Games_DataFusion_Main
 			// define the fusion strategy
 			DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
 			// write debug results to file
-			strategy.activateDebugReport("data/output/debugResultsDatafusion.csv", -1, gs);
+			//TODO comment in again
+			//strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
 			// add attribute fusers
 
 			//TODO Adapt
 			//TODO create the mentioned Fusers and Evaluators
-			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
-			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());
+			// TODO deleted not needed evaluators
+			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new StringEvaluationRule());
+			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new StringEvaluationRule(1.0));
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
+			// TODO should not be the most recent as this is wrong for some datasets
 			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserMostRecent(), new PublicationDateEvaluationRule());
-			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserFavourSource(), new GloballySoldUnitsEvaluationRule());
+			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserFavourSource(), new FloatEvaluationRule());
 			strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(), new GenresEvaluationRule());
-			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new CriticScoreEvaluationRule());
-			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new UserScoreEvaluationRule());
+			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new FloatEvaluationRule());
+			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new FloatEvaluationRule());
 			strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(), new DevelopersEvaluationRule());
-			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new SummaryEvaluationRule());
-			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new RatingEvaluationRule());
-			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new SeriesEvaluationRule());
+			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new StringEvaluationRule());
+			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new StringEvaluationRule());
+			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new StringEvaluationRule());
 
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
@@ -156,7 +159,7 @@ public class Games_DataFusion_Main
 			engine.printClusterConsistencyReport(correspondences, null);
 
 			// print record groups sorted by consistency
-			engine.writeRecordGroupsByConsistency(new File("data/output/recordGroupConsistencies.csv"), correspondences, null);
+			engine.writeRecordGroupsByConsistency(new File(debugResultsOutputPath + "recordGroupConsistencies.csv"), correspondences, null);
 
 			// run the fusion
 			logger.info("*\tRunning data fusion\t*");

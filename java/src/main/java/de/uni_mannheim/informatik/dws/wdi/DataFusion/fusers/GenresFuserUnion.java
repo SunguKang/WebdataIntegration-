@@ -40,6 +40,7 @@ public class GenresFuserUnion extends AttributeValueFuser<List<Genre>, Game, Att
 
     @Override
     public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+        // TODO implement
         return null;
     }
 }

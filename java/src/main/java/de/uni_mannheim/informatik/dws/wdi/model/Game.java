@@ -39,18 +39,7 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	private String rating;
 	private String series;
 	private String namePreprocessed;
-	
 
-//	Those are not in the Movie Model of Data Fusion
-//	@Override
-//	public String getIdentifier() {
-//		return id;
-//	}
-//	@Override
-//	public String getProvenance() {
-//		return provenance;
-//	}
-	
 	public String getName(){
 		return name;
 	}
@@ -84,7 +73,12 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	}
 
 	public Float getGloballySoldUnits() {
-        return globallySoldUnits;
+		if (globallySoldUnits == null){
+			return Float.NaN;
+		}
+	    else {
+			return globallySoldUnits;
+		}
     }
     
 	public void setGloballyySoldUnits(Float globallySoldUnits) {
@@ -100,7 +94,11 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	    }    
 	    
 	public Float getCriticScore() {
-	        return criticScore;
+		if (criticScore == null)
+				return Float.NaN;
+		else {
+			return criticScore;
+		}
 	    }
 	    
 	public void setCriticScore(Float criticScore) {
@@ -108,7 +106,11 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	    }    
 	    
 	public Float getUserScore() {
-	        return userScore;
+		if (userScore == null)
+		return Float.NaN;
+	    else {
+			return userScore;
+		}
 	    }
 	    
 	public void setUserScore(Float userScore) {
@@ -204,7 +206,6 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 	}
 
 	@Override
-	//  TODO has to be adapted
 	public boolean hasValue(Attribute attribute) {
 		if(attribute==NAME)
 			return getName() != null && !getName().isEmpty();

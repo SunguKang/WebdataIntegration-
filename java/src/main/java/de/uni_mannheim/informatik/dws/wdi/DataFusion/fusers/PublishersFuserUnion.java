@@ -40,6 +40,7 @@ public class PublishersFuserUnion extends AttributeValueFuser<List<Publisher>, G
 
     @Override
     public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+        //TODO implement
         return null;
     }
 

@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class DateFuserMostRecent extends AttributeValueFuser<LocalDateTime, Game, Attribute> {
     
     public DateFuserMostRecent() {
-		super(new MostRecent<LocalDateTime, Game, Attribute>());
+		super(new DateConflictResolution<Game, Attribute>());
 	}
 
     @Override
@@ -38,6 +38,7 @@ public class DateFuserMostRecent extends AttributeValueFuser<LocalDateTime, Game
 
     @Override
     public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+        // TODO implement
         return null;
     }
 // TODO

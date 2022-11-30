@@ -5,6 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformYearsGenerator;
+import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators.*;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.util.HelperClassComparatorWeightPair;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
@@ -12,7 +14,6 @@ import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparat
 import org.slf4j.Logger;
 
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators.GameNameComparatorLevenshtein;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 //import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;
@@ -51,6 +52,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
 			String correspondencesFolderPath = dataFolderPath + prop.getProperty("data.correspondences.path");
 
+			String debugResultsOuputPath = "data/output/";
 			// loading data
 			logger.info("*\tLoading datasets\t*");
 			HashedDataSet<Game, Attribute> data_A = new HashedDataSet<>();
@@ -105,13 +107,39 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
 
-			int comparatorSetChosenKey = 0;
+			int comparatorSetChosenKey = 2;
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
 			List<HelperClassComparatorWeightPair> compartorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 1));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(1, compartorSetOne);
 
-			String debugResultsOuputPath = "data/output/";
+			List<HelperClassComparatorWeightPair> compartorSetTwo =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetsDict.put(2, compartorSetTwo);
+
+			List<HelperClassComparatorWeightPair> comparatorSetThree =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorLevenshtein(), 0.7));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetsDict.put(3, comparatorSetThree);
+
+			List<HelperClassComparatorWeightPair> comparatorSetFour =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorEqual(), 0.7));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetsDict.put(4, comparatorSetFour);
+
+			List<HelperClassComparatorWeightPair> comparatorSetFive =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetsDict.put(5, comparatorSetFive);
+
+			List<HelperClassComparatorWeightPair> comparatorSetSix =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
+			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetsDict.put(6, comparatorSetSix);
 
 			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
 			for (String datasetKey : pairsDict.keySet()){
@@ -124,29 +152,15 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					currentMatchingRule.addComparator(comparatorWeightPair.getComparator(), comparatorWeightPair.getWeight());
 				}
 			}
-			//			matchingRuleA_B.activateDebugReport("data/output/debugResultsMatchingRuleA_B.csv",
-			//					1000, gsTestA_B);
-			//			matchingRuleA_B.addComparator(new GameNameComparatorLevenshtein(), 1);
-			//			matchingRuleA_D.activateDebugReport("data/output/debugResultsMatchingRuleA_D.csv",
-			//					1000, gsTestA_D);
-			//			matchingRuleA_D.addComparator(new GameNameComparatorLevenshtein(), 1);
-			//			matchingRuleB_C.activateDebugReport("data/output/debugResultsMatchingRuleB_C.csv",
-			//					1000, gsTestB_C);
-			//			matchingRuleB_C.addComparator(new GameNameComparatorLevenshtein(), 1);
-			//			matchingRuleC_D.activateDebugReport("data/output/debugResultsMatchingRuleC_D.csv",
-			//					1000, gsTestC_D);
-			//			matchingRuleC_D.addComparator(new GameNameComparatorLevenshtein(), 1);
-			//			matchingRuleC_E.activateDebugReport("data/output/debugResultsMatchingRuleC_E.csv",
-			//					1000, gsTestC_E);
-			//			matchingRuleC_E.addComparator(new GameNameComparatorLevenshtein(), 1);
 
 			// create a blocker (blocking strategy)
-			//include year in GameBlockingKeyByPlatformGenerator because lazy
-			StandardRecordBlocker<Game, Attribute> blockerA_B = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformGenerator());
-			StandardRecordBlocker<Game, Attribute> blockerA_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformGenerator());
-			StandardRecordBlocker<Game, Attribute> blockerB_C = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformGenerator());
-			StandardRecordBlocker<Game, Attribute> blockerC_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformGenerator());
-			StandardRecordBlocker<Game, Attribute> blockerC_E = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformGenerator());
+			// did not use NeighbourhoodBlocker as that was not documented well enough, better to achieve with
+			// StandardRecordBlocker
+			StandardRecordBlocker<Game, Attribute> blockerA_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerA_B = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerB_C = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerC_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerC_E = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
 
 			//StandardRecordBlocker<Game, Attribute> blocker2 = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByYearGenerator());
 			// NoBlocker<Movie, Attribute> blocker = new NoBlocker<>();
