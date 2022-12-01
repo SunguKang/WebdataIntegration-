@@ -5,12 +5,15 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
+import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformYearGenerator;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformYearsGenerator;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators.*;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.util.HelperClassComparatorWeightPair;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
+import de.uni_mannheim.informatik.dws.winter.model.*;
 import org.slf4j.Logger;
 
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
@@ -22,10 +25,6 @@ import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 //import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
-import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
-import de.uni_mannheim.informatik.dws.winter.model.HashedDataSet;
-import de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard;
-import de.uni_mannheim.informatik.dws.winter.model.Performance;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
@@ -87,16 +86,17 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			gsTestC_E.loadFromCSVFile(new File(folderGoldStandardIR + "C-E.csv"));
 
 			// create a matching rule
+			double thresh = 0.7;
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
-					0.7);
+					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_D = new LinearCombinationMatchingRule<>(
-					0.7);
+					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleB_C = new LinearCombinationMatchingRule<>(
-					0.7);
+					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleC_D = new LinearCombinationMatchingRule<>(
-					0.7);
+					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleC_E = new LinearCombinationMatchingRule<>(
-					0.7);
+					thresh);
 
 			//this exports the debug report
 			Map<String, List<Serializable>> pairsDict = Map.ofEntries(
@@ -107,7 +107,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
 
-			int comparatorSetChosenKey = 2;
+			int comparatorSetChosenKey = 1;
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
 			List<HelperClassComparatorWeightPair> compartorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
 			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
@@ -115,30 +115,30 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			comparatorSetsDict.put(1, compartorSetOne);
 
 			List<HelperClassComparatorWeightPair> compartorSetTwo =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			compartorSetTwo.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			compartorSetTwo.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(2, compartorSetTwo);
 
 			List<HelperClassComparatorWeightPair> comparatorSetThree =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorLevenshtein(), 0.7));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetThree.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorLevenshtein(), 0.7));
+			comparatorSetThree.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(3, comparatorSetThree);
 
 			List<HelperClassComparatorWeightPair> comparatorSetFour =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorEqual(), 0.7));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetFour.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorEqual(), 0.7));
+			comparatorSetFour.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(4, comparatorSetFour);
 
 			List<HelperClassComparatorWeightPair> comparatorSetFive =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(5, comparatorSetFive);
 
 			List<HelperClassComparatorWeightPair> comparatorSetSix =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
-			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
+			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(6, comparatorSetSix);
 
 			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
@@ -147,7 +147,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 				LinearCombinationMatchingRule currentMatchingRule = (LinearCombinationMatchingRule) val.get(0);
 				MatchingGoldStandard currentGS = (MatchingGoldStandard) val.get(1);
 				currentMatchingRule.activateDebugReport(debugResultsOuputPath + "debugResultsMatchingRule" +
-								datasetKey + ".csv", 1000, currentGS);
+								datasetKey + ".csv", 10000, currentGS);
 				for (HelperClassComparatorWeightPair comparatorWeightPair : chosenCompartorSet) {
 					currentMatchingRule.addComparator(comparatorWeightPair.getComparator(), comparatorWeightPair.getWeight());
 				}
@@ -175,11 +175,12 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 
 			//blocker2.setMeasureBlockSizes(true);
 			//Write debug results to file:
-			blockerA_B.collectBlockSizeData("data/output/debugResultsBlockingA_B.csv", 100);
-			blockerA_D.collectBlockSizeData("data/output/debugResultsBlockingA_D.csv", 100);
-			blockerB_C.collectBlockSizeData("data/output/debugResultsBlockingB_C.csv", 100);
-			blockerC_D.collectBlockSizeData("data/output/debugResultsBlockingC_D.csv", 100);
-			blockerC_E.collectBlockSizeData("data/output/debugResultsBlockingC_E.csv", 100);
+			blockerA_B.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingA_B.csv", 100);
+			blockerA_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingB_D.csv", 100);
+			blockerB_C.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingB_C.csv", 100);
+			blockerC_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingC_D.csv", 100);
+			blockerC_E.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingC_E.csv", 100);
+
 
 			//blocker2.collectBlockSizeData("data/output/debugResultsBlocking2.csv", 100);
 			// Initialize Matching Engine
