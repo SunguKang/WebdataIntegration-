@@ -43,22 +43,26 @@ public class StringEvaluationRule extends EvaluationRule<Game, Attribute> {
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
         String attributeIdentifier = attribute.getIdentifier();
         Class<?> clazz = Game.class;
+        Field currentField = null;
         try {
-            Field currentField = clazz.getDeclaredField(attributeIdentifier);
+            currentField = clazz.getDeclaredField(attributeIdentifier);
             currentField.setAccessible(true);
 
             String string1 = (String) currentField.get(record1);
             String string2 = (String) currentField.get(record1);
-            if(string1==null && string2==null)
+            if (string1 == null && string2 == null)
                 return true;
-            else if(string1==null ^ string2==null)
+            else if (string1 == null ^ string2 == null)
                 return false;
-            else if(string1.equals(string2))
+            else if (string1.equals(string2))
                 return true;
             else
                 return isEqualSimilarity(string1, string2);
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
+        } finally {
+            if (currentField != null)
+                currentField.setAccessible(false);
         }
 
 

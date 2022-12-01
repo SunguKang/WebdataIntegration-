@@ -15,8 +15,9 @@ public class FloatEvaluationRule extends EvaluationRule<Game, Attribute> {
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
         String attributeIdentifier = attribute.getIdentifier();
         Class<?> clazz = Game.class;
+        Field currentField = null;
         try {
-            Field currentField = clazz.getDeclaredField(attributeIdentifier);
+            currentField = clazz.getDeclaredField(attributeIdentifier);
             currentField.setAccessible(true);
 
             Float number1 = (Float) currentField.get(record1);
@@ -29,6 +30,9 @@ public class FloatEvaluationRule extends EvaluationRule<Game, Attribute> {
                 return number1.compareTo(number2) == 0;
         } catch (NoSuchFieldException | IllegalAccessException e) {
             throw new RuntimeException(e);
+        } finally {
+            if (currentField != null)
+                currentField.setAccessible(false);
         }
     }
 
