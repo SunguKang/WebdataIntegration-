@@ -7,6 +7,12 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Properties;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.util.Locale;
+
 //TODO write + import classes for Game attributes
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.evaluation.*;
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers.*;
@@ -55,7 +61,7 @@ public class Games_DataFusion_Main
 			String dataFolderPath = prop.getProperty("data.path");
 			String folderPathXMLPreprocessedFiles = dataFolderPath + prop.getProperty("data.preprocessing.path")
 					+ prop.getProperty("data.preprocessing.preprocessed_xml.path");
-			String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
+//unused    String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
 			String correspondencesFolderPath = dataFolderPath + prop.getProperty("data.correspondences.path");
 			String fusedFolderPath = dataFolderPath + prop.getProperty("data.fused.path");
 			String goldStandardFusionPath = dataFolderPath + prop.getProperty("data.gold_standard_fusion.path");
@@ -63,7 +69,7 @@ public class Games_DataFusion_Main
 			String record_path = "/videogames/videogame";
 			String debugResultsOutputPath = "data/output/";
 
-			// Load the Data into FusibleDataSet, data set A as HashedDataset and the rest are FusibleDataset (might not work)
+			// Load the Data as FusibleHashedDataSet (original idea:  data set A as HashedDataset and the rest are FusibleDataSet, might not work) 
 			logger.info("*\tLoading datasets\t*");
 			FusibleDataSet<Game, Attribute> data_A = new FusibleHashedDataSet<>();
 			FusibleDataSet<Game, Attribute> data_B = new FusibleHashedDataSet<>();
@@ -90,19 +96,29 @@ public class Games_DataFusion_Main
 			data_D.printDataSetDensityReport();
 			data_E.printDataSetDensityReport();
 
-			// Maintain Provenance
-			// Scores (e.g. from rating)
-			// TODO set valid scores
-			data_A.setScore(1.0);
-			data_B.setScore(2.0);
-			data_C.setScore(3.0);
-			data_D.setScore(3.0);
-			data_E.setScore(3.0);
+			// Provenance Scores (e.g. from rating)
+			// the higher the score the more trust worthy the data is (acording to the tutors)
+			data_A.setScore(2.0);  //one source, not wiki (Metacritic)
+			data_B.setScore(3.0); //multiple sources, one is wiki
+			data_C.setScore(4.0); //multiple sources, none is wiki
+			data_D.setScore(2.0); //one source, not wiki (TrueTrophies.com)
+			data_E.setScore(1.0); //raw wiki
+			
+			
+			// Date (e.g. last update)
+			DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+			        .appendPattern("yyyy-MM-dd")
+			        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
+			        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+			        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+			        .toFormatter(Locale.ENGLISH);
 
-			//		TODO: Take dates of provenance files
-			//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
-			//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
-			//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
+
+			data_A.setDate(LocalDateTime.parse("2022-02-01", formatter)); //imputed day-part of date
+			data_B.setDate(LocalDateTime.parse("2021-12-30", formatter));
+			data_C.setDate(LocalDateTime.parse("2017-01-01", formatter)); //imputed day-part of date
+			data_D.setDate(LocalDateTime.parse("2021-12-01", formatter)); //imputed day-part of date
+			data_E.setDate(LocalDateTime.parse("2022-10-04", formatter)); 
 
 
 			// load correspondences
@@ -129,13 +145,13 @@ public class Games_DataFusion_Main
 
 			// define the fusion strategy
 			DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
-			// write debug results to file
+			
+			// write debug results to file			
 			//TODO comment in again
 			//strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
 			// add attribute fusers
 
-			//TODO Adapt
 			//TODO create the mentioned Fusers and Evaluators
 			// TODO deleted not needed evaluators
 			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new StringEvaluationRule());
@@ -155,6 +171,7 @@ public class Games_DataFusion_Main
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
+			//TODO fix NullpointerException caused by FloatEvaluationRule (not the fist time it is called); Breakpoint file is in "../orga"
 			// print consistency report
 			engine.printClusterConsistencyReport(correspondences, null);
 
