@@ -61,7 +61,7 @@ public class Games_DataFusion_Main
 			String dataFolderPath = prop.getProperty("data.path");
 			String folderPathXMLPreprocessedFiles = dataFolderPath + prop.getProperty("data.preprocessing.path")
 					+ prop.getProperty("data.preprocessing.preprocessed_xml.path");
-			String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
+//unused    String folderGoldStandardIR = dataFolderPath + prop.getProperty("data.gold_standard_ir.path");
 			String correspondencesFolderPath = dataFolderPath + prop.getProperty("data.correspondences.path");
 			String fusedFolderPath = dataFolderPath + prop.getProperty("data.fused.path");
 			String goldStandardFusionPath = dataFolderPath + prop.getProperty("data.gold_standard_fusion.path");
@@ -115,14 +115,11 @@ public class Games_DataFusion_Main
 			        .toFormatter(Locale.ENGLISH);
 
 
-			data_A.setDate(LocalDateTime.parse("2022-02-01", formatter)); //no information about day
+			data_A.setDate(LocalDateTime.parse("2022-02-01", formatter)); //imputed day
 			data_B.setDate(LocalDateTime.parse("2021-12-30", formatter));
-			data_C.setDate(LocalDateTime.parse("2017-01-01", formatter)); //no information about day
-			data_D.setDate(LocalDateTime.parse("2021-12-01", formatter)); //no information about day
+			data_C.setDate(LocalDateTime.parse("2017-01-01", formatter)); //imputed day
+			data_D.setDate(LocalDateTime.parse("2021-12-01", formatter)); //imputed day
 			data_E.setDate(LocalDateTime.parse("2022-10-04", formatter)); 
-
-			//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
-			//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
 
 
 			// load correspondences
