@@ -2,9 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.model.Genre;
-import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
-import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.list.Union;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
@@ -20,27 +18,48 @@ public class GenresFuserUnion extends AttributeValueFuser<List<Genre>, Game, Att
     public GenresFuserUnion() {
 		super(new Union<Genre, Game, Attribute>());
 	}
-
+    
     @Override
-    public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        //TODO implement
-        FusedValue<List<Genre>, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
-		gameFused.setGenres(fused.getValue());
-		gameFused.setAttributeProvenance(Game.GENRES, fused.getOriginalIds());
-    }
-
+    //  //TODO implement comparison (if attribute values are too similar)
+	public void fuse(RecordGroup<Game, Attribute> group, Game fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
+		FusedValue<List<Genre>, Game, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
+		fusedRecord.setGenres(fused.getValue());
+		fusedRecord.setAttributeProvenance(Game.GENRES, fused.getOriginalIds());
+	}
+  
     @Override
-    public boolean hasValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-        return game.hasValue(Game.GENRES);
-    }
-
-     public List<Genre> getValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-		return game.getGenres();
+	public boolean hasValue(Game record, Correspondence<Attribute, Matchable> correspondence) {
+		return record.hasValue(Game.GENRES);
 	}
 
-    @Override
-    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        // TODO implement
-        return null;
-    }
+	@Override
+	public List<Genre> getValue(Game record, Correspondence<Attribute, Matchable> correspondence) {
+		return record.getGenres();
+	}
+    
+//	  changed it so it is like in the excercise
+//  import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
+//  import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
+//	import de.uni_mannheim.informatik.dws.wdi.model.Publisher
+//    @Override
+//    public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+//        FusedValue<List<Genre>, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
+//		gameFused.setGenres(fused.getValue());
+//		gameFused.setAttributeProvenance(Game.GENRES, fused.getOriginalIds());
+//    }
+//    @Override
+//    public boolean hasValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
+//        return game.hasValue(Game.GENRES);
+//    }
+//
+//     public List<Genre> getValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
+//		return game.getGenres();
+//	}
+
+ 	
+//   //we propably don't need this 
+//   @Override
+//   public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+//       return null;
+//   }
 }

@@ -7,15 +7,14 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 public class CriticScoreEvaluationRule extends EvaluationRule<Game, Attribute> {
-    // TODO implement
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        if(record1.getPublicationDate()==null && record2.getPublicationDate()==null)
+        if(record1.getCriticScore()==null && record2.getCriticScore()==null)
             return true;
-        else if(record1.getPublicationDate()==null ^ record2.getPublicationDate()==null)
+        else if(record1.getCriticScore()==null ^ record2.getCriticScore()==null)
             return false;
         else
-            return record1.getPublicationDate().getYear() == record2.getPublicationDate().getYear();
+            return record1.getCriticScore() == record2.getCriticScore();
     }
 
     @Override

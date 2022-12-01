@@ -36,10 +36,11 @@ public class DateFuserMostRecent extends AttributeValueFuser<LocalDateTime, Game
 		return game.getPublicationDate();
 	}
 
-    @Override
-    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        // TODO implement
-        return null;
-    }
-// TODO
+//    @Override
+//    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
+//        // I dont think we need it
+//        return null;
+//    }
+ // TODO write meaningful Todo or delete
+
 }
