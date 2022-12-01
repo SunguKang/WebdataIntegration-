@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2022r2 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap" uid="1" editable="1" blackbox="0">
+		<properties SelectedLanguage="builtin"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="13" kind="2">
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="480" lty="18" rbx="556" rby="34"/>
+					<data>
+						<constant value="PS4_id_" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="15" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="6"/>
+						<datapoint pos="1" key="7"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="570" lty="-3" rbx="645" rby="51"/>
+				</component>
+				<component name="target_schema" library="xml" uid="10" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="810" lty="4" rbx="1087" rby="462"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="videogames" expanded="1">
+										<entry name="videogame" inpkey="9" expanded="1">
+											<entry name="id" inpkey="10"/>
+											<entry name="name" inpkey="11"/>
+											<entry name="platform" inpkey="12"/>
+											<entry name="publishers" expanded="1">
+												<entry name="publisher" inpkey="13" expanded="1">
+													<entry name="namePublisher" inpkey="14"/>
+												</entry>
+											</entry>
+											<entry name="publicationDate" inpkey="15"/>
+											<entry name="globallySoldUnits" inpkey="16"/>
+											<entry name="genres" expanded="1">
+												<entry name="genre" inpkey="17" expanded="1">
+													<entry name="genreName" inpkey="18"/>
+												</entry>
+											</entry>
+											<entry name="criticScore" inpkey="19"/>
+											<entry name="userScore" inpkey="20"/>
+											<entry name="developers" expanded="1">
+												<entry name="developer" inpkey="21" expanded="1">
+													<entry name="nameDeveloper" inpkey="22"/>
+												</entry>
+											</entry>
+											<entry name="summary" inpkey="23"/>
+											<entry name="rating" inpkey="24"/>
+											<entry name="series" inpkey="25"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="target_schema.xsd" instanceroot="{}videogames" inputinstance="target_schema.xml" outputinstance="target_schema.xml"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="12" kind="2">
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="723" lty="109" rbx="781" rby="125"/>
+					<data>
+						<constant value="PS4" datatype="string"/>
+					</data>
+				</component>
+				<component name="set-null" library="db" uid="21" kind="5">
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="561" lty="532" rbx="621" rby="569"/>
+				</component>
+				<component name="token_not_empty" library="user" uid="19" kind="19" visible="0" blackbox="0">
+					<view ltx="376" lty="357" rbx="474" rby="374"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="4" componentid="4"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="28" componentid="3"/>
+						</root>
+					</data>
+				</component>
+				<component name="token_not_empty" library="user" uid="18" kind="19" visible="0" blackbox="0">
+					<view ltx="376" lty="307" rbx="474" rby="324"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="3" componentid="4"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="29" componentid="3"/>
+						</root>
+					</data>
+				</component>
+				<component name="token_not_empty" library="user" uid="17" kind="19" visible="0" blackbox="0">
+					<view ltx="376" lty="253" rbx="474" rby="270"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="input" inpkey="1" componentid="4"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="30" componentid="3"/>
+						</root>
+					</data>
+				</component>
+				<component name="ps4_games" library="text" uid="11" kind="16">
+					<properties/>
+					<view ltx="26" lty="19" rbx="324" rby="413"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Rows" outkey="31" expanded="1">
+										<entry name="ID" outkey="32"/>
+										<entry name="GameName" outkey="33"/>
+										<entry name="Publisher" outkey="2"/>
+										<entry name="ReleaseYear" outkey="34"/>
+										<entry name="ReleaseDate" outkey="35"/>
+										<entry name="Developer" outkey="36"/>
+										<entry name="Genre" outkey="37"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="Original Data\playstation_4_games.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="playstation_4_games" block="Rows">
+									<field0 name="ID" type="integer"/>
+									<field1 name="GamePSID" type="string"/>
+									<field2 name="GameName" type="string"/>
+									<field3 name="Publisher" type="string"/>
+									<field4 name="ReleaseYear" type="decimal"/>
+									<field5 name="ReleaseDate" type="string"/>
+									<field6 name="Developer" type="string"/>
+									<field7 name="Genre" type="string"/>
+									<field8 name="Features" type="string"/>
+									<field9 name="Size" type="string"/>
+									<field10 name="Medium" type="string"/>
+									<field11 name="Hardware" type="string"/>
+									<field12 name="CompletionTime(Hours)" type="string"/>
+									<field13 name="is_Digital_game" type="string"/>
+									<field14 name="is_Physical_game" type="string"/>
+									<field15 name="OfficialWebsite" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="Date" library="user" uid="43" kind="19" visible="0" blackbox="0">
+					<view ltx="459" lty="156" rbx="554" rby="189"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Year" inpkey="38" componentid="26"/>
+							<entry name="Date" inpkey="39" componentid="24"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="40" componentid="23"/>
+						</root>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="37">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="10"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="13"/>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="16"/>
+							<edge vertexkey="19"/>
+							<edge vertexkey="20"/>
+							<edge vertexkey="23"/>
+							<edge vertexkey="24"/>
+							<edge vertexkey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="17"/>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="29">
+						<edges>
+							<edge vertexkey="21"/>
+							<edge vertexkey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="35">
+						<edges>
+							<edge vertexkey="39"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="token_not_empty" library="user" uid="2" inline="1" editable="1" blackbox="0">
+		<structure>
+			<children>
+				<component name="result" library="core" uid="3" kind="7">
+					<sources>
+						<datapoint pos="0" key="12"/>
+					</sources>
+					<view ltx="933" lty="42" rbx="985" rby="79"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="5" kind="2">
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="512" lty="131" rbx="557" rby="147"/>
+					<data>
+						<constant value=", " datatype="string"/>
+					</data>
+				</component>
+				<component name="empty" library="lang" uid="9" kind="5">
+					<sources>
+						<datapoint pos="0" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="361" lty="15" rbx="430" rby="52"/>
+				</component>
+				<component name="if-else" library="core" uid="7" kind="4">
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="11"/>
+						<datapoint pos="2" key="4"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="459" lty="42" rbx="553" rby="113"/>
+				</component>
+				<component name="tokenize" library="core" uid="6" kind="5">
+					<sources>
+						<datapoint pos="0" key="3"/>
+						<datapoint pos="1" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="586" lty="61" rbx="672" rby="114"/>
+				</component>
+				<component name="set-null" library="db" uid="8" kind="5">
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="361" lty="60" rbx="421" rby="97"/>
+				</component>
+				<component name="input" library="core" uid="4" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="89" lty="76" rbx="163" rby="113"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="input"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="4"/>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="Date" library="user" uid="22" inline="1" editable="1" blackbox="0">
+		<structure>
+			<children>
+				<component name="is-null" library="db" uid="37" kind="5">
+					<sources>
+						<datapoint pos="0" key="10"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="224" lty="-67" rbx="288" rby="-30"/>
+				</component>
+				<component name="set-null" library="db" uid="35" kind="5">
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="224" lty="-22" rbx="284" rby="15"/>
+				</component>
+				<component name="Year" library="core" uid="26" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="37" lty="29" rbx="108" rby="66"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="Year"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="38" kind="2">
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="135" lty="66" rbx="207" rby="82"/>
+					<data>
+						<constant value="-06-21" datatype="string"/>
+					</data>
+				</component>
+				<component name="concat" library="core" uid="40" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="14"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="224" lty="29" rbx="299" rby="83"/>
+				</component>
+				<component name="if-else" library="core" uid="41" kind="4">
+					<sources>
+						<datapoint pos="0" key="9"/>
+						<datapoint pos="1" key="8"/>
+						<datapoint pos="2" key="7"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="631" lty="121" rbx="725" rby="192"/>
+				</component>
+				<component name="if-else" library="core" uid="25" kind="4">
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="2"/>
+						<datapoint pos="2" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="359" rbx="453" rby="71"/>
+				</component>
+				<component name="empty" library="lang" uid="28" kind="5">
+					<sources>
+						<datapoint pos="0" key="17"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="123" lty="121" rbx="192" rby="158"/>
+				</component>
+				<component name="Date" library="core" uid="24" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="19"/>
+					</targets>
+					<view ltx="26" lty="155" rbx="98" rby="192"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="Date"/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="23" kind="7">
+					<sources>
+						<datapoint pos="0" key="20"/>
+					</sources>
+					<view ltx="872" lty="138" rbx="924" rby="175"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="2"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="19">
+						<edges>
+							<edge vertexkey="7"/>
+							<edge vertexkey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="10"/>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="20"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
