@@ -41,7 +41,7 @@ def combine_samples_from_files():
                                                                         index=False, sep =";") 
 
 
-def look_up_matches_gs():
+def look_up_matches_gs(c_paths,paths,compare):
     #look up found matches from goldstandard files and put their rows in a table
     for i in range(0,len(c_paths)):               
         csv_1 = pd.read_csv(paths[compare[i][0]])
