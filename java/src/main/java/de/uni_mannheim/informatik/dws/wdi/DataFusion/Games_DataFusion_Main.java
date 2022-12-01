@@ -98,12 +98,12 @@ public class Games_DataFusion_Main
 
 			// Maintain Provenance
 			// Scores (e.g. from rating)
-			// TODO set valid scores
-			data_A.setScore(1.0);
-			data_B.setScore(2.0);
-			data_C.setScore(3.0);
-			data_D.setScore(3.0);
-			data_E.setScore(3.0);
+			// the higher the score the more trust worthy the data is (acording to the tutors)
+			data_A.setScore(2.0);  //one source, not wiki (Metacritic)
+			data_B.setScore(3.0); //multiple sources, one is wiki
+			data_C.setScore(4.0); //multiple sources, none is wiki
+			data_D.setScore(2.0); //one source, not wiki (TrueTrophies.com)
+			data_E.setScore(1.0); //raw wiki
 			
 			
 			// Date (e.g. last update)
@@ -172,6 +172,7 @@ public class Games_DataFusion_Main
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
+			//TODO fix Nullpointer Exception; Breakpoint file is in "../orga"
 			// print consistency report
 			engine.printClusterConsistencyReport(correspondences, null);
 
