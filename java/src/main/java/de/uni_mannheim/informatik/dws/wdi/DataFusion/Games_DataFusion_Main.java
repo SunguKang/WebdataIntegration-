@@ -7,6 +7,12 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Properties;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.util.Locale;
+
 //TODO write + import classes for Game attributes
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.evaluation.*;
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers.*;
@@ -98,9 +104,23 @@ public class Games_DataFusion_Main
 			data_C.setScore(3.0);
 			data_D.setScore(3.0);
 			data_E.setScore(3.0);
+			
+			
+			// Date (e.g. last update)
+			DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+			        .appendPattern("yyyy-MM-dd")
+			        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
+			        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+			        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+			        .toFormatter(Locale.ENGLISH);
 
-			//		TODO: Take dates of provenance files
-			//		ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
+
+			data_A.setDate(LocalDateTime.parse("2022-02-01", formatter)); //no information about day
+			data_B.setDate(LocalDateTime.parse("2021-12-30", formatter));
+			data_C.setDate(LocalDateTime.parse("2017-01-01", formatter)); //no information about day
+			data_D.setDate(LocalDateTime.parse("2021-12-01", formatter)); //no information about day
+			data_E.setDate(LocalDateTime.parse("2022-10-04", formatter)); 
+
 			//		ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
 			//		ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
 
