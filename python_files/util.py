@@ -2,6 +2,7 @@
 import random
 import pandas as pd
 import numpy as np
+import os
 
 gold_path = r"../data/gold_standard/gold_standard_leon"
 compare = [["A","B"],["A","D"],["B","C"],["C","D"],["C","E"]]
@@ -38,7 +39,8 @@ def combine_samples_from_files():
                                                                         "_"+str(num)+"_random_combinations"+
                                                                         str(j+1)+"_fith.csv",
                                                                         index=False, sep =";") 
-                        
+
+
 def look_up_matches_gs():
     #look up found matches from goldstandard files and put their rows in a table
     for i in range(0,len(c_paths)):               
@@ -53,3 +55,17 @@ def look_up_matches_gs():
             merged_csv = pd.concat([merged_csv,merged], axis=0)
         #save as dataset1-dataset2_new.csv
         merged_csv.to_csv(c_paths[i].replace(r".csv", "_full_rows.csv"), index=False, sep=";")
+
+def describe_gold():
+    #descriptives of gold standard
+    gold_path = "../data/gold_standard/merged"
+    files = os.listdir(gold_path)
+    counts = list()
+    for i in range(len(files)):
+        print(files[i].replace(r".csv",""), end="; Size: ")
+        files[i] = gold_path+"/"+files[i]
+        csv = pd.read_csv(files[i],header=None)
+        counts.append(csv[2].value_counts())
+        print(sum(counts[i]), end= " of which True: ")#/(counts[1]+counts[0])
+        print(round(100*counts[i][1]/(sum(counts[i])),), end = "%\n")
+    print("Total size: ",sum([sum(c) for c in counts]))
