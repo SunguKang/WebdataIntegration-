@@ -35,7 +35,8 @@ public class FloatEvaluationRule extends EvaluationRule<Game, Attribute> {
 
     @Override
     public boolean isEqual(Game record1, Game record2, Correspondence<Attribute, Matchable> correspondence) {
-        return isEqual(record1, record2, (Attribute)null);
+    	Attribute attribute = correspondence.getFirstRecord();
+        return isEqual(record1, record2, attribute);
     }
 
 

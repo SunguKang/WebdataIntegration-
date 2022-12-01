@@ -69,7 +69,7 @@ public class Games_DataFusion_Main
 			String record_path = "/videogames/videogame";
 			String debugResultsOutputPath = "data/output/";
 
-			// Load the Data into FusibleDataSet, data set A as HashedDataset and the rest are FusibleDataset (might not work)
+			// Load the Data as FusibleHashedDataSet (original idea:  data set A as HashedDataset and the rest are FusibleDataSet, might not work) 
 			logger.info("*\tLoading datasets\t*");
 			FusibleDataSet<Game, Attribute> data_A = new FusibleHashedDataSet<>();
 			FusibleDataSet<Game, Attribute> data_B = new FusibleHashedDataSet<>();
@@ -96,8 +96,7 @@ public class Games_DataFusion_Main
 			data_D.printDataSetDensityReport();
 			data_E.printDataSetDensityReport();
 
-			// Maintain Provenance
-			// Scores (e.g. from rating)
+			// Provenance Scores (e.g. from rating)
 			// the higher the score the more trust worthy the data is (acording to the tutors)
 			data_A.setScore(2.0);  //one source, not wiki (Metacritic)
 			data_B.setScore(3.0); //multiple sources, one is wiki
@@ -115,10 +114,10 @@ public class Games_DataFusion_Main
 			        .toFormatter(Locale.ENGLISH);
 
 
-			data_A.setDate(LocalDateTime.parse("2022-02-01", formatter)); //imputed day
+			data_A.setDate(LocalDateTime.parse("2022-02-01", formatter)); //imputed day-part of date
 			data_B.setDate(LocalDateTime.parse("2021-12-30", formatter));
-			data_C.setDate(LocalDateTime.parse("2017-01-01", formatter)); //imputed day
-			data_D.setDate(LocalDateTime.parse("2021-12-01", formatter)); //imputed day
+			data_C.setDate(LocalDateTime.parse("2017-01-01", formatter)); //imputed day-part of date
+			data_D.setDate(LocalDateTime.parse("2021-12-01", formatter)); //imputed day-part of date
 			data_E.setDate(LocalDateTime.parse("2022-10-04", formatter)); 
 
 
@@ -146,13 +145,13 @@ public class Games_DataFusion_Main
 
 			// define the fusion strategy
 			DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
-			// write debug results to file
+			
+			// write debug results to file			
 			//TODO comment in again
 			//strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
 			// add attribute fusers
 
-			//TODO Adapt
 			//TODO create the mentioned Fusers and Evaluators
 			// TODO deleted not needed evaluators
 			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new StringEvaluationRule());
@@ -172,7 +171,7 @@ public class Games_DataFusion_Main
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
-			//TODO fix Nullpointer Exception; Breakpoint file is in "../orga"
+			//TODO fix NullpointerException caused by FloatEvaluationRule (not the fist time it is called); Breakpoint file is in "../orga"
 			// print consistency report
 			engine.printClusterConsistencyReport(correspondences, null);
 
