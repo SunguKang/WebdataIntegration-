@@ -10,3 +10,5 @@ java/.idea
 java/.settings
 data/Log Files
 *.class
+*.csv
+data/fused/fused.xml

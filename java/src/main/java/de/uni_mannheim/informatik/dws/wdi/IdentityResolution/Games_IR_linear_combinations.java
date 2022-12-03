@@ -90,7 +90,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			gsTestC_E.loadFromCSVFile(new File(folderGoldStandardIR + "C-E.csv"));
 
 			// create a matching rule
-			double thresh = 0.7;
+			double thresh = 0.9;
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
 					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_D = new LinearCombinationMatchingRule<>(
@@ -111,7 +111,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
 			
-			int comparatorSetChosenKey = 9;
+			int comparatorSetChosenKey = 7;
 			
 			// nur Jahr und Name
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
@@ -147,12 +147,18 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(6, comparatorSetSix);
-			
+
+			List<HelperClassComparatorWeightPair> comparatorSetSeven =  new ArrayList<HelperClassComparatorWeightPair>();
+			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetsDict.put(7, comparatorSetSeven);
 			
 			List<HelperClassComparatorWeightPair> compartorSetNine =  new ArrayList<HelperClassComparatorWeightPair>();
 			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
 			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
 			comparatorSetsDict.put(9, compartorSetNine);
+
+
 
 			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
 			for (String datasetKey : pairsDict.keySet()){

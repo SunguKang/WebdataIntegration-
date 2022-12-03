@@ -109,7 +109,7 @@ public class Games_DataFusion_Main
 			data_B.setScore(3.0); //multiple sources, one is wiki
 			data_C.setScore(4.0); //multiple sources, none is wiki
 			data_D.setScore(2.0); //one source, not wiki (TrueTrophies.com)
-			data_E.setScore(1.0); //raw wiki
+			data_E.setScore(1.0); //raw wikipedia
 			
 			
 			// Date (e.g. last update)
@@ -151,28 +151,27 @@ public class Games_DataFusion_Main
 			}
 
 			// define the fusion strategy
-			DataFusionStrategy<Game, Attribute> strategy = new DataFusionStrategy<>(new GameXMLReader());
+			GameDataFusionStrategy<Game, Attribute> strategy = new GameDataFusionStrategy<>(new GameXMLReader());
 			
-			// write debug results to file			
-			//TODO comment in again
-			//strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
+			// write debug results to file
+			strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
 
-			//TODO finish String and FLoad Evaluators
-			//TODO adapt Unionfusers (if feasable)
-			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());//StringEvaluationRule());
-			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule());//StringEvaluationRule(1.0));
+			//TODO create the mentioned Fusers and Evaluators
+			// TODO deleted not needed evaluators
+			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
+			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserVoting(), new PlatformEvaluationRule(1.0));
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
-			//TODO does Voting make sense?
-			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserVoting(), new PublicationDateEvaluationRule());
-			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballysoldunitsFuserFavourSource(), new GloballySoldUnitsEvaluationRule());//FloatEvaluationRule());
+			// TODO should not be the most recent as this is wrong for some datasets
+			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserMostRecent(), new PublicationDateEvaluationRule());
+			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballySoldUnitsFuserFavourSource(), new GloballySoldUnitsEvaluationRule());
 			strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(), new GenresEvaluationRule());
-			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new CriticScoreEvaluationRule());//FloatEvaluationRule());
-			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new UserScoreEvaluationRule());//FloatEvaluationRule());
+			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new CriticScoreEvaluationRule());
+			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new UserScoreEvaluationRule());
 			strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(), new DevelopersEvaluationRule());
-			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new SummaryEvaluationRule());//StringEvaluationRule());
-			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new RatingEvaluationRule());//StringEvaluationRule());
-			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new SeriesEvaluationRule());//StringEvaluationRule());
+			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new SummaryEvaluationRule());
+			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new RatingEvaluationRule());
+			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new SeriesEvaluationRule());
 
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
@@ -186,6 +185,7 @@ public class Games_DataFusion_Main
 
 			// run the fusion
 			logger.info("*\tRunning data fusion\t*");
+
 			FusibleDataSet<Game, Attribute> fusedDataSet = engine.run(correspondences, null);
 
 			// write the result

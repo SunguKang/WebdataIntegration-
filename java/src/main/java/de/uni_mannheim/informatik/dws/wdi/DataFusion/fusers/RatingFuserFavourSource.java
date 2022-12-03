@@ -32,6 +32,7 @@ public class RatingFuserFavourSource extends AttributeValueFuser<String, Game, A
         return game.hasValue(Game.RATING);
     }
 
+    @Override
     public String getValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
 		return game.getRating();
 	}

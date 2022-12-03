@@ -2,6 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Developer;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
+import de.uni_mannheim.informatik.dws.wdi.model.Publisher;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.list.Union;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -10,27 +11,17 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 
 import java.util.List;
 
 public class DevelopersFuserUnion extends AttributeValueFuser<List<Developer>, Game, Attribute> {
 
     public DevelopersFuserUnion() {
-		super(new Union<Developer, Game, Attribute>());
+		super(new SmartUnion<Developer, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
 	}
 
-//	  changed it so it is like in the excercise
-//    import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
-//    import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule; 
-//    @Override
-//    public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-//        FusedValue<List<Developer>, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
-//		gameFused.setDevelopers(fused.getValue());
-//		gameFused.setAttributeProvenance(Game.DEVELOPERS, fused.getOriginalIds());
-//    }
-    
     @Override
-    //  //TODO implement comparison (if attribute values are too similar)
 	public void fuse(RecordGroup<Game, Attribute> group, Game fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		FusedValue<List<Developer>, Game, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
 		fusedRecord.setDevelopers(fused.getValue());
