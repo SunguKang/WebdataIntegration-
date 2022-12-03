@@ -10,6 +10,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class GenresEvaluationRule extends EvaluationRule<Game, Attribute> {
+	
+
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
         Set<String> attrListSet1 = new HashSet<>();

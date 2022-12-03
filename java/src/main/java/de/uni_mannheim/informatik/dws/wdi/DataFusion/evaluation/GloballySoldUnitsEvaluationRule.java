@@ -7,15 +7,14 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 public class GloballySoldUnitsEvaluationRule extends EvaluationRule<Game, Attribute> {
-    // TODO I think this is only in dataset C, but not completely shure
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        if(record1.getPublicationDate()==null && record2.getPublicationDate()==null)
+        if(record1.getGloballySoldUnits()==null && record2.getGloballySoldUnits()==null)
             return true;
-        else if(record1.getPublicationDate()==null ^ record2.getPublicationDate()==null)
+        else if(record1.getGloballySoldUnits()==null ^ record2.getGloballySoldUnits()==null)
             return false;
         else
-            return record1.getPublicationDate().getYear() == record2.getPublicationDate().getYear();
+            return record1.getGloballySoldUnits() == record2.getGloballySoldUnits();
     }
 
     @Override

@@ -7,15 +7,15 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 public class SummaryEvaluationRule extends EvaluationRule<Game, Attribute> {
-    // TODO implement
+	//is not perfect but I don't want to check for context without nltk
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        if(record1.getPublicationDate()==null && record2.getPublicationDate()==null)
+        if(record1.getSummary()==null && record2.getSummary()==null)
             return true;
-        else if(record1.getPublicationDate()==null ^ record2.getPublicationDate()==null)
+        else if(record1.getSummary()==null ^ record2.getSummary()==null)
             return false;
         else
-            return record1.getPublicationDate().getYear() == record2.getPublicationDate().getYear();
+            return record1.getSummary().equals(record2.getSummary());
     }
 
     @Override

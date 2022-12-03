@@ -9,12 +9,16 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 public class RatingEvaluationRule extends EvaluationRule<Game, Attribute> {
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        // TODO implement
-        return false;
+        if(record1.getRating()==null && record2.getRating()==null)
+            return true;
+        else if(record1.getRating()==null ^ record2.getRating()==null)
+            return false;
+        else
+            return record1.getRating().equals(record2.getRating());
     }
 
     @Override
     public boolean isEqual(Game record1, Game record2, Correspondence<Attribute, Matchable> correspondence) {
-        return false;
+        return isEqual(record1, record2, (Attribute)null);
     }
 }

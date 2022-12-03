@@ -7,17 +7,15 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
 public class SeriesEvaluationRule extends EvaluationRule<Game, Attribute> {
-    // TODO change maybe to other
-    @Override
+    
+	@Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        String string1 = record1.getSeries();
-        String string2 = record2.getSeries();
-        if(string1==null && record2.getPublicationDate()==null)
+        if(record1.getSeries()==null && record2.getSeries()==null)
             return true;
-        else if(record1.getPublicationDate()==null ^ record2.getPublicationDate()==null)
+        else if(record1.getSeries()==null ^ record2.getSeries()==null)
             return false;
         else
-            return string1.equals(string2);
+            return record1.getSeries().equals(record2.getSeries());
     }
 
     @Override
