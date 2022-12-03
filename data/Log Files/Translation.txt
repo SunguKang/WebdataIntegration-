@@ -19,3 +19,13 @@ Fusion_1:
 			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new SummaryEvaluationRule());//StringEvaluationRule());
 			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new RatingEvaluationRule());//StringEvaluationRule());
 			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new SeriesEvaluationRule());//StringEvaluationRule());
+
+IR_Years_9:
+			int comparatorSetChosenKey = 9;
+
+			
+			StandardRecordBlocker<Game, Attribute> blockerA_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerA_B = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerB_C = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerC_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
+			StandardRecordBlocker<Game, Attribute> blockerC_E = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());

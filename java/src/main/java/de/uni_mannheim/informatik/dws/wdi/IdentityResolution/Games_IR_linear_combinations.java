@@ -106,9 +106,18 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_D", Arrays.asList(matchingRuleC_D, gsTestC_D)),
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
-
-			int comparatorSetChosenKey = 1;
+			
+			int comparatorSetChosenKey = 9;
+			
+			// nur Jahr und Name
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
+			
+			List<HelperClassComparatorWeightPair> compartorSetNine =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetsDict.put(9, compartorSetNine);
+			
+
 			List<HelperClassComparatorWeightPair> compartorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
 			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
 			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
