@@ -25,7 +25,7 @@
 					</data>
 				</component>
 				<component name="target_schema" library="xml" uid="2" kind="14">
-					<properties XSLTDefaultOutput="1"/>
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
 					<view ltx="842" lty="25" rbx="1102" rby="402"/>
 					<data>
 						<root>
@@ -42,25 +42,16 @@
 											<entry name="id" inpkey="8"/>
 											<entry name="name" inpkey="20"/>
 											<entry name="platform" inpkey="21"/>
-											<entry name="publishers" expanded="1">
-												<entry name="publisher" expanded="1"/>
-											</entry>
 											<entry name="publicationDate" inpkey="22"/>
-											<entry name="genres" expanded="1">
-												<entry name="genre" expanded="1"/>
-											</entry>
 											<entry name="criticScore" inpkey="23"/>
 											<entry name="userScore" inpkey="17"/>
-											<entry name="developers" expanded="1">
-												<entry name="developer" expanded="1"/>
-											</entry>
 											<entry name="summary" inpkey="24"/>
 										</entry>
 									</entry>
 								</entry>
 							</entry>
 						</root>
-						<document schema="target_schema.xsd" instanceroot="{}videogames" inputinstance="target_schema.xml" outputinstance="target_schema.xml"/>
+						<document schema="..\altova_target_scema\target_schema.xsd" instanceroot="{}videogames" inputinstance="..\altova_target_scema\target_schema.xml" outputinstance="..\integrated_target_schema_datasets_xlsx\test_data.xml"/>
 					</data>
 				</component>
 				<component name="all_games" library="text" uid="3" kind="16">
@@ -87,7 +78,7 @@
 								</entry>
 							</entry>
 						</root>
-						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="all_games.csv">
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="..\..\source_datasets\all_games.csv">
 							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
 								<names root="all_games" block="Rows">
 									<field0 name="name" type="string"/>
@@ -102,7 +93,7 @@
 					</data>
 				</component>
 				<component name="userScore" library="user" uid="27" kind="19" visible="0" blackbox="0">
-					<view ltx="600" lty="358" rbx="736" rby="375"/>
+					<view ltx="600" lty="358" rbx="740" rby="375"/>
 					<data>
 						<root>
 							<header>
@@ -176,7 +167,6 @@
 		</structure>
 	</component>
 	<component name="ID" library="user" uid="10" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
 				<component name="constant" library="core" uid="11" kind="2">
@@ -258,7 +248,6 @@
 		</structure>
 	</component>
 	<component name="userScore" library="user" uid="21" inline="1" editable="1" blackbox="0">
-		<description/>
 		<structure>
 			<children>
 				<component name="numeric" library="lang" uid="22" kind="5">
@@ -268,16 +257,7 @@
 					<targets>
 						<datapoint pos="0" key="2"/>
 					</targets>
-					<view ltx="300" rbx="367" rby="36"/>
-				</component>
-				<component name="constant" library="core" uid="23" kind="2">
-					<targets>
-						<datapoint pos="0" key="5"/>
-					</targets>
-					<view ltx="330" lty="132" rbx="367" rby="148"/>
-					<data>
-						<constant value="0" datatype="decimal"/>
-					</data>
+					<view ltx="300" rbx="369" rby="37"/>
 				</component>
 				<component name="if-else" library="core" uid="24" kind="4">
 					<sources>
@@ -288,7 +268,7 @@
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="395" lty="68" rbx="487" rby="139"/>
+					<view ltx="395" lty="68" rbx="489" rby="139"/>
 				</component>
 				<component name="valuetrue" library="core" uid="25" kind="6">
 					<sources>
@@ -297,7 +277,7 @@
 					<targets>
 						<datapoint pos="0" key="8"/>
 					</targets>
-					<view rbx="92" rby="36"/>
+					<view rbx="94" rby="37"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="valuetrue"/>
@@ -307,11 +287,17 @@
 					<sources>
 						<datapoint pos="0" key="9"/>
 					</sources>
-					<view ltx="587" rbx="659" rby="36"/>
+					<view ltx="587" rbx="659" rby="37"/>
 					<data>
 						<output datatype="anyType"/>
 						<parameter usageKind="output" name="userScore"/>
 					</data>
+				</component>
+				<component name="set-null" library="db" uid="29" kind="5">
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="253" lty="102" rbx="313" rby="139"/>
 				</component>
 			</children>
 			<graph directed="1">
@@ -328,7 +314,7 @@
 							<edge vertexkey="3"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="5">
+					<vertex vertexkey="10">
 						<edges>
 							<edge vertexkey="6"/>
 						</edges>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="videogames">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="videogame" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" type="xs:string"/>
+							<xs:element name="name" type="xs:string"/>
+							<xs:element name="platform" type="xs:string"/>
+							<xs:element name="publishers">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="publisher">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="namePublisher" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="publicationDate" type="xs:string"/>
+							<xs:element name="globallySoldUnits" type="xs:decimal"/>
+							<xs:element name="genres">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="genre">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="genreName" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="criticScore" type="xs:decimal"/>
+							<xs:element name="userScore" type="xs:decimal"/>
+							<xs:element name="developers">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="developer" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="nameDeveloper" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="summary" type="xs:string"/>
+							<xs:element name="rating" type="xs:string"/>
+							<xs:element name="series" type="xs:string"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

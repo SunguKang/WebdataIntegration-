@@ -35,12 +35,16 @@ import static java.util.Map.entry;
 public class Games_IR_linear_combinations 
 {
 private static final Logger logger = WinterLogManager.activateLogger("trace");
-	
+
     public static void main( String[] args ) throws Exception
     {
 		try (InputStream is = Files.newInputStream(Paths.get("src/main/resources/config.properties"))) {
 			Properties prop = new Properties();
 			prop.load(is);
+			
+			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
+			System.setOut(out);
+
 
 			//		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
 			//		String folderGoldStandardIR = "../data/gold_standard/merged/";
@@ -106,9 +110,12 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_D", Arrays.asList(matchingRuleC_D, gsTestC_D)),
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
-
-			int comparatorSetChosenKey = 7;
+			
+			int comparatorSetChosenKey = 9;
+			
+			// nur Jahr und Name
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
+
 			List<HelperClassComparatorWeightPair> compartorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
 			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
 			compartorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
@@ -145,6 +152,13 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
 			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
 			comparatorSetsDict.put(7, comparatorSetSeven);
+			
+			List<HelperClassComparatorWeightPair> compartorSetNine =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetsDict.put(9, compartorSetNine);
+
+
 
 			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
 			for (String datasetKey : pairsDict.keySet()){
@@ -262,6 +276,9 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			logger.info(String.format("Precision: %.4f",perfTestC_E.getPrecision()));
 			logger.info(String.format("Recall: %.4f",	perfTestC_E.getRecall()));
 			logger.info(String.format("F1: %.4f",perfTestC_E.getF1()));
+			
+			System.setOut(out);
+			
 		} catch (IOException ex) {
 			ex.printStackTrace();
 		}
