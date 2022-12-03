@@ -1,83 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Edited with Altova MapForce 2022r2 -->
-<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+<!-- Edited with Altova MapForce 2023 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="26">
 	<resources/>
 	<component name="defaultmap" uid="1" editable="1" blackbox="0">
-		<properties SelectedLanguage="builtin"/>
+		<properties ShowLibraryNameInHeader="1" SelectedLanguage="builtin"/>
 		<structure>
 			<children>
-				<component name="ID" library="user" uid="16" kind="19" visible="0" blackbox="0">
-					<view ltx="669" lty="33" rbx="716" rby="50"/>
-					<data>
-						<root>
-							<header>
-								<namespaces/>
-							</header>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="id" outkey="18" componentid="15"/>
-						</root>
-					</data>
-				</component>
-				<component name="target_schema" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
-					<view ltx="842" lty="25" rbx="1102" rby="402"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
-								</namespaces>
-							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="videogames" expanded="1">
-										<entry name="videogame" inpkey="19" expanded="1">
-											<entry name="id" inpkey="8"/>
-											<entry name="name" inpkey="20"/>
-											<entry name="platform" inpkey="21"/>
-											<entry name="publicationDate" inpkey="22"/>
-											<entry name="criticScore" inpkey="23"/>
-											<entry name="userScore" inpkey="17"/>
-											<entry name="summary" inpkey="24"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
-						</root>
-						<document schema="..\altova_target_scema\target_schema.xsd" instanceroot="{}videogames" inputinstance="..\altova_target_scema\target_schema.xml" outputinstance="..\integrated_target_schema_xml\target_schema_metacritic.xml"/>
-					</data>
-				</component>
-				<component name="userScore" library="user" uid="27" kind="19" visible="0" blackbox="0">
-					<view ltx="553" lty="342" rbx="693" rby="359"/>
-					<data>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="valuetrue" inpkey="31" componentid="25"/>
-						</root>
-						<root>
-							<header>
-								<namespaces>
-									<namespace/>
-								</namespaces>
-							</header>
-							<entry name="userScore" outkey="32" componentid="26"/>
-						</root>
-					</data>
-				</component>
 				<component name="all_games" library="text" uid="3" kind="16">
 					<properties/>
-					<view ltx="82" lty="109" rbx="262" rby="309"/>
+					<view ltx="92" lty="89" rbx="272" rby="367"/>
 					<data>
 						<root>
 							<header>
@@ -113,6 +44,100 @@
 						</text>
 					</data>
 				</component>
+				<component name="target_schema" library="xml" uid="2" kind="14">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="842" lty="25" rbx="1102" rby="402"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="videogames" expanded="1">
+										<entry name="videogame" inpkey="19" expanded="1">
+											<entry name="id" inpkey="8"/>
+											<entry name="name" inpkey="20"/>
+											<entry name="platform" inpkey="21"/>
+											<entry name="publishers" expanded="1">
+												<entry name="publisher" expanded="1"/>
+											</entry>
+											<entry name="publicationDate" inpkey="22"/>
+											<entry name="genres" expanded="1">
+												<entry name="genre" expanded="1"/>
+											</entry>
+											<entry name="criticScore" inpkey="23"/>
+											<entry name="userScore" inpkey="17"/>
+											<entry name="developers" expanded="1">
+												<entry name="developer" expanded="1"/>
+											</entry>
+											<entry name="summary" inpkey="24"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="target_schema.xsd" instanceroot="{}videogames" inputinstance="target_schema.xml" outputinstance="target_schema.xml"/>
+					</data>
+				</component>
+				<component name="all_games" library="text" uid="3" kind="16">
+					<properties/>
+					<view ltx="200" lty="143" rbx="380" rby="343"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="dateStringInput" inpkey="33" componentid="40"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="34" componentid="29"/>
+						</root>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0" inputinstance="all_games.csv">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="all_games" block="Rows">
+									<field0 name="name" type="string"/>
+									<field1 name="platform" type="string"/>
+									<field2 name="release_date" type="string"/>
+									<field3 name="summary" type="string"/>
+									<field4 name="meta_score" type="integer"/>
+									<field5 name="user_review" type="string"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="userScore" library="user" uid="27" kind="19" visible="0" blackbox="0">
+					<view ltx="600" lty="358" rbx="736" rby="375"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="valuetrue" inpkey="31" componentid="25"/>
+						</root>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="userScore" outkey="32" componentid="26"/>
+						</root>
+					</data>
+				</component>
 			</children>
 			<graph directed="1">
 				<edges/>
@@ -142,7 +167,7 @@
 							<edge vertexkey="21"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="28">
+					<vertex vertexkey="34">
 						<edges>
 							<edge vertexkey="22"/>
 						</edges>
@@ -162,22 +187,19 @@
 							<edge vertexkey="31"/>
 						</edges>
 					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="33"/>
+						</edges>
+					</vertex>
 				</vertices>
 			</graph>
 		</structure>
 	</component>
 	<component name="ID" library="user" uid="10" inline="1" editable="1" blackbox="0">
+		<description/>
 		<structure>
 			<children>
-				<component name="constant" library="core" uid="11" kind="2">
-					<targets>
-						<datapoint pos="0" key="3"/>
-					</targets>
-					<view ltx="300" lty="50" rbx="337" rby="66"/>
-					<data>
-						<constant value="1" datatype="decimal"/>
-					</data>
-				</component>
 				<component name="concat" library="core" uid="12" kind="5" growable="1" growablebasename="value">
 					<sources>
 						<datapoint pos="0" key="6"/>
@@ -186,13 +208,13 @@
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="557" lty="15" rbx="629" rby="69"/>
+					<view ltx="557" lty="15" rbx="639" rby="71"/>
 				</component>
 				<component name="constant" library="core" uid="13" kind="2">
 					<targets>
 						<datapoint pos="0" key="5"/>
 					</targets>
-					<view ltx="432" rbx="517" rby="16"/>
+					<view ltx="432" rbx="524" rby="17"/>
 					<data>
 						<constant value="all_games" datatype="string"/>
 					</data>
@@ -207,16 +229,25 @@
 					<targets>
 						<datapoint pos="0" key="1"/>
 					</targets>
-					<view ltx="374" lty="51" rbx="501" rby="135"/>
+					<view ltx="374" lty="51" rbx="516" rby="137"/>
 				</component>
 				<component name="id" library="core" uid="15" kind="7">
 					<sources>
 						<datapoint pos="0" key="8"/>
 					</sources>
-					<view ltx="729" rbx="764" rby="36"/>
+					<view ltx="729" rbx="767" rby="38"/>
 					<data>
 						<output datatype="string"/>
 						<parameter usageKind="output" name="id"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="289" lty="104" rbx="329" rby="121"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
 					</data>
 				</component>
 			</children>
@@ -248,6 +279,7 @@
 		</structure>
 	</component>
 	<component name="userScore" library="user" uid="21" inline="1" editable="1" blackbox="0">
+		<description/>
 		<structure>
 			<children>
 				<component name="numeric" library="lang" uid="22" kind="5">
@@ -257,7 +289,16 @@
 					<targets>
 						<datapoint pos="0" key="2"/>
 					</targets>
-					<view ltx="300" rbx="369" rby="37"/>
+					<view ltx="300" rbx="367" rby="36"/>
+				</component>
+				<component name="constant" library="core" uid="23" kind="2">
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="330" lty="132" rbx="367" rby="148"/>
+					<data>
+						<constant value="0" datatype="decimal"/>
+					</data>
 				</component>
 				<component name="if-else" library="core" uid="24" kind="4">
 					<sources>
@@ -268,7 +309,7 @@
 					<targets>
 						<datapoint pos="0" key="7"/>
 					</targets>
-					<view ltx="395" lty="68" rbx="489" rby="139"/>
+					<view ltx="395" lty="68" rbx="487" rby="139"/>
 				</component>
 				<component name="valuetrue" library="core" uid="25" kind="6">
 					<sources>
@@ -277,7 +318,7 @@
 					<targets>
 						<datapoint pos="0" key="8"/>
 					</targets>
-					<view rbx="94" rby="37"/>
+					<view rbx="92" rby="36"/>
 					<data>
 						<input datatype="string"/>
 						<parameter usageKind="input" name="valuetrue"/>
@@ -287,19 +328,10 @@
 					<sources>
 						<datapoint pos="0" key="9"/>
 					</sources>
-					<view ltx="587" rbx="659" rby="37"/>
+					<view ltx="587" rbx="659" rby="36"/>
 					<data>
 						<output datatype="anyType"/>
 						<parameter usageKind="output" name="userScore"/>
-					</data>
-				</component>
-				<component name="constant" library="core" uid="23" kind="2">
-					<targets>
-						<datapoint pos="0" key="5"/>
-					</targets>
-					<view ltx="330" lty="132" rbx="368" rby="148"/>
-					<data>
-						<constant value="0" datatype="decimal"/>
 					</data>
 				</component>
 			</children>
@@ -317,7 +349,7 @@
 							<edge vertexkey="3"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="5">
+					<vertex vertexkey="10">
 						<edges>
 							<edge vertexkey="6"/>
 						</edges>
@@ -325,6 +357,147 @@
 					<vertex vertexkey="7">
 						<edges>
 							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="dateReformat" library="user" uid="28" inline="1" editable="1" blackbox="0">
+		<description/>
+		<structure>
+			<children>
+				<component name="tokenize" library="core" uid="32" kind="5">
+					<sources>
+						<datapoint pos="0" key="1"/>
+						<datapoint pos="1" key="9"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view ltx="185" lty="205" rbx="287" rby="259"/>
+				</component>
+				<component name="item-at" library="core" uid="33" kind="5">
+					<sources>
+						<datapoint pos="0" key="13"/>
+						<datapoint pos="1" key="11"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="363" lty="182" rbx="473" rby="236"/>
+				</component>
+				<component name="constant" library="core" uid="34" kind="2">
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="282" lty="279" rbx="400" rby="296"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="parse-dateTime" library="core" uid="35" kind="5">
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="4"/>
+					</targets>
+					<view ltx="528" lty="191" rbx="665" rby="245"/>
+				</component>
+				<component name="constant" library="core" uid="36" kind="2">
+					<targets>
+						<datapoint pos="0" key="2"/>
+					</targets>
+					<view ltx="379" lty="279" rbx="598" rby="296"/>
+					<data>
+						<constant value="[Y]-[M]-[D]T[H]:[m]:[s]Z" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="37" kind="2">
+					<targets>
+						<datapoint pos="0" key="8"/>
+					</targets>
+					<view ltx="73" lty="300" rbx="196" rby="317"/>
+					<data>
+						<constant value="," datatype="string"/>
+					</data>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="38" kind="5">
+					<sources>
+						<datapoint pos="0" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="14"/>
+					</targets>
+					<view ltx="698" lty="220" rbx="857" rby="258"/>
+				</component>
+				<component name="result" library="core" uid="29" kind="7">
+					<sources>
+						<datapoint pos="0" key="16"/>
+					</sources>
+					<view ltx="875" lty="171" rbx="963" rby="209"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="dateStringInput" library="core" uid="40" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="17"/>
+					</targets>
+					<view ltx="-31" lty="182" rbx="109" rby="220"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="dateStringInput"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="1"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="4">
+						<edges>
+							<edge vertexkey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="7"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="13"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="16"/>
 						</edges>
 					</vertex>
 				</vertices>
