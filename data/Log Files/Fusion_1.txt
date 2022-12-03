@@ -1,0 +1,174 @@
+[INFO ] 2022-12-03 15:46:28.553 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading datasets	*
+[INFO ] 2022-12-03 15:46:28.559 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading from XML	*
+[INFO ] 2022-12-03 15:46:28.861 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 3817 elements from Dataset_B.xml
+[INFO ] 2022-12-03 15:46:29.533 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 18800 elements from Dataset_A.xml
+[INFO ] 2022-12-03 15:46:30.290 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 17416 elements from Dataset_C.xml
+[INFO ] 2022-12-03 15:46:30.636 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 9686 elements from Dataset_D.xml
+[INFO ] 2022-12-03 15:46:31.591 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 48205 elements from Dataset_E.xml
+[INFO ] 2022-12-03 15:46:32.166 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,49
+[INFO ] 2022-12-03 15:46:32.167 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 0,93
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,99
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 0,00
+[INFO ] 2022-12-03 15:46:32.203 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-03 15:46:32.204 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-03 15:46:32.204 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 0,00
+[INFO ] 2022-12-03 15:46:32.204 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 0,00
+[INFO ] 2022-12-03 15:46:32.204 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-03 15:46:32.204 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-03 15:46:32.210 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,42
+[INFO ] 2022-12-03 15:46:32.210 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-03 15:46:32.217 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-03 15:46:32.217 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-03 15:46:32.217 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-03 15:46:32.217 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-03 15:46:32.217 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-03 15:46:32.218 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 0,00
+[INFO ] 2022-12-03 15:46:32.218 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-03 15:46:32.218 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-03 15:46:32.218 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 0,00
+[INFO ] 2022-12-03 15:46:32.218 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 0,00
+[INFO ] 2022-12-03 15:46:32.218 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-03 15:46:32.219 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-03 15:46:32.230 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,55
+[INFO ] 2022-12-03 15:46:32.230 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-03 15:46:32.255 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 0,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-03 15:46:32.256 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 0,00
+[INFO ] 2022-12-03 15:46:32.257 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 0,00
+[INFO ] 2022-12-03 15:46:32.257 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,59
+[INFO ] 2022-12-03 15:46:32.257 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 1,00
+[INFO ] 2022-12-03 15:46:32.262 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,41
+[INFO ] 2022-12-03 15:46:32.262 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-03 15:46:32.275 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-03 15:46:32.275 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-03 15:46:32.275 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-03 15:46:32.276 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-03 15:46:32.276 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-03 15:46:32.276 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 0,00
+[INFO ] 2022-12-03 15:46:32.277 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-03 15:46:32.277 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 0,92
+[INFO ] 2022-12-03 15:46:32.277 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 0,00
+[INFO ] 2022-12-03 15:46:32.277 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 0,00
+[INFO ] 2022-12-03 15:46:32.277 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-03 15:46:32.278 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-03 15:46:32.305 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,48
+[INFO ] 2022-12-03 15:46:32.306 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-03 15:46:32.344 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-03 15:46:32.344 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-03 15:46:32.344 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-03 15:46:32.344 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-03 15:46:32.344 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,30
+[INFO ] 2022-12-03 15:46:32.344 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 0,00
+[INFO ] 2022-12-03 15:46:32.345 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-03 15:46:32.345 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-03 15:46:32.345 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 0,00
+[INFO ] 2022-12-03 15:46:32.345 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 0,00
+[INFO ] 2022-12-03 15:46:32.345 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,44
+[INFO ] 2022-12-03 15:46:32.345 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-03 15:46:32.346 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading correspondences	*
+[INFO ] 2022-12-03 15:46:32.476 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 11215 groups:
+[INFO ] 2022-12-03 15:46:32.477 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2022-12-03 15:46:32.477 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2022-12-03 15:46:32.478 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	7198
+[INFO ] 2022-12-03 15:46:32.478 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	1308
+[INFO ] 2022-12-03 15:46:32.478 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	1118
+[INFO ] 2022-12-03 15:46:32.478 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	373
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	324
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	175
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		8	| 	144
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	75
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		10	| 	90
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		11	| 	59
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		12	| 	55
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		13	| 	38
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		14	| 	34
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		15	| 	26
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		16	| 	18
+[INFO ] 2022-12-03 15:46:32.479 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		17	| 	16
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		18	| 	24
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		19	| 	15
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		20	| 	14
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		21	| 	10
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		22	| 	8
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		23	| 	5
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		24	| 	6
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		25	| 	8
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		26	| 	3
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		27	| 	3
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		28	| 	3
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		29	| 	4
+[INFO ] 2022-12-03 15:46:32.480 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		30	| 	3
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		31	| 	7
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		32	| 	3
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		33	| 	1
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		34	| 	4
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		35	| 	3
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		36	| 	2
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		37	| 	2
+[INFO ] 2022-12-03 15:46:32.481 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		38	| 	4
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		39	| 	1
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		40	| 	2
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		42	| 	2
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		45	| 	1
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		46	| 	2
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		47	| 	1
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		50	| 	2
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		52	| 	1
+[INFO ] 2022-12-03 15:46:32.482 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		53	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		55	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		59	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		60	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		62	| 	2
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		63	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		64	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		70	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		71	| 	2
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		73	| 	1
+[INFO ] 2022-12-03 15:46:32.483 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		82	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		83	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		84	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		92	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		95	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		96	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		102	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		106	| 	1
+[INFO ] 2022-12-03 15:46:32.484 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Evaluating results	*
+[INFO ] 2022-12-03 15:46:32.491 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 21 elements from gold.xml
+[INFO ] 2022-12-03 15:46:32.492 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2412
+[INFO ] 2022-12-03 15:46:32.492 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales14427
+[INFO ] 2022-12-03 15:46:32.492 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales151
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2015
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5866
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11696
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11657
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16810
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales6532
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7774
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16644
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7000
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales81
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales842
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9980
+[INFO ] 2022-12-03 15:46:32.493 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9246
+[INFO ] 2022-12-03 15:46:32.494 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2929
+[INFO ] 2022-12-03 15:46:32.494 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales8765
+[INFO ] 2022-12-03 15:46:32.494 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2405
+[INFO ] 2022-12-03 15:46:32.494 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5628
+[INFO ] 2022-12-03 15:46:32.498 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2022-12-03 15:46:32.752 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	criticScore: 0,00
+[INFO ] 2022-12-03 15:46:32.752 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	globallySoldUnits: 0,78
+[INFO ] 2022-12-03 15:46:32.753 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	name: 0,59
+[INFO ] 2022-12-03 15:46:32.753 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	userScore: 0,75
+[INFO ] 2022-12-03 15:46:32.753 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	publicationDate: 0,00
+[INFO ] 2022-12-03 15:46:32.950 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Running data fusion	*
+[INFO ] 2022-12-03 15:46:33.553 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Accuracy: 0,35

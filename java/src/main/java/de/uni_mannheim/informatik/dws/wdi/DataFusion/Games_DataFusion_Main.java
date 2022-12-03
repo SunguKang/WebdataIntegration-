@@ -98,6 +98,13 @@ public class Games_DataFusion_Main
 
 			// Provenance Scores (e.g. from rating)
 			// the higher the score the more trust worthy the data is (acording to the tutors)
+			/*
+			 * Dataset_A scraped from Metacritic
+			Dataset_B scraped from Wikipedia, igdb
+			Dataset_C scraped from VGChartz and Metacritic
+			Dataset_D Web Scraping from TrueTrophies.com
+			Dataset_E Query from WikiData
+			 */
 			data_A.setScore(2.0);  //one source, not wiki (Metacritic)
 			data_B.setScore(3.0); //multiple sources, one is wiki
 			data_C.setScore(4.0); //multiple sources, none is wiki
