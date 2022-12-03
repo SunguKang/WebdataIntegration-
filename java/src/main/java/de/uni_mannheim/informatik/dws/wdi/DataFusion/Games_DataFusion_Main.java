@@ -160,7 +160,7 @@ public class Games_DataFusion_Main
 			//TODO create the mentioned Fusers and Evaluators
 			// TODO deleted not needed evaluators
 			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
-			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule(1.0));
+			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserVoting(), new PlatformEvaluationRule(1.0));
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
 			// TODO should not be the most recent as this is wrong for some datasets
 			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserMostRecent(), new PublicationDateEvaluationRule());

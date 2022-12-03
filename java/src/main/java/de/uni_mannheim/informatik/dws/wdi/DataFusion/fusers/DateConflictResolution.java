@@ -17,7 +17,7 @@ public class DateConflictResolution<RecordType extends Matchable & Fusible<Schem
             Collection<FusibleValue<LocalDateTime, RecordType, SchemaElementType>> values) {
 
         FusibleValue<LocalDateTime, RecordType, SchemaElementType> currentFusedDate = null;
-        // TODO add trustscore of source
+
         for(FusibleValue<LocalDateTime, RecordType, SchemaElementType> value : values) {
             // in the following line the first of a year is being handled separately as it was a filler value during
             // schema matching

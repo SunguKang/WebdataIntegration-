@@ -18,7 +18,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Map;
-
+//TODO delete if not needed
 public class GameCorrespondenceSet extends CorrespondenceSet {
 
     private Collection<GameRecordGroup> groups;

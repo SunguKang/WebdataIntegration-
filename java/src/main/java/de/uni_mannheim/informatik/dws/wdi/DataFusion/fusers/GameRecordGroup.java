@@ -7,7 +7,7 @@ import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
-
+//TODO delete if not needed
 import java.lang.reflect.Field;
 
 public class GameRecordGroup<Game, SchemaElementType> extends RecordGroup {

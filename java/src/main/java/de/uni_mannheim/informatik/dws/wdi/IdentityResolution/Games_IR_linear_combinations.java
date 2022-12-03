@@ -90,7 +90,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			gsTestC_E.loadFromCSVFile(new File(folderGoldStandardIR + "C-E.csv"));
 
 			// create a matching rule
-			double thresh = 0.7;
+			double thresh = 0.9;
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
 					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_D = new LinearCombinationMatchingRule<>(
@@ -111,7 +111,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
 			
-			int comparatorSetChosenKey = 9;
+			int comparatorSetChosenKey = 7;
 			
 			// nur Jahr und Name
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
