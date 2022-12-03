@@ -10,20 +10,6 @@ import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimila
 import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
 public class PlatformEvaluationRule extends EvaluationRule<Game, Attribute> {
-    @Override
-    public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        if(record1.getPlatform()==null && record2.getPlatform()==null)
-            return true;
-        else if(record1.getPlatform()==null ^ record2.getPlatform()==null)
-            return false;
-        else
-            return record1.getPlatform().equals(record2.getPlatform());
-    }
-
-    @Override
-    public boolean isEqual(Game record1, Game record2, Correspondence<Attribute, Matchable> correspondence) {
-        return isEqual(record1, record2, (Attribute)null);
-    }
 
     SimilarityMeasure<String> sim;
 
