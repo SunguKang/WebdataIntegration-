@@ -107,7 +107,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					entry("C_E", Arrays.asList(matchingRuleC_E, gsTestC_E))
 			);
 
-			int comparatorSetChosenKey = 1;
+			int comparatorSetChosenKey = 7;
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
 			List<HelperClassComparatorWeightPair> compartorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
 			compartorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
@@ -140,6 +140,11 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
 			comparatorSetsDict.put(6, comparatorSetSix);
+
+			List<HelperClassComparatorWeightPair> comparatorSetSeven =  new ArrayList<HelperClassComparatorWeightPair>();
+			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetsDict.put(7, comparatorSetSeven);
 
 			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
 			for (String datasetKey : pairsDict.keySet()){

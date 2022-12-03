@@ -18,6 +18,8 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
+import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
+import org.slf4j.Logger;
 
 
 /**
@@ -29,7 +31,8 @@ import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimila
  * 
  */
 public class GameNamePreprocessedComparatorLevenshtein implements Comparator<Game, Attribute> {
-	
+	private static final Logger logger = WinterLogManager.activateLogger("trace");
+
 	private static final long serialVersionUID = 1L;
 	private LevenshteinSimilarity sim = new LevenshteinSimilarity();
 	
@@ -54,6 +57,7 @@ public class GameNamePreprocessedComparatorLevenshtein implements Comparator<Gam
     	
 			this.comparisonLog.setSimilarity(Double.toString(similarity));
 		}
+		logger.info("Similarity for " + s1 +  " and "+ s2 + " is: " + similarity);
 		return similarity;
 	}
 

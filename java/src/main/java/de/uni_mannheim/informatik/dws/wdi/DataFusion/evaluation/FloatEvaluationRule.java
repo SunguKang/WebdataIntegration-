@@ -10,8 +10,7 @@ import java.lang.reflect.Field;
 import java.math.BigDecimal;
 
 public class FloatEvaluationRule extends EvaluationRule<Game, Attribute> {
-    // TODO I think this is only in dataset C, but not completely shure
-	//	What is only in Dataset C???
+
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
         String attributeIdentifier = attribute.getIdentifier();

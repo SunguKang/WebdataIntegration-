@@ -9,17 +9,18 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 public class CriticScoreEvaluationRule extends EvaluationRule<Game, Attribute> {
     @Override
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
-        if(record1.getCriticScore()==null && record2.getCriticScore()==null)
+        Float number1 = record1.getCriticScore();
+        Float number2 = record2.getCriticScore();
+        if (number1 == null && number2 == null)
             return true;
-        else if(record1.getCriticScore()==null ^ record2.getCriticScore()==null)
+        else if (number1 == null ^ number2 == null)
             return false;
         else
-            return record1.getCriticScore() == record2.getCriticScore();
+            return number1.compareTo(number2) == 0;
     }
 
     @Override
     public boolean isEqual(Game record1, Game record2, Correspondence<Attribute, Matchable> correspondence) {
-        return isEqual(record1, record2, (Attribute)null);
+        return isEqual(record1, record2, (Attribute) null);
     }
-
 }

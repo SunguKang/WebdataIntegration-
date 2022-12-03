@@ -9,3 +9,5 @@ python_files/.ipynb_checkpoints/Leon preprocessing and Gold standard-checkpoint.
 java/.idea
 java/.settings
 *.class
+*.csv
+data/fused/fused.xml
