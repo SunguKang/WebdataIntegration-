@@ -1,0 +1,577 @@
+[INFO ] 2022-12-03 18:57:47.379 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.185.967 / 15.491.253 elements completed (39,93%) after 0:01:44.669
+[INFO ] 2022-12-03 18:57:48.380 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.222.547 / 15.491.253 elements completed (40,17%) after 0:01:45.670
+[INFO ] 2022-12-03 18:57:49.381 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.284.440 / 15.491.253 elements completed (40,57%) after 0:01:46.671
+[INFO ] 2022-12-03 18:57:50.383 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.341.873 / 15.491.253 elements completed (40,94%) after 0:01:47.673
+[INFO ] 2022-12-03 18:57:51.384 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.403.487 / 15.491.253 elements completed (41,34%) after 0:01:48.674
+[INFO ] 2022-12-03 18:57:52.385 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.458.279 / 15.491.253 elements completed (41,69%) after 0:01:49.675
+[INFO ] 2022-12-03 18:57:53.389 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.515.800 / 15.491.253 elements completed (42,06%) after 0:01:50.678
+[INFO ] 2022-12-03 18:57:54.389 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.570.158 / 15.491.253 elements completed (42,41%) after 0:01:51.680
+[INFO ] 2022-12-03 18:57:55.391 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.630.593 / 15.491.253 elements completed (42,80%) after 0:01:52.681
+[INFO ] 2022-12-03 18:57:56.392 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.692.468 / 15.491.253 elements completed (43,20%) after 0:01:53.682
+[INFO ] 2022-12-03 18:57:57.393 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.756.257 / 15.491.253 elements completed (43,61%) after 0:01:54.683
+[INFO ] 2022-12-03 18:57:58.394 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.816.431 / 15.491.253 elements completed (44,00%) after 0:01:55.685
+[INFO ] 2022-12-03 18:57:59.396 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.874.049 / 15.491.253 elements completed (44,37%) after 0:01:56.686
+[INFO ] 2022-12-03 18:58:00.397 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.934.853 / 15.491.253 elements completed (44,77%) after 0:01:57.687
+[INFO ] 2022-12-03 18:58:01.398 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 6.996.458 / 15.491.253 elements completed (45,16%) after 0:01:58.688
+[INFO ] 2022-12-03 18:58:02.399 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.057.426 / 15.491.253 elements completed (45,56%) after 0:01:59.689
+[INFO ] 2022-12-03 18:58:03.401 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.120.017 / 15.491.253 elements completed (45,96%) after 0:02:00.691
+[INFO ] 2022-12-03 18:58:04.402 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.179.891 / 15.491.253 elements completed (46,35%) after 0:02:01.692
+[INFO ] 2022-12-03 18:58:05.403 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.240.212 / 15.491.253 elements completed (46,74%) after 0:02:02.693
+[INFO ] 2022-12-03 18:58:06.405 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.302.097 / 15.491.253 elements completed (47,14%) after 0:02:03.695
+[INFO ] 2022-12-03 18:58:07.406 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.365.232 / 15.491.253 elements completed (47,54%) after 0:02:04.696
+[INFO ] 2022-12-03 18:58:08.407 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.427.098 / 15.491.253 elements completed (47,94%) after 0:02:05.697
+[INFO ] 2022-12-03 18:58:09.409 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.485.330 / 15.491.253 elements completed (48,32%) after 0:02:06.699
+[INFO ] 2022-12-03 18:58:10.410 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.546.197 / 15.491.253 elements completed (48,71%) after 0:02:07.701
+[INFO ] 2022-12-03 18:58:11.412 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.609.153 / 15.491.253 elements completed (49,12%) after 0:02:08.702
+[INFO ] 2022-12-03 18:58:12.413 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.670.367 / 15.491.253 elements completed (49,51%) after 0:02:09.703
+[INFO ] 2022-12-03 18:58:13.414 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.731.563 / 15.491.253 elements completed (49,91%) after 0:02:10.704
+[INFO ] 2022-12-03 18:58:14.415 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.795.534 / 15.491.253 elements completed (50,32%) after 0:02:11.705
+[INFO ] 2022-12-03 18:58:15.417 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.860.442 / 15.491.253 elements completed (50,74%) after 0:02:12.707
+[INFO ] 2022-12-03 18:58:16.418 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.923.140 / 15.491.253 elements completed (51,15%) after 0:02:13.708
+[INFO ] 2022-12-03 18:58:17.419 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 7.983.974 / 15.491.253 elements completed (51,54%) after 0:02:14.709
+[INFO ] 2022-12-03 18:58:18.420 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.046.195 / 15.491.253 elements completed (51,94%) after 0:02:15.710
+[INFO ] 2022-12-03 18:58:19.422 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.102.459 / 15.491.253 elements completed (52,30%) after 0:02:16.712
+[INFO ] 2022-12-03 18:58:20.423 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.158.755 / 15.491.253 elements completed (52,67%) after 0:02:17.713
+[INFO ] 2022-12-03 18:58:21.424 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.220.777 / 15.491.253 elements completed (53,07%) after 0:02:18.714
+[INFO ] 2022-12-03 18:58:22.425 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.281.848 / 15.491.253 elements completed (53,46%) after 0:02:19.715
+[INFO ] 2022-12-03 18:58:23.427 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.343.114 / 15.491.253 elements completed (53,86%) after 0:02:20.717
+[INFO ] 2022-12-03 18:58:24.428 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.403.976 / 15.491.253 elements completed (54,25%) after 0:02:21.718
+[INFO ] 2022-12-03 18:58:25.429 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.463.816 / 15.491.253 elements completed (54,64%) after 0:02:22.719
+[INFO ] 2022-12-03 18:58:26.430 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.525.822 / 15.491.253 elements completed (55,04%) after 0:02:23.721
+[INFO ] 2022-12-03 18:58:27.432 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.588.490 / 15.491.253 elements completed (55,44%) after 0:02:24.722
+[INFO ] 2022-12-03 18:58:28.433 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.650.171 / 15.491.253 elements completed (55,84%) after 0:02:25.723
+[INFO ] 2022-12-03 18:58:29.434 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.709.151 / 15.491.253 elements completed (56,22%) after 0:02:26.724
+[INFO ] 2022-12-03 18:58:30.436 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.766.212 / 15.491.253 elements completed (56,59%) after 0:02:27.726
+[INFO ] 2022-12-03 18:58:31.437 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.828.392 / 15.491.253 elements completed (56,99%) after 0:02:28.727
+[INFO ] 2022-12-03 18:58:32.439 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.890.947 / 15.491.253 elements completed (57,39%) after 0:02:29.729
+[INFO ] 2022-12-03 18:58:33.440 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 8.953.162 / 15.491.253 elements completed (57,79%) after 0:02:30.731
+[INFO ] 2022-12-03 18:58:34.442 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.016.374 / 15.491.253 elements completed (58,20%) after 0:02:31.732
+[INFO ] 2022-12-03 18:58:35.443 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.079.532 / 15.491.253 elements completed (58,61%) after 0:02:32.733
+[INFO ] 2022-12-03 18:58:36.444 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.141.681 / 15.491.253 elements completed (59,01%) after 0:02:33.734
+[INFO ] 2022-12-03 18:58:37.445 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.203.908 / 15.491.253 elements completed (59,41%) after 0:02:34.735
+[INFO ] 2022-12-03 18:58:38.446 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.266.914 / 15.491.253 elements completed (59,82%) after 0:02:35.736
+[INFO ] 2022-12-03 18:58:39.448 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.328.505 / 15.491.253 elements completed (60,22%) after 0:02:36.738
+[INFO ] 2022-12-03 18:58:40.449 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.387.573 / 15.491.253 elements completed (60,60%) after 0:02:37.739
+[INFO ] 2022-12-03 18:58:41.450 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.450.579 / 15.491.253 elements completed (61,01%) after 0:02:38.740
+[INFO ] 2022-12-03 18:58:42.451 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.513.456 / 15.491.253 elements completed (61,41%) after 0:02:39.741
+[INFO ] 2022-12-03 18:58:43.452 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.577.511 / 15.491.253 elements completed (61,83%) after 0:02:40.743
+[INFO ] 2022-12-03 18:58:44.454 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.641.379 / 15.491.253 elements completed (62,24%) after 0:02:41.744
+[INFO ] 2022-12-03 18:58:45.455 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.705.000 / 15.491.253 elements completed (62,65%) after 0:02:42.745
+[INFO ] 2022-12-03 18:58:46.456 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.769.361 / 15.491.253 elements completed (63,06%) after 0:02:43.746
+[INFO ] 2022-12-03 18:58:47.457 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.833.383 / 15.491.253 elements completed (63,48%) after 0:02:44.747
+[INFO ] 2022-12-03 18:58:48.459 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.897.056 / 15.491.253 elements completed (63,89%) after 0:02:45.749
+[INFO ] 2022-12-03 18:58:49.460 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 9.960.427 / 15.491.253 elements completed (64,30%) after 0:02:46.750
+[INFO ] 2022-12-03 18:58:50.461 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.020.343 / 15.491.253 elements completed (64,68%) after 0:02:47.751
+[INFO ] 2022-12-03 18:58:51.462 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.083.278 / 15.491.253 elements completed (65,09%) after 0:02:48.752
+[INFO ] 2022-12-03 18:58:52.464 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.146.787 / 15.491.253 elements completed (65,50%) after 0:02:49.754
+[INFO ] 2022-12-03 18:58:53.465 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.210.755 / 15.491.253 elements completed (65,91%) after 0:02:50.755
+[INFO ] 2022-12-03 18:58:54.466 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.274.526 / 15.491.253 elements completed (66,32%) after 0:02:51.756
+[INFO ] 2022-12-03 18:58:55.467 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.337.831 / 15.491.253 elements completed (66,73%) after 0:02:52.757
+[INFO ] 2022-12-03 18:58:56.468 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.401.117 / 15.491.253 elements completed (67,14%) after 0:02:53.759
+[INFO ] 2022-12-03 18:58:57.470 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.464.814 / 15.491.253 elements completed (67,55%) after 0:02:54.760
+[INFO ] 2022-12-03 18:58:58.472 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.529.534 / 15.491.253 elements completed (67,97%) after 0:02:55.762
+[INFO ] 2022-12-03 18:58:59.473 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.591.838 / 15.491.253 elements completed (68,37%) after 0:02:56.763
+[INFO ] 2022-12-03 18:59:00.474 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.650.305 / 15.491.253 elements completed (68,75%) after 0:02:57.765
+[INFO ] 2022-12-03 18:59:01.475 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.712.805 / 15.491.253 elements completed (69,15%) after 0:02:58.766
+[INFO ] 2022-12-03 18:59:02.477 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.775.809 / 15.491.253 elements completed (69,56%) after 0:02:59.767
+[INFO ] 2022-12-03 18:59:03.478 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.839.380 / 15.491.253 elements completed (69,97%) after 0:03:00.768
+[INFO ] 2022-12-03 18:59:04.479 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.902.724 / 15.491.253 elements completed (70,38%) after 0:03:01.770
+[INFO ] 2022-12-03 18:59:05.481 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 10.966.723 / 15.491.253 elements completed (70,79%) after 0:03:02.771
+[INFO ] 2022-12-03 18:59:06.482 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.030.041 / 15.491.253 elements completed (71,20%) after 0:03:03.772
+[INFO ] 2022-12-03 18:59:07.483 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.093.868 / 15.491.253 elements completed (71,61%) after 0:03:04.774
+[INFO ] 2022-12-03 18:59:08.485 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.157.000 / 15.491.253 elements completed (72,02%) after 0:03:05.775
+[INFO ] 2022-12-03 18:59:09.486 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.219.391 / 15.491.253 elements completed (72,42%) after 0:03:06.776
+[INFO ] 2022-12-03 18:59:10.488 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.279.407 / 15.491.253 elements completed (72,81%) after 0:03:07.778
+[INFO ] 2022-12-03 18:59:11.489 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.342.118 / 15.491.253 elements completed (73,22%) after 0:03:08.779
+[INFO ] 2022-12-03 18:59:12.491 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.405.342 / 15.491.253 elements completed (73,62%) after 0:03:09.781
+[INFO ] 2022-12-03 18:59:13.492 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.468.661 / 15.491.253 elements completed (74,03%) after 0:03:10.782
+[INFO ] 2022-12-03 18:59:14.493 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.532.614 / 15.491.253 elements completed (74,45%) after 0:03:11.783
+[INFO ] 2022-12-03 18:59:15.494 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.596.469 / 15.491.253 elements completed (74,86%) after 0:03:12.785
+[INFO ] 2022-12-03 18:59:16.496 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.659.926 / 15.491.253 elements completed (75,27%) after 0:03:13.786
+[INFO ] 2022-12-03 18:59:17.498 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.723.047 / 15.491.253 elements completed (75,68%) after 0:03:14.788
+[INFO ] 2022-12-03 18:59:18.499 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.784.504 / 15.491.253 elements completed (76,07%) after 0:03:15.790
+[INFO ] 2022-12-03 18:59:19.501 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.847.673 / 15.491.253 elements completed (76,48%) after 0:03:16.791
+[INFO ] 2022-12-03 18:59:20.502 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.904.335 / 15.491.253 elements completed (76,85%) after 0:03:17.792
+[INFO ] 2022-12-03 18:59:21.504 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 11.960.984 / 15.491.253 elements completed (77,21%) after 0:03:18.794
+[INFO ] 2022-12-03 18:59:22.505 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.025.285 / 15.491.253 elements completed (77,63%) after 0:03:19.795
+[INFO ] 2022-12-03 18:59:23.506 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.088.930 / 15.491.253 elements completed (78,04%) after 0:03:20.796
+[INFO ] 2022-12-03 18:59:24.508 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.152.538 / 15.491.253 elements completed (78,45%) after 0:03:21.798
+[INFO ] 2022-12-03 18:59:25.509 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.216.513 / 15.491.253 elements completed (78,86%) after 0:03:22.799
+[INFO ] 2022-12-03 18:59:26.511 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.277.010 / 15.491.253 elements completed (79,25%) after 0:03:23.801
+[INFO ] 2022-12-03 18:59:27.512 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.340.595 / 15.491.253 elements completed (79,66%) after 0:03:24.802
+[INFO ] 2022-12-03 18:59:28.513 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.404.695 / 15.491.253 elements completed (80,08%) after 0:03:25.803
+[INFO ] 2022-12-03 18:59:29.514 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.467.382 / 15.491.253 elements completed (80,48%) after 0:03:26.805
+[INFO ] 2022-12-03 18:59:30.516 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.523.399 / 15.491.253 elements completed (80,84%) after 0:03:27.806
+[INFO ] 2022-12-03 18:59:31.517 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.582.507 / 15.491.253 elements completed (81,22%) after 0:03:28.807
+[INFO ] 2022-12-03 18:59:32.519 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.643.711 / 15.491.253 elements completed (81,62%) after 0:03:29.809
+[INFO ] 2022-12-03 18:59:33.520 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.706.425 / 15.491.253 elements completed (82,02%) after 0:03:30.810
+[INFO ] 2022-12-03 18:59:34.521 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.769.126 / 15.491.253 elements completed (82,43%) after 0:03:31.811
+[INFO ] 2022-12-03 18:59:35.522 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.831.000 / 15.491.253 elements completed (82,83%) after 0:03:32.812
+[INFO ] 2022-12-03 18:59:36.523 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.881.215 / 15.491.253 elements completed (83,15%) after 0:03:33.814
+[INFO ] 2022-12-03 18:59:37.525 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.928.611 / 15.491.253 elements completed (83,46%) after 0:03:34.815
+[INFO ] 2022-12-03 18:59:38.526 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 12.984.244 / 15.491.253 elements completed (83,82%) after 0:03:35.816
+[INFO ] 2022-12-03 18:59:39.527 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.044.587 / 15.491.253 elements completed (84,21%) after 0:03:36.817
+[INFO ] 2022-12-03 18:59:40.528 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.103.993 / 15.491.253 elements completed (84,59%) after 0:03:37.818
+[INFO ] 2022-12-03 18:59:41.530 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.161.837 / 15.491.253 elements completed (84,96%) after 0:03:38.820
+[INFO ] 2022-12-03 18:59:42.531 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.222.272 / 15.491.253 elements completed (85,35%) after 0:03:39.821
+[INFO ] 2022-12-03 18:59:43.532 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.283.627 / 15.491.253 elements completed (85,75%) after 0:03:40.822
+[INFO ] 2022-12-03 18:59:44.534 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.346.832 / 15.491.253 elements completed (86,16%) after 0:03:41.824
+[INFO ] 2022-12-03 18:59:45.536 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.408.217 / 15.491.253 elements completed (86,55%) after 0:03:42.826
+[INFO ] 2022-12-03 18:59:46.537 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.469.621 / 15.491.253 elements completed (86,95%) after 0:03:43.827
+[INFO ] 2022-12-03 18:59:47.538 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.530.107 / 15.491.253 elements completed (87,34%) after 0:03:44.829
+[INFO ] 2022-12-03 18:59:48.540 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.592.472 / 15.491.253 elements completed (87,74%) after 0:03:45.830
+[INFO ] 2022-12-03 18:59:49.542 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.654.482 / 15.491.253 elements completed (88,14%) after 0:03:46.832
+[INFO ] 2022-12-03 18:59:50.543 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.716.444 / 15.491.253 elements completed (88,54%) after 0:03:47.833
+[INFO ] 2022-12-03 18:59:51.544 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.775.061 / 15.491.253 elements completed (88,92%) after 0:03:48.834
+[INFO ] 2022-12-03 18:59:52.546 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.834.099 / 15.491.253 elements completed (89,30%) after 0:03:49.836
+[INFO ] 2022-12-03 18:59:53.547 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.896.205 / 15.491.253 elements completed (89,70%) after 0:03:50.837
+[INFO ] 2022-12-03 18:59:54.548 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 13.958.902 / 15.491.253 elements completed (90,11%) after 0:03:51.838
+[INFO ] 2022-12-03 18:59:55.549 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.021.616 / 15.491.253 elements completed (90,51%) after 0:03:52.839
+[INFO ] 2022-12-03 18:59:56.550 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.083.151 / 15.491.253 elements completed (90,91%) after 0:03:53.841
+[INFO ] 2022-12-03 18:59:57.552 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.144.517 / 15.491.253 elements completed (91,31%) after 0:03:54.842
+[INFO ] 2022-12-03 18:59:58.553 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.207.511 / 15.491.253 elements completed (91,71%) after 0:03:55.843
+[INFO ] 2022-12-03 18:59:59.555 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.269.835 / 15.491.253 elements completed (92,12%) after 0:03:56.845
+[INFO ] 2022-12-03 19:00:00.556 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.331.859 / 15.491.253 elements completed (92,52%) after 0:03:57.846
+[INFO ] 2022-12-03 19:00:01.557 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.392.430 / 15.491.253 elements completed (92,91%) after 0:03:58.847
+[INFO ] 2022-12-03 19:00:02.558 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.449.479 / 15.491.253 elements completed (93,28%) after 0:03:59.849
+[INFO ] 2022-12-03 19:00:03.560 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.513.193 / 15.491.253 elements completed (93,69%) after 0:04:00.850
+[INFO ] 2022-12-03 19:00:04.561 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.576.746 / 15.491.253 elements completed (94,10%) after 0:04:01.852
+[INFO ] 2022-12-03 19:00:05.563 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.638.915 / 15.491.253 elements completed (94,50%) after 0:04:02.853
+[INFO ] 2022-12-03 19:00:06.564 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.701.555 / 15.491.253 elements completed (94,90%) after 0:04:03.854
+[INFO ] 2022-12-03 19:00:07.566 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.764.503 / 15.491.253 elements completed (95,31%) after 0:04:04.856
+[INFO ] 2022-12-03 19:00:08.568 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.827.260 / 15.491.253 elements completed (95,71%) after 0:04:05.858
+[INFO ] 2022-12-03 19:00:09.569 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.887.985 / 15.491.253 elements completed (96,11%) after 0:04:06.859
+[INFO ] 2022-12-03 19:00:10.570 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 14.948.673 / 15.491.253 elements completed (96,50%) after 0:04:07.860
+[INFO ] 2022-12-03 19:00:11.571 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.010.821 / 15.491.253 elements completed (96,90%) after 0:04:08.861
+[INFO ] 2022-12-03 19:00:12.572 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.067.700 / 15.491.253 elements completed (97,27%) after 0:04:09.863
+[INFO ] 2022-12-03 19:00:13.574 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.128.868 / 15.491.253 elements completed (97,66%) after 0:04:10.864
+[INFO ] 2022-12-03 19:00:14.575 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.192.654 / 15.491.253 elements completed (98,07%) after 0:04:11.865
+[INFO ] 2022-12-03 19:00:15.576 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.255.582 / 15.491.253 elements completed (98,48%) after 0:04:12.866
+[INFO ] 2022-12-03 19:00:16.577 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.318.780 / 15.491.253 elements completed (98,89%) after 0:04:13.867
+[INFO ] 2022-12-03 19:00:17.578 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.381.705 / 15.491.253 elements completed (99,29%) after 0:04:14.868
+[INFO ] 2022-12-03 19:00:18.580 [de.uni_mannheim.informatik.dws.winter.utils.ProgressReporter] - : 15.444.135 / 15.491.253 elements completed (99,70%) after 0:04:15.870
+[INFO ] 2022-12-03 19:00:19.325 [de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleBasedMatchingAlgorithm] - Identity Resolution finished after 0:04:46.142; found 11.564 correspondences.
+[WARN ] 2022-12-03 19:00:19.325 [de.uni_mannheim.informatik.dws.winter.matching.rules.MatchingRule] - No corresponding record for the Debug Log found in the Goldstandard!
+[WARN ] 2022-12-03 19:00:19.325 [de.uni_mannheim.informatik.dws.winter.matching.rules.MatchingRule] - Please align the order of Data Sets in Goldstandard and Matching Rule!
+[INFO ] 2022-12-03 19:00:19.379 [de.uni_mannheim.informatik.dws.winter.matching.rules.MatchingRule] - Debug results written to file: data/output/debugResultsMatchingRuleC_E.csv
+[INFO ] 2022-12-03 19:00:19.436 [de.uni_mannheim.informatik.dws.winter.matching.rules.MatchingRule] - Debug results written to file: data/output/debugResultsMatchingRuleC_E.csv_short
+[INFO ] 2022-12-03 19:00:19.463 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - *	Evaluating result	*
+[TRACE] 2022-12-03 19:00:19.464 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4176,Windowgames_564,1.0
+[TRACE] 2022-12-03 19:00:19.464 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13164,Windowgames_2358,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games17365,Windowgames_3248,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5758,Windowgames_1502,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7261,Windowgames_3020,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games16522,Windowgames_1024,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games11226,Windowgames_3729,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games15198,Windowgames_2433,1.0
+[TRACE] 2022-12-03 19:00:19.465 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7752,Windowgames_1701,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games11189,Windowgames_1601,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games11126,Windowgames_2384,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games7719,Windowgames_2034,0.7
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games16514,Windowgames_3084,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games11166,Windowgames_3794,0.7
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games100,Windowgames_1507,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games10655,Windowgames_283,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7705,Windowgames_3322,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games63,Windowgames_2568,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games43,Windowgames_348,1.0
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4013,Windowgames_1425,0.7
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games7724,Windowgames_1064,0.7
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13092,Windowgames_1870,0.7
+[TRACE] 2022-12-03 19:00:19.466 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games92,Windowgames_350,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7701,Windowgames_1275,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games33,Windowgames_2424,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7760,Windowgames_301,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games16231,Windowgames_480,0.9794117647058822
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games69,Windowgames_1092,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games95,Windowgames_1090,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games11196,Windowgames_1914,1.0
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games46,Windowgames_256,0.9781249999999999
+[TRACE] 2022-12-03 19:00:19.467 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7723,Windowgames_3198,0.9787878787878788
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7156,Windowgames_3466,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5469,Windowgames_830,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7534,Windowgames_282,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games90,Windowgames_2666,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6330,Windowgames_2774,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games15642,Windowgames_347,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13139,Windowgames_3159,1.0
+[TRACE] 2022-12-03 19:00:19.468 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4054,Windowgames_914,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7549,Windowgames_355,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13144,Windowgames_794,0.7
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10648,Windowgames_2982,0.7
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7732,Windowgames_2863,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games25,Windowgames_1537,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4267,Windowgames_2285,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games39,Windowgames_1534,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games6518,Windowgames_2107,0.76
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games12093,Windowgames_263,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6887,Windowgames_2419,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5491,Windowgames_1878,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games12125,Windowgames_3135,0.7
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games12125,Windowgames_3134,0.7
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games11127,Windowgames_2136,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4114,Windowgames_2437,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7750,Windowgames_2932,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4928,Windowgames_3140,1.0
+[TRACE] 2022-12-03 19:00:19.469 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10664,Windowgames_2814,0.7
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games13093,Windowgames_788,0.9124999999999999
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games15856,Windowgames_2171,1.0
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games12561,Windowgames_3536,1.0
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games15654,Windowgames_942,0.8923076923076922
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games26,Windowgames_1485,1.0
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games85,Windowgames_1489,0.7
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games12539,Windowgames_2936,1.0
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games79,Windowgames_2051,1.0
+[TRACE] 2022-12-03 19:00:19.470 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] ﻿all_games15139,Windowgames_3595
+[TRACE] 2022-12-03 19:00:19.471 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games7776,Windowgames_1369
+[TRACE] 2022-12-03 19:00:19.471 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games89,Windowgames_579
+[TRACE] 2022-12-03 19:00:19.471 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games4316,Windowgames_2265
+[TRACE] 2022-12-03 19:00:19.471 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5991,PS4_id_2940,1.0
+[TRACE] 2022-12-03 19:00:19.471 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5799,PS4_id_1265,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games5799,PS4_id_1264,0.9176470588235293
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games18104,PS4_id_8600,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4760,PS4_id_1526,0.9186046511627906
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4760,PS4_id_1525,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games10135,PS4_id_8413,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13449,PS4_id_1235,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games9289,PS4_id_6638,0.7
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games9523,PS4_id_6374,0.72
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6441,PS4_id_4395,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games9486,PS4_id_4130,1.0
+[TRACE] 2022-12-03 19:00:19.472 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games18200,PS4_id_7540,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games3731,PS4_id_7635,0.8599999999999999
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games3731,PS4_id_7634,0.8185185185185184
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games3731,PS4_id_7633,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5694,PS4_id_8121,0.895
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5694,PS4_id_8120,0.98
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13531,PS4_id_8193,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10581,PS4_id_7067,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games18142,PS4_id_8658,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13570,PS4_id_1607,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games9638,PS4_id_5299,0.8967213114754098
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games13573,PS4_id_958,0.8939393939393938
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13573,PS4_id_957,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4405,PS4_id_8774,0.9681818181818183
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6701,PS4_id_5567,1.0
+[TRACE] 2022-12-03 19:00:19.473 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games4167,PS4_id_1841,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games60,PS4_id_2802,0.7565217391304347
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games60,PS4_id_2801,0.825
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games60,PS4_id_2800,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games60,PS4_id_2804,0.825
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games17,PS4_id_727,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13702,PS4_id_8369,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5434,PS4_id_8548,0.7789473684210526
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games13702,PS4_id_8371,0.875
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games13702,PS4_id_8370,0.8366666666666667
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games1855,PS4_id_5791,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games18330,PS4_id_9534,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10360,PS4_id_2999,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7451,PS4_id_6899,1.0
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games7451,PS4_id_6898,0.7899999999999999
+[TRACE] 2022-12-03 19:00:19.474 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7700,PS4_id_5580,1.0
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13598,PS4_id_6184,1.0
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13463,PS4_id_6029,1.0
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6860,PS4_id_7521,0.7499999999999999
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6860,PS4_id_7520,1.0
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7368,PS4_id_4163,1.0
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7755,PS4_id_7959,1.0
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6292,PS4_id_5278,0.7433333333333333
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6292,PS4_id_5279,0.8319999999999999
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13613,PS4_id_6039,0.8333333333333333
+[TRACE] 2022-12-03 19:00:19.475 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13613,PS4_id_6038,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games7498,PS4_id_6989,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6882,PS4_id_6304,0.9649999999999999
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10254,PS4_id_5817,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13499,PS4_id_5087,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7872,PS4_id_7583,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games9761,PS4_id_1704,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10055,PS4_id_5315,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games17193,PS4_id_3452,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6085,PS4_id_8718,1.0
+[TRACE] 2022-12-03 19:00:19.476 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10383,PS4_id_4787,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10236,PS4_id_3619,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6723,PS4_id_1963,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13620,PS4_id_6757,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games9598,PS4_id_2903,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games8802,PS4_id_7413,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13639,PS4_id_6890,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5430,PS4_id_4177,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games8619,PS4_id_7621,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5993,PS4_id_2088,0.8870967741935483
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5993,PS4_id_2085,1.0
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5993,PS4_id_2086,0.8352941176470587
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games5993,PS4_id_2087,0.8870967741935483
+[TRACE] 2022-12-03 19:00:19.477 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7206,PS4_id_6096,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13611,PS4_id_4310,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13552,PS4_id_5742,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13525,PS4_id_4396,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13694,PS4_id_5732,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games16766,PS4_id_1192,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13683,PS4_id_4399,1.0
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games18,PS4_id_6348,0.825
+[TRACE] 2022-12-03 19:00:19.478 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games15597,PS4_id_2929,0.9078947368421053
+[TRACE] 2022-12-03 19:00:19.479 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7825,PS4_id_3921,1.0
+[TRACE] 2022-12-03 19:00:19.480 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] all_games10450,PS4_id_4048,1.0
+[TRACE] 2022-12-03 19:00:19.481 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6125,PS4_id_8119,1.0
+[TRACE] 2022-12-03 19:00:19.481 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13643,PS4_id_4739,0.8055555555555556
+[TRACE] 2022-12-03 19:00:19.481 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13643,PS4_id_4738,1.0
+[TRACE] 2022-12-03 19:00:19.481 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games13443,PS4_id_4958,1.0
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games8680,PS4_id_8264,1.0
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games6128,PS4_id_2861,1.0
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] all_games7304,PS4_id_1694,1.0
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] ﻿all_games17903,PS4_id_4452
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games8877,PS4_id_8822
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games8,PS4_id_727
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games1075,PS4_id_2492
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games4925,PS4_id_8670
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games6368,PS4_id_7503
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games6368,PS4_id_7504
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] all_games6701,PS4_id_5568
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2308,Video_games_sales11776,1.0
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2309,Video_games_sales12737,1.0
+[TRACE] 2022-12-03 19:00:19.482 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3559,Video_games_sales15946,1.0
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3560,Video_games_sales12583,0.8999999999999999
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1604,Video_games_sales16955,1.0
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3693,Video_games_sales2685,1.0
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_522,Video_games_sales14382,0.9794117647058822
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1488,Video_games_sales2131,0.7
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1884,Video_games_sales16723,1.0
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_2310,Video_games_sales12737,0.8333333333333333
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2314,Video_games_sales11781,0.8558823529411765
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2185,Video_games_sales13106,1.0
+[TRACE] 2022-12-03 19:00:19.483 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_826,Video_games_sales12015,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2987,Video_games_sales11709,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2748,Video_games_sales12257,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2568,Video_games_sales2731,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_998,Video_games_sales9283,0.7421052631578946
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1092,Video_games_sales311,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2073,Video_games_sales13037,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3263,Video_games_sales15174,0.7421052631578946
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_694,Video_games_sales14880,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2120,Video_games_sales12183,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_634,Video_games_sales16598,0.9045454545454545
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_631,Video_games_sales16598,0.7
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1090,Video_games_sales6625,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_26,Video_games_sales12632,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3585,Video_games_sales13118,1.0
+[TRACE] 2022-12-03 19:00:19.484 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3699,Video_games_sales10990,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1599,Video_games_sales13830,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1489,Video_games_sales13953,0.7
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3804,Video_games_sales12741,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1766,Video_games_sales14816,0.7
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2612,Video_games_sales12706,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2735,Video_games_sales12849,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1323,Video_games_sales16301,0.7
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1041,Video_games_sales12945,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3057,Video_games_sales8746,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2302,Video_games_sales11861,0.9758620689655173
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1567,Video_games_sales11688,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3023,Video_games_sales12157,1.0
+[TRACE] 2022-12-03 19:00:19.485 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2424,Video_games_sales9193,1.0
+[TRACE] 2022-12-03 19:00:19.488 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3753,Video_games_sales2858,1.0
+[TRACE] 2022-12-03 19:00:19.488 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_149,Video_games_sales13972,0.8541666666666665
+[TRACE] 2022-12-03 19:00:19.488 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1810,Video_games_sales9717,1.0
+[TRACE] 2022-12-03 19:00:19.488 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1948,Video_games_sales15957,1.0
+[TRACE] 2022-12-03 19:00:19.488 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_63,Video_games_sales5082,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_350,Video_games_sales3060,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1902,Video_games_sales13786,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3718,Video_games_sales4174,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1747,Video_games_sales16983,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_64,Video_games_sales12360,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1353,Video_games_sales13338,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_358,Video_games_sales17207,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3024,Video_games_sales12829,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_821,Video_games_sales6980,0.7
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1966,Video_games_sales15003,0.7
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3398,Video_games_sales12911,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1907,Video_games_sales12518,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1322,Video_games_sales12121,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1568,Video_games_sales11582,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3454,Video_games_sales11876,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2616,Video_games_sales12466,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_348,Video_games_sales4735,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3208,Video_games_sales487,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1537,Video_games_sales671,1.0
+[TRACE] 2022-12-03 19:00:19.489 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2150,Video_games_sales12917,0.7
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2216,Video_games_sales528,0.7
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1534,Video_games_sales287,0.7
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3385,Video_games_sales17138,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3636,Video_games_sales15743,0.9658536585365853
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2051,Video_games_sales4917,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_1485,Video_games_sales1644,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1636,Video_games_sales14613,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Windowgames_1721,Video_games_sales15997,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_3020,Video_games_sales1560,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_2846,Video_games_sales12887,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Windowgames_928,Video_games_sales194,1.0
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] ﻿Windowgames_3248,Video_games_sales15542
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Windowgames_2171,Video_games_sales13003
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Windowgames_1652,Video_games_sales3398
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Windowgames_418,Video_games_sales12835
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Windowgames_2610,Video_games_sales17209
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales5381,PS4_id_4335,0.972
+[TRACE] 2022-12-03 19:00:19.490 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales2100,PS4_id_5890,0.9086956521739129
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4309,PS4_id_8235,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales8030,PS4_id_9473,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13309,PS4_id_7705,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales473,PS4_id_5858,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales105,PS4_id_2177,0.973076923076923
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales12259,PS4_id_1214,0.7
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13004,PS4_id_3127,0.8599999999999999
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13004,PS4_id_3128,0.9054054054054055
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15841,PS4_id_613,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13004,PS4_id_3126,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales354,PS4_id_8263,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales10130,PS4_id_6989,1.0
+[TRACE] 2022-12-03 19:00:19.491 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales8924,PS4_id_8449,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales14955,PS4_id_1553,0.983720930232558
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15879,PS4_id_605,0.9299999999999999
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales13465,PS4_id_5187,0.8923076923076922
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13465,PS4_id_5188,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1146,PS4_id_7210,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4654,PS4_id_1135,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales751,PS4_id_9018,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4995,PS4_id_6701,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales2586,PS4_id_333,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales6697,PS4_id_2561,0.8653846153846154
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales14116,PS4_id_1629,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales16536,PS4_id_151,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15854,PS4_id_4223,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales3388,PS4_id_961,0.7
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales6697,PS4_id_2559,0.7
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales486,PS4_id_9273,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales5932,PS4_id_4699,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales10272,PS4_id_1192,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales8214,PS4_id_1447,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales5043,PS4_id_2798,0.7499999999999999
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7335,PS4_id_1833,0.9708333333333332
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15868,PS4_id_5687,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales8225,PS4_id_9475,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales637,PS4_id_8741,1.0
+[TRACE] 2022-12-03 19:00:19.492 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales38,PS4_id_6348,0.825
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1862,PS4_id_5411,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales10712,PS4_id_6432,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12301,PS4_id_6558,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales8530,PS4_id_2062,0.7
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales8687,PS4_id_3152,0.7
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales10911,PS4_id_9179,0.7
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13238,PS4_id_4124,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4502,PS4_id_251,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4502,PS4_id_252,0.8870967741935483
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales13147,PS4_id_4700,0.7
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales9068,PS4_id_8648,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales11302,PS4_id_7144,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales10257,PS4_id_346,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales10088,PS4_id_8448,0.972
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales2241,PS4_id_6425,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales9425,PS4_id_3901,0.7
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4617,PS4_id_6892,0.825
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4617,PS4_id_6891,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales13591,PS4_id_805,0.8444444444444443
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13591,PS4_id_806,0.8833333333333333
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales13591,PS4_id_807,0.8444444444444443
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales9748,PS4_id_4050,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales775,PS4_id_5711,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales10116,PS4_id_6897,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales9422,PS4_id_6372,0.7
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1324,PS4_id_8740,1.0
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales3191,PS4_id_968,0.7454545454545454
+[TRACE] 2022-12-03 19:00:19.493 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales16191,PS4_id_9114,0.9299999999999999
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] ﻿Video_games_sales12776,PS4_id_9534
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales8232,PS4_id_8184
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales7841,PS4_id_6291
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales5043,PS4_id_2801
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales5043,PS4_id_2802
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales5043,PS4_id_2803
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales5043,PS4_id_2804
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales206,PS4_id_1467
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales7841,PS4_id_6291
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales2164,PS4_id_9362
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales6697,PS4_id_2560
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales2640,wikidata_id_44867,0.9824999999999999
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4866,wikidata_id_74832,0.825
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7045,wikidata_id_49319,0.9815789473684211
+[TRACE] 2022-12-03 19:00:19.494 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales2731,wikidata_id_72600,1.0
+[TRACE] 2022-12-03 19:00:19.495 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7000,wikidata_id_38858,1.0
+[TRACE] 2022-12-03 19:00:19.495 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1644,wikidata_id_54901,0.7
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12278,wikidata_id_71187,1.0
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12604,wikidata_id_58904,1.0
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales3060,wikidata_id_62294,0.7
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13953,wikidata_id_38960,0.7
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales666,wikidata_id_13703,1.0
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales11725,wikidata_id_31243,0.963157894736842
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales6519,wikidata_id_74459,1.0
+[TRACE] 2022-12-03 19:00:19.496 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales8279,wikidata_id_28993,1.0
+[TRACE] 2022-12-03 19:00:19.497 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales6625,wikidata_id_29340,1.0
+[TRACE] 2022-12-03 19:00:19.497 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15187,wikidata_id_61137,0.9416666666666667
+[TRACE] 2022-12-03 19:00:19.497 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12644,wikidata_id_67854,1.0
+[TRACE] 2022-12-03 19:00:19.498 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1308,wikidata_id_71690,1.0
+[TRACE] 2022-12-03 19:00:19.498 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15253,wikidata_id_52734,1.0
+[TRACE] 2022-12-03 19:00:19.499 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales196,wikidata_id_37337,1.0
+[TRACE] 2022-12-03 19:00:19.499 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales12038,wikidata_id_48102,0.7
+[TRACE] 2022-12-03 19:00:19.499 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12632,wikidata_id_76440,1.0
+[TRACE] 2022-12-03 19:00:19.500 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4735,wikidata_id_39999,1.0
+[TRACE] 2022-12-03 19:00:19.500 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales3545,wikidata_id_59080,1.0
+[TRACE] 2022-12-03 19:00:19.501 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12340,wikidata_id_57224,0.98
+[TRACE] 2022-12-03 19:00:19.501 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15207,wikidata_id_32772,0.925531914893617
+[TRACE] 2022-12-03 19:00:19.502 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4135,wikidata_id_26269,1.0
+[TRACE] 2022-12-03 19:00:19.502 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] Video_games_sales11952,wikidata_id_47062,0.7
+[TRACE] 2022-12-03 19:00:19.502 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales2699,wikidata_id_5176,1.0
+[TRACE] 2022-12-03 19:00:19.503 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales14299,wikidata_id_29372,1.0
+[TRACE] 2022-12-03 19:00:19.503 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7112,wikidata_id_11012,1.0
+[TRACE] 2022-12-03 19:00:19.503 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales14239,wikidata_id_74483,0.7
+[TRACE] 2022-12-03 19:00:19.503 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1289,wikidata_id_858,1.0
+[TRACE] 2022-12-03 19:00:19.503 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7041,wikidata_id_37342,1.0
+[TRACE] 2022-12-03 19:00:19.505 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales5406,wikidata_id_46446,0.9363636363636363
+[TRACE] 2022-12-03 19:00:19.507 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15084,wikidata_id_73207,0.981081081081081
+[TRACE] 2022-12-03 19:00:19.508 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15614,wikidata_id_51500,1.0
+[TRACE] 2022-12-03 19:00:19.508 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales8144,wikidata_id_68693,1.0
+[TRACE] 2022-12-03 19:00:19.509 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales15644,wikidata_id_64138,1.0
+[TRACE] 2022-12-03 19:00:19.509 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7052,wikidata_id_32402,1.0
+[TRACE] 2022-12-03 19:00:19.509 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales1140,wikidata_id_66276,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales12262,wikidata_id_64342,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales16065,wikidata_id_56275,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales9193,wikidata_id_29147,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13929,wikidata_id_65691,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales5043,wikidata_id_60488,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales7004,wikidata_id_59545,1.0
+[TRACE] 2022-12-03 19:00:19.510 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales629,wikidata_id_36230,1.0
+[TRACE] 2022-12-03 19:00:19.511 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales376,wikidata_id_36616,1.0
+[TRACE] 2022-12-03 19:00:19.511 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales4917,wikidata_id_74057,1.0
+[TRACE] 2022-12-03 19:00:19.511 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales13438,wikidata_id_63542,1.0
+[TRACE] 2022-12-03 19:00:19.511 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales38,wikidata_id_50946,0.7
+[TRACE] 2022-12-03 19:00:19.511 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales311,wikidata_id_75364,1.0
+[TRACE] 2022-12-03 19:00:19.511 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales3802,wikidata_id_47739,1.0
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] Video_games_sales11920,wikidata_id_52411,1.0
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] ﻿Video_games_sales15114,wikidata_id_56277
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales7019,wikidata_id_69016
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales287,wikidata_id_44057
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales3418,wikidata_id_39571
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales3429,wikidata_id_51122
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales103,wikidata_id_52050
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales5031,wikidata_id_65731
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales501,wikidata_id_30395
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales501,wikidata_id_33926
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales501,wikidata_id_39306
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales8849,wikidata_id_53099
+[TRACE] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] Video_games_sales4317,wikidata_id_37488
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - data_A <-> data_B
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Precision: 0,8939
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Recall: 0,9365
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - F1: 0,9147
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - data_A <-> data_D
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Precision: 0,7634
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Recall: 0,8987
+[INFO ] 2022-12-03 19:00:19.512 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - F1: 0,8256
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - data_B <-> data_C
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Precision: 0,8442
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Recall: 0,9155
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - F1: 0,8784
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - data_C <-> data_D
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Precision: 0,7500
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Recall: 0,7969
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - F1: 0,7727
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - data_C <-> data_E
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Precision: 0,9636
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - Recall: 0,8154
+[INFO ] 2022-12-03 19:00:19.513 [de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Games_IR_linear_combinations] - F1: 0,8833

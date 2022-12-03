@@ -23,7 +23,6 @@ Fusion_1:
 IR_Years_9:
 			int comparatorSetChosenKey = 9;
 
-			
 			StandardRecordBlocker<Game, Attribute> blockerA_D = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
 			StandardRecordBlocker<Game, Attribute> blockerA_B = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
 			StandardRecordBlocker<Game, Attribute> blockerB_C = new StandardRecordBlocker<Game, Attribute>(new GameBlockingKeyByPlatformYearsGenerator());
