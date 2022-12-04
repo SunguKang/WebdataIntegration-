@@ -21,7 +21,6 @@ public class SeriesFuserFavourSource extends AttributeValueFuser<String, Game, A
 
     @Override
     public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        // TODO implement
         FusedValue<String, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
 		gameFused.setSeries(fused.getValue());
 		gameFused.setAttributeProvenance(Game.SERIES, fused.getOriginalIds());
@@ -36,9 +35,4 @@ public class SeriesFuserFavourSource extends AttributeValueFuser<String, Game, A
 		return game.getSeries();
 	}
 
-    @Override
-    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        //TODO implement
-        return null;
-    }
 }

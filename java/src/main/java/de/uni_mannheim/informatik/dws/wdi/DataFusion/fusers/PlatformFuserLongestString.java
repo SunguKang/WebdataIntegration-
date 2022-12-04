@@ -20,7 +20,6 @@ public class PlatformFuserLongestString extends AttributeValueFuser<String, Game
 
     @Override
     public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        //TODO implement
         FusedValue<String, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
 		gameFused.setPlatform(fused.getValue());
 		gameFused.setAttributeProvenance(Game.PLATFORM, fused.getOriginalIds());
@@ -35,10 +34,6 @@ public class PlatformFuserLongestString extends AttributeValueFuser<String, Game
 		return game.getPlatform();
 	}
 
-    @Override
-    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        //TODO implement
-        return null;
-    }
+
 
 }

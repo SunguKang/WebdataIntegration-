@@ -20,7 +20,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 
+import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 import org.apache.commons.lang3.StringUtils;
+import org.slf4j.Logger;
 import org.w3c.dom.Node;
 
 import de.uni_mannheim.informatik.dws.winter.model.DataSet;
@@ -37,6 +39,8 @@ import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
  */
 public class GameXMLReader extends XMLMatchableReader<Game, Attribute> implements
 FusibleFactory<Game, Attribute> {
+
+	private static final Logger logger = WinterLogManager.activateLogger("default");
 
 /* (non-Javadoc)
 * @see de.uni_mannheim.informatik.wdi.model.io.XMLMatchableReader#initialiseDataset(de.uni_mannheim.informatik.wdi.model.DataSet)
@@ -77,7 +81,7 @@ String id = getValueFromChildElement(node, "id");
 	try{
 		soldUnits = Float.parseFloat(getValueFromChildElement(node, "globallySoldUnits"));
 	}catch (NumberFormatException e){
-		// TODO log error
+		logger.warn("Got NumberFormatException for soldUnits game: " + game.getName());
 	}
 	game.setGloballyySoldUnits(soldUnits);
 
@@ -85,7 +89,7 @@ String id = getValueFromChildElement(node, "id");
 	try{
 		criticScore = Float.parseFloat(getValueFromChildElement(node, "criticScore"));
 	} catch	(NumberFormatException e){
-		// TODO log error
+		logger.warn("Got NumberFormatException for criticScore game: " + game.getName());
 	}
 	game.setCriticScore(criticScore);
 
@@ -93,7 +97,7 @@ String id = getValueFromChildElement(node, "id");
 	try{
 		userScore = Float.parseFloat(getValueFromChildElement(node, "userScore"));
 	} catch (NumberFormatException e){
-		//TODO log error
+		logger.warn("Got NumberFormatException for userScore game: " + game.getName());
 	}
 	game.setUserScore(userScore);
 	game.setSummary(getValueFromChildElement(node, "summary"));

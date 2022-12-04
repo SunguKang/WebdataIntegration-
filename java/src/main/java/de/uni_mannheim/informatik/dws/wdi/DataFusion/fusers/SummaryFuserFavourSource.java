@@ -13,14 +13,14 @@ import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
 public class SummaryFuserFavourSource extends AttributeValueFuser<String, Game, Attribute> {
-    
+    // attribute only in dataset A
+
     public SummaryFuserFavourSource() {
 		super(new FavourSources<String, Game, Attribute>());
 	}
 
     @Override
     public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        //TODO implement
         FusedValue<String, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
 		gameFused.setRating(fused.getValue());
 		gameFused.setAttributeProvenance(Game.SUMMARY, fused.getOriginalIds());
@@ -35,10 +35,6 @@ public class SummaryFuserFavourSource extends AttributeValueFuser<String, Game, 
 		return game.getSummary();
 	}
 
-    @Override
-    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-        //TODO implement
-        return null;
-    }
-////attribute only in dataset A
+
+
 }

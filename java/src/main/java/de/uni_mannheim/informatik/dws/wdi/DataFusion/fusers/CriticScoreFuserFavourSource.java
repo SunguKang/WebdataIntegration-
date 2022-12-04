@@ -20,7 +20,6 @@ public class CriticScoreFuserFavourSource extends AttributeValueFuser<Float, Gam
 		super(new FavourSources<Float, Game, Attribute>());
 	}
 
-    //TODO Test
 	@Override
 	public void fuse(RecordGroup<Game, Attribute> group, Game fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		FusedValue<Float, Game, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
