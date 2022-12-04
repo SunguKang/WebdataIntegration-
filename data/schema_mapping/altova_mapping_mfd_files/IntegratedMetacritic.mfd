@@ -7,7 +7,7 @@
 		<structure>
 			<children>
 				<component name="ID" library="user" uid="16" kind="19" visible="0" blackbox="0">
-					<view ltx="669" lty="33" rbx="716" rby="50"/>
+					<view ltx="669" lty="33" rbx="716" rby="49"/>
 					<data>
 						<root>
 							<header>
@@ -24,34 +24,25 @@
 						</root>
 					</data>
 				</component>
-				<component name="target_schema" library="xml" uid="2" kind="14">
-					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
-					<view ltx="842" lty="25" rbx="1102" rby="402"/>
+				<component name="userScore" library="user" uid="27" kind="19" visible="0" blackbox="0">
+					<view ltx="542" lty="328" rbx="682" rby="344"/>
 					<data>
 						<root>
 							<header>
 								<namespaces>
 									<namespace/>
-									<namespace uid="http://www.altova.com/mapforce"/>
 								</namespaces>
 							</header>
-							<entry name="FileInstance" ns="1" expanded="1">
-								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
-									<entry name="videogames" expanded="1">
-										<entry name="videogame" inpkey="19" expanded="1">
-											<entry name="id" inpkey="8"/>
-											<entry name="name" inpkey="20"/>
-											<entry name="platform" inpkey="21"/>
-											<entry name="publicationDate" inpkey="22"/>
-											<entry name="criticScore" inpkey="23"/>
-											<entry name="userScore" inpkey="17"/>
-											<entry name="summary" inpkey="24"/>
-										</entry>
-									</entry>
-								</entry>
-							</entry>
+							<entry name="valuetrue" inpkey="35" componentid="25"/>
 						</root>
-						<document schema="..\altova_target_scema\target_schema.xsd" instanceroot="{}videogames" inputinstance="..\altova_target_scema\target_schema.xml" outputinstance="..\integrated_target_schema_datasets_xlsx\test_data.xml"/>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="userScore" outkey="36" componentid="26"/>
+						</root>
 					</data>
 				</component>
 				<component name="all_games" library="text" uid="3" kind="16">
@@ -92,8 +83,8 @@
 						</text>
 					</data>
 				</component>
-				<component name="userScore" library="user" uid="27" kind="19" visible="0" blackbox="0">
-					<view ltx="600" lty="358" rbx="740" rby="375"/>
+				<component name="reformatDate" library="user" uid="59" kind="19" visible="0" blackbox="0">
+					<view ltx="581" lty="186" rbx="734" rby="202"/>
 					<data>
 						<root>
 							<header>
@@ -101,7 +92,7 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="valuetrue" inpkey="31" componentid="25"/>
+							<entry name="dateStringInput" inpkey="37" componentid="53"/>
 						</root>
 						<root>
 							<header>
@@ -109,8 +100,38 @@
 									<namespace/>
 								</namespaces>
 							</header>
-							<entry name="userScore" outkey="32" componentid="26"/>
+							<entry name="result" outkey="39" componentid="48"/>
 						</root>
+					</data>
+				</component>
+				<component name="target_schema" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="842" lty="25" rbx="1102" rby="402"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="videogames" expanded="1">
+										<entry name="videogame" inpkey="19" expanded="1">
+											<entry name="id" inpkey="8"/>
+											<entry name="name" inpkey="20"/>
+											<entry name="platform" inpkey="21"/>
+											<entry name="publicationDate" inpkey="22"/>
+											<entry name="criticScore" inpkey="23"/>
+											<entry name="userScore" inpkey="17"/>
+											<entry name="summary" inpkey="24"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="..\altova_target_scema\target_schema.xsd" instanceroot="{}videogames" inputinstance="..\altova_target_scema\target_schema.xml" outputinstance="..\integrated_target_schema_xml\target_schema_metacritic.xml"/>
 					</data>
 				</component>
 			</children>
@@ -122,7 +143,7 @@
 							<edge vertexkey="8"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="32">
+					<vertex vertexkey="36">
 						<edges>
 							<edge vertexkey="17"/>
 						</edges>
@@ -142,7 +163,7 @@
 							<edge vertexkey="21"/>
 						</edges>
 					</vertex>
-					<vertex vertexkey="28">
+					<vertex vertexkey="39">
 						<edges>
 							<edge vertexkey="22"/>
 						</edges>
@@ -159,7 +180,12 @@
 					</vertex>
 					<vertex vertexkey="16">
 						<edges>
-							<edge vertexkey="31"/>
+							<edge vertexkey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="37"/>
 						</edges>
 					</vertex>
 				</vertices>
@@ -322,6 +348,246 @@
 					<vertex vertexkey="7">
 						<edges>
 							<edge vertexkey="9"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="dataReformat" library="user" uid="31" inline="1" editable="1" blackbox="0">
+		<description/>
+		<structure>
+			<children>
+				<component name="tokenize" library="core" uid="33" kind="5">
+					<sources>
+						<datapoint pos="0" key="16"/>
+						<datapoint pos="1" key="4"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="229" lty="125" rbx="315" rby="178"/>
+				</component>
+				<component name="item-at" library="core" uid="34" kind="5">
+					<sources>
+						<datapoint pos="0" key="6"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="407" lty="102" rbx="506" rby="155"/>
+				</component>
+				<component name="constant" library="core" uid="35" kind="2">
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="326" lty="199" rbx="364" rby="215"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="parse-dateTime" library="core" uid="36" kind="5">
+					<sources>
+						<datapoint pos="0" key="2"/>
+						<datapoint pos="1" key="12"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="572" lty="111" rbx="670" rby="164"/>
+				</component>
+				<component name="constant" library="core" uid="37" kind="2">
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="423" lty="199" rbx="559" rby="215"/>
+					<data>
+						<constant value="[Y]-[M]-[D]T[H]:[m]:[s]Z" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="38" kind="2">
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="117" lty="220" rbx="159" rby="236"/>
+					<data>
+						<constant value="," datatype="string"/>
+					</data>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="39" kind="5">
+					<sources>
+						<datapoint pos="0" key="14"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="742" lty="140" rbx="859" rby="177"/>
+				</component>
+				<component name="dateStringInput" library="core" uid="41" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="15"/>
+					</targets>
+					<view ltx="50" lty="110" rbx="172" rby="147"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="dateStringInput"/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="32" kind="7">
+					<sources>
+						<datapoint pos="0" key="17"/>
+					</sources>
+					<view ltx="909" lty="90" rbx="961" rby="127"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="4"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="6"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="12"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="16"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="17"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="reformatDate" library="user" uid="47" inline="1" editable="1" blackbox="0">
+		<description/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="66" kind="2">
+					<targets>
+						<datapoint pos="0" key="21"/>
+					</targets>
+					<view ltx="541" lty="341" rbx="665" rby="358"/>
+					<data>
+						<constant value="[MNn,3-9] [D], [Y]" datatype="string"/>
+					</data>
+				</component>
+				<component name="parse-date" library="core" uid="65" kind="5">
+					<sources>
+						<datapoint pos="0" key="22"/>
+						<datapoint pos="1" key="23"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="692" lty="259" rbx="771" rby="313"/>
+				</component>
+				<component name="dateStringInput" library="core" uid="53" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="481" lty="258" rbx="605" rby="295"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="dateStringInput"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="56" kind="2">
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="754" lty="369" rbx="845" rby="386"/>
+					<data>
+						<constant value="[Y]-[M]-[D]" datatype="string"/>
+					</data>
+				</component>
+				<component name="format-date" library="core" uid="63" kind="5">
+					<sources>
+						<datapoint pos="0" key="18"/>
+						<datapoint pos="1" key="19"/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="867" lty="258" rbx="955" rby="328"/>
+				</component>
+				<component name="result" library="core" uid="48" kind="7">
+					<sources>
+						<datapoint pos="0" key="17"/>
+					</sources>
+					<view ltx="1021" lty="276" rbx="1074" rby="313"/>
+					<data>
+						<output datatype="string"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="21">
+						<edges>
+							<edge vertexkey="23"/>
 						</edges>
 					</vertex>
 				</vertices>
