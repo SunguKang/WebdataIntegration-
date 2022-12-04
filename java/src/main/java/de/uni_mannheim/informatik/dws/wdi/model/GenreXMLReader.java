@@ -34,18 +34,12 @@ public class GenreXMLReader extends XMLMatchableReader<Genre, Attribute> {
     public Genre createModelFromElement(Node node, String provenanceInfo) {
         String id = getValueFromChildElement(node, "id");
 
-
-
        // create the object with id and provenance information
         Genre genre = new Genre(id, provenanceInfo);
 
-
-
        // fill the attribute
         genre.setGenreName(getValueFromChildElement(node, "genreName"));
-
-
-
+        
        return genre;
    }
 }

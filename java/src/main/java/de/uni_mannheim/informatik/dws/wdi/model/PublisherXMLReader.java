@@ -34,17 +34,11 @@ public class PublisherXMLReader extends XMLMatchableReader<Publisher, Attribute>
     public Publisher createModelFromElement(Node node, String provenanceInfo) {
         String id = getValueFromChildElement(node, "id");
 
-
-
        // create the object with id and provenance information
         Publisher publisher = new Publisher(id, provenanceInfo);
 
-
-
        // fill the attribute
         publisher.setPublisherName(getValueFromChildElement(node, "publisherName"));
-
-
 
        return publisher;
     }

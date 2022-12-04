@@ -37,12 +37,4 @@ public class GenresFuserUnion extends AttributeValueFuser<List<Genre>, Game, Att
 	public List<Genre> getValue(Game record, Correspondence<Attribute, Matchable> correspondence) {
 		return record.getGenres();
 	}
-
-
- 	
-//   //we propably don't need this 
-//   @Override
-//   public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-//       return null;
-//   }
 }

@@ -63,7 +63,6 @@ dataset.addAttribute(Game.SUMMARY);
 dataset.addAttribute(Game.RATING);
 dataset.addAttribute(Game.SERIES);
 
-
 }
 
 @Override
@@ -124,9 +123,6 @@ String id = getValueFromChildElement(node, "id");
 	}
 	
 	// load the List variables
-//	List<Actor> actors = getObjectListFromChildElement(node, "actors",
-//			"actor", new ActorXMLReader(), provenanceInfo);
-//	movie.setActors(actors);
 	List<Publisher> publishers = getObjectListFromChildElement(node, "publishers",
 			"publishers", new PublisherXMLReader(), provenanceInfo);
 	game.setPublishers(publishers);

@@ -38,10 +38,4 @@ public class DevelopersFuserUnion extends AttributeValueFuser<List<Developer>, G
 		return record.getDevelopers();
 	}
 
-
-//    //we propably don't need this 
-//    @Override
-//    public Double getConsistency(RecordGroup<Game, Attribute> recordGroup, EvaluationRule<Game, Attribute> evaluationRule, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
-//        return null;
-//    }
 }
