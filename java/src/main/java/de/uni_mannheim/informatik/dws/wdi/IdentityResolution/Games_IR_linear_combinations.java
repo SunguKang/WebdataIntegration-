@@ -45,10 +45,6 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			PrintStream out = new PrintStream(new FileOutputStream("output.txt"));
 			System.setOut(out);
 
-
-			//		String folderPathXMLSourceFiles = "../data/preprocessing/preprocessed_xml_files/";
-			//		String folderGoldStandardIR = "../data/gold_standard/merged/";
-			//		String correspondencesFolderPath = "../data/correspondences/";
 			String dataFolderPath = prop.getProperty("data.path");
 			String folderPathXMLPreprocessedFiles = dataFolderPath + prop.getProperty("data.preprocessing.path")
 					+ prop.getProperty("data.preprocessing.preprocessed_xml.path");
@@ -224,16 +220,12 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			blockerC_D.setMeasureBlockSizes(true);
 			blockerC_E.setMeasureBlockSizes(true);
 
-			//blocker2.setMeasureBlockSizes(true);
 			//Write debug results to file:
 			blockerA_B.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingA_B.csv", 100);
 			blockerA_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingA_D.csv", 100);
 			blockerB_C.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingB_C.csv", 100);
 			blockerC_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingC_D.csv", 100);
 			blockerC_E.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingC_E.csv", 100);
-
-
-			//blocker2.collectBlockSizeData("data/output/debugResultsBlocking2.csv", 100);
 			
 			// Initialize Matching Engine
 			MatchingEngine<Game, Attribute> engineA_B = new MatchingEngine<>();
@@ -256,14 +248,6 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					data_C, data_E, null, matchingRuleC_E, blockerC_E);
 
 
-			// Create a top-1 global matching
-			// correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
-
-			// Alternative: Create a maximum-weight, bipartite matching
-			// MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
-			// maxWeight.run();
-			// correspondences = maxWeight.getResult();
-
 			// write the correspondences to the output file (in the data folder of the git repository)
 			new CSVCorrespondenceFormatter().writeCSV(
 					new File(correspondencesFolderPath+ "A_B_correspondences.csv"), correspondencesA_B);
@@ -275,7 +259,6 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					new File(correspondencesFolderPath + "C_D_correspondences.csv"), correspondencesC_D);
 			new CSVCorrespondenceFormatter().writeCSV(
 					new File(correspondencesFolderPath + "C_E_correspondences.csv"), correspondencesC_E);
-			
 			
 			
 			logger.info("*\tEvaluating result\t*");
@@ -290,6 +273,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			Performance perfTestC_D = evaluatorC_D.evaluateMatching(correspondencesC_D, gsTestC_D);
 			MatchingEvaluator<Game, Attribute> evaluatorC_E = new MatchingEvaluator<Game, Attribute>();
 			Performance perfTestC_E = evaluatorC_E.evaluateMatching(correspondencesC_E, gsTestC_E);
+			
 			// print the evaluation result
 			logger.info("data_A <-> data_B");
 			logger.info(String.format("Precision: %.4f",perfTestA_B.getPrecision()));
