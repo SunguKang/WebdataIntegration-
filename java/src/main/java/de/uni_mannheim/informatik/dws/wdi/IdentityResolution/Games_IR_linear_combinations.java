@@ -195,7 +195,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			//blocker2.setMeasureBlockSizes(true);
 			//Write debug results to file:
 			blockerA_B.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingA_B.csv", 100);
-			blockerA_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingB_D.csv", 100);
+			blockerA_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingA_D.csv", 100);
 			blockerB_C.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingB_C.csv", 100);
 			blockerC_D.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingC_D.csv", 100);
 			blockerC_E.collectBlockSizeData(debugResultsOuputPath + "debugResultsBlockingC_E.csv", 100);
