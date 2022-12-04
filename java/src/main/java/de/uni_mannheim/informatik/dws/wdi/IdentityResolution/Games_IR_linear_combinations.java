@@ -158,6 +158,18 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			compartorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
 			comparatorSetsDict.put(9, compartorSetNine);
 
+			List<HelperClassComparatorWeightPair> compartorSetTen =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetTen.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			comparatorSetsDict.put(10, compartorSetTen);
+
+			List<HelperClassComparatorWeightPair> compartorSetEleven =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetEleven.add(new HelperClassComparatorWeightPair(new GameNameComparatorJaccard(), 0.7));
+			comparatorSetsDict.put(11, compartorSetEleven);
+
+			List<HelperClassComparatorWeightPair> compartorSetTwelve =  new ArrayList<HelperClassComparatorWeightPair>();
+			compartorSetTwelve.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			comparatorSetsDict.put(12, compartorSetTwelve);
+
 
 
 			List<HelperClassComparatorWeightPair> chosenCompartorSet = comparatorSetsDict.get(comparatorSetChosenKey);
