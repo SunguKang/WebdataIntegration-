@@ -30,7 +30,7 @@ public class GloballySoldUnitsFuserFavourSource extends AttributeValueFuser<Floa
 	@Override
 	public void fuse(RecordGroup<Game, Attribute> group, Game fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		FusedValue<Float, Game, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		fusedRecord.setGloballyySoldUnits(fused.getValue());
+		fusedRecord.setGloballySoldUnits(fused.getValue());
 		fusedRecord.setAttributeProvenance(Game.GLOBALLYSOLDUNITS, fused.getOriginalIds());
 	}
 

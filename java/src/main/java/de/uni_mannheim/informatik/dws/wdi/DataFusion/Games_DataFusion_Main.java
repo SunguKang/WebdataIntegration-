@@ -153,17 +153,17 @@ public class Games_DataFusion_Main
 			// write debug results to file
 			strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
-			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
-			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserVoting(), new PlatformEvaluationRule(1.0));
+			strategy.addAttributeFuser(Game.NAME, new NameFuserFavourSource(), new NameEvaluationRule());
+			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule(1.0));
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
-			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserMostRecent(), new PublicationDateEvaluationRule());
-			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballySoldUnitsFuserFavourSource(), new GloballySoldUnitsEvaluationRule());
+			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserVoting(), new PublicationDateEvaluationRule());
+			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballySoldUnitsFuserVoting(), new GloballySoldUnitsEvaluationRule());
 			strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(), new GenresEvaluationRule());
-			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserFavourSource(), new CriticScoreEvaluationRule());
-			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserFavourSource(), new UserScoreEvaluationRule());
+			strategy.addAttributeFuser(Game.CRITICSCORE, new CriticScoreFuserVoting(), new CriticScoreEvaluationRule());
+			strategy.addAttributeFuser(Game.USERSCORE, new UserScoreFuserVoting(), new UserScoreEvaluationRule());
 			strategy.addAttributeFuser(Game.DEVELOPERS, new DevelopersFuserUnion(), new DevelopersEvaluationRule());
-			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserFavourSource(), new SummaryEvaluationRule());
-			strategy.addAttributeFuser(Game.RATING, new RatingFuserFavourSource(), new RatingEvaluationRule());
+			strategy.addAttributeFuser(Game.SUMMARY, new SummaryFuserLongestString(), new SummaryEvaluationRule());
+			strategy.addAttributeFuser(Game.RATING, new RatingFuserVoting(), new RatingEvaluationRule());
 			strategy.addAttributeFuser(Game.SERIES, new SeriesFuserFavourSource(), new SeriesEvaluationRule());
 
 			// create the fusion engine

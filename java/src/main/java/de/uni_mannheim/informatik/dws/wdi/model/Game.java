@@ -81,8 +81,8 @@ public class Game extends AbstractRecord<Attribute> implements Serializable{
 		}
     }
     
-	public void setGloballyySoldUnits(Float globallySoldUnits) {
-	        this.globallySoldUnits = globallySoldUnits;
+	public void setGloballySoldUnits(Float fl) {
+	        this.globallySoldUnits = fl;
 	    }    
 	    
 	public List<Genre> getGenres() {

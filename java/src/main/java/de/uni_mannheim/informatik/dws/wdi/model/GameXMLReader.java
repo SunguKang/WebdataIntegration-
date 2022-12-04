@@ -83,7 +83,7 @@ String id = getValueFromChildElement(node, "id");
 	}catch (NumberFormatException e){
 		logger.debug("Got NumberFormatException for soldUnits game: " + game.getName());
 	}
-	game.setGloballyySoldUnits(soldUnits);
+	game.setGloballySoldUnits(soldUnits);
 
 	Float criticScore = null;
 	try{
