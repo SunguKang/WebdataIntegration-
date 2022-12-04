@@ -4,19 +4,19 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
-
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformYearGenerator;
+//import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByYearGenerator;
+//import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
+//import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformYearGenerator;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformYearsGenerator;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators.*;
 import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.util.HelperClassComparatorWeightPair;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
-import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
+//import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
+//import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.model.*;
 import org.slf4j.Logger;
 
-import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Blocking.GameBlockingKeyByPlatformGenerator;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 //import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;
@@ -90,7 +90,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			gsTestC_E.loadFromCSVFile(new File(folderGoldStandardIR + "C-E.csv"));
 
 			// create a matching rule
-			double thresh = 0.9;
+			double thresh = 0.5;
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_B = new LinearCombinationMatchingRule<>(
 					thresh);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleA_D = new LinearCombinationMatchingRule<>(
@@ -202,6 +202,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 
 
 			//blocker2.collectBlockSizeData("data/output/debugResultsBlocking2.csv", 100);
+			
 			// Initialize Matching Engine
 			MatchingEngine<Game, Attribute> engineA_B = new MatchingEngine<>();
 			MatchingEngine<Game, Attribute> engineA_D = new MatchingEngine<>();
