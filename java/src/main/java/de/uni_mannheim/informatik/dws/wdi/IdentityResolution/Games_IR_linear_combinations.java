@@ -167,7 +167,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			comparatorSetsDict.put(11, compartorSetEleven);
 
 			List<HelperClassComparatorWeightPair> compartorSetTwelve =  new ArrayList<HelperClassComparatorWeightPair>();
-			compartorSetTwelve.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			compartorSetTwelve.add(new HelperClassComparatorWeightPair(new GameNameComparatorEqual(), 0.7));
 			comparatorSetsDict.put(12, compartorSetTwelve);
 
 
