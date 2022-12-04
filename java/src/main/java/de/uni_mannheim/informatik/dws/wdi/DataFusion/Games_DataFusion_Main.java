@@ -5,21 +5,18 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.Properties;
+import java.util.*;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeFormatterBuilder;
 import java.time.temporal.ChronoField;
-import java.util.Locale;
 
-//TODO write + import classes for Game attributes
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.evaluation.*;
 import de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers.*;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
-//TODO adapt class
+import de.uni_mannheim.informatik.dws.wdi.model.GameCSVFormatter;
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLReader;
-//TODO adapt class
 import de.uni_mannheim.informatik.dws.wdi.model.GameXMLFormatter;
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
@@ -156,13 +153,9 @@ public class Games_DataFusion_Main
 			// write debug results to file
 			strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
-
-			//TODO create the mentioned Fusers and Evaluators
-			// TODO deleted not needed evaluators
 			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
 			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserVoting(), new PlatformEvaluationRule(1.0));
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
-			// TODO should not be the most recent as this is wrong for some datasets
 			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserMostRecent(), new PublicationDateEvaluationRule());
 			strategy.addAttributeFuser(Game.GLOBALLYSOLDUNITS, new GloballySoldUnitsFuserFavourSource(), new GloballySoldUnitsEvaluationRule());
 			strategy.addAttributeFuser(Game.GENRES, new GenresFuserUnion(), new GenresEvaluationRule());
@@ -176,8 +169,6 @@ public class Games_DataFusion_Main
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
-			//TODO fix NullpointerException caused by FloatEvaluationRule (not the fist time it is called); Breakpoint file is in "../orga"
-			// print consistency report
 			engine.printClusterConsistencyReport(correspondences, null);
 
 			// print record groups sorted by consistency
@@ -190,7 +181,9 @@ public class Games_DataFusion_Main
 
 			// write the result
 			new GameXMLFormatter().writeXML(new File(fusedFolderPath + "fused.xml"), fusedDataSet);
-
+			Collection attributeCollection = fusedDataSet.getSchema().get();
+			List<Attribute> csvHeaders = new ArrayList<Attribute>(attributeCollection);
+			new GameCSVFormatter().writeCSV(new File(fusedFolderPath + "fused.csv"), fusedDataSet, csvHeaders);
 			// evaluate
 			DataFusionEvaluator<Game, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Game, Attribute>());
 

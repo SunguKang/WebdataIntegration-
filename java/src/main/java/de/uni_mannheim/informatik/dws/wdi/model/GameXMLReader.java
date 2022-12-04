@@ -81,7 +81,7 @@ String id = getValueFromChildElement(node, "id");
 	try{
 		soldUnits = Float.parseFloat(getValueFromChildElement(node, "globallySoldUnits"));
 	}catch (NumberFormatException e){
-		logger.warn("Got NumberFormatException for soldUnits game: " + game.getName());
+		logger.debug("Got NumberFormatException for soldUnits game: " + game.getName());
 	}
 	game.setGloballyySoldUnits(soldUnits);
 
@@ -89,7 +89,7 @@ String id = getValueFromChildElement(node, "id");
 	try{
 		criticScore = Float.parseFloat(getValueFromChildElement(node, "criticScore"));
 	} catch	(NumberFormatException e){
-		logger.warn("Got NumberFormatException for criticScore game: " + game.getName());
+		logger.debug("Got NumberFormatException for criticScore game: " + game.getName());
 	}
 	game.setCriticScore(criticScore);
 
@@ -97,7 +97,7 @@ String id = getValueFromChildElement(node, "id");
 	try{
 		userScore = Float.parseFloat(getValueFromChildElement(node, "userScore"));
 	} catch (NumberFormatException e){
-		logger.warn("Got NumberFormatException for userScore game: " + game.getName());
+		logger.debug("Got NumberFormatException for userScore game: " + game.getName());
 	}
 	game.setUserScore(userScore);
 	game.setSummary(getValueFromChildElement(node, "summary"));
