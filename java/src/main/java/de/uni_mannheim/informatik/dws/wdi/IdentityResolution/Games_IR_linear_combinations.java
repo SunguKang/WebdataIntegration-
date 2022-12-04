@@ -100,7 +100,7 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 					.4);
 			LinearCombinationMatchingRule<Game, Attribute> matchingRuleC_E = new LinearCombinationMatchingRule<>(
 					.5);
-
+			
 			//this exports the debug report
 			Map<String, List<Serializable>> pairsDict = Map.ofEntries(
 					entry("A_B", Arrays.asList(matchingRuleA_B, gsTestA_B)),

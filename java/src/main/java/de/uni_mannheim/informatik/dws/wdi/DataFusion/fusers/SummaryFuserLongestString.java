@@ -4,7 +4,7 @@ import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.EvaluationRule;
-import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.meta.FavourSources;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.LongestString;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
@@ -12,27 +12,26 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class SummaryFuserFavourSource extends AttributeValueFuser<String, Game, Attribute> {
-    // attribute only in dataset A
-
-    public SummaryFuserFavourSource() {
-		super(new FavourSources<String, Game, Attribute>());
+public class SummaryFuserLongestString extends AttributeValueFuser<String, Game, Attribute> {
+   
+    public SummaryFuserLongestString() {
+		super(new LongestString<Game, Attribute>());
 	}
 
     @Override
     public void fuse(RecordGroup<Game, Attribute> recordGroup, Game gameFused, Processable<Correspondence<Attribute, Matchable>> processable, Attribute attribute) {
         FusedValue<String, Game, Attribute> fused = getFusedValue(recordGroup, processable, attribute);
-		gameFused.setRating(fused.getValue());
-		gameFused.setAttributeProvenance(Game.SUMMARY, fused.getOriginalIds());
+		gameFused.setPlatform(fused.getValue());
+		gameFused.setAttributeProvenance(Game.PLATFORM, fused.getOriginalIds());
     }
 
     @Override
     public boolean hasValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-        return game.hasValue(Game.SUMMARY);
+        return game.hasValue(Game.PLATFORM);
     }
 
     public String getValue(Game game, Correspondence<Attribute, Matchable> correspondence) {
-		return game.getSummary();
+		return game.getPlatform();
 	}
 
 
