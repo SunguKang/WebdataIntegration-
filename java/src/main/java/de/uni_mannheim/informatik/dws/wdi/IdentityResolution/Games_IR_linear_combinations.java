@@ -117,59 +117,58 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 			HashMap<Integer, List> comparatorSetsDict = new HashMap<>();
 
 			List<HelperClassComparatorWeightPair> comparatorSetOne =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
-			comparatorSetOne.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetOne.add(new HelperClassComparatorWeightPair(new GameNameComparatorJaccard(), 1.0));
 			comparatorSetsDict.put(1, comparatorSetOne);
 
 			List<HelperClassComparatorWeightPair> comparatorSetTwo =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetTwo.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			comparatorSetTwo.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetTwo.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 1.0));
 			comparatorSetsDict.put(2, comparatorSetTwo);
 
 			List<HelperClassComparatorWeightPair> comparatorSetThree =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetThree.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorLevenshtein(), 0.7));
-			comparatorSetThree.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetThree.add(new HelperClassComparatorWeightPair(new GameNameComparatorEqual(), 1.0));
 			comparatorSetsDict.put(3, comparatorSetThree);
 
 			List<HelperClassComparatorWeightPair> comparatorSetFour =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetFour.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorEqual(), 0.7));
-			comparatorSetFour.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetFour.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 1.0));
 			comparatorSetsDict.put(4, comparatorSetFour);
 
 			List<HelperClassComparatorWeightPair> comparatorSetFive =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
-			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetFive.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorLevenshtein(), 1.0));
 			comparatorSetsDict.put(5, comparatorSetFive);
 
 			List<HelperClassComparatorWeightPair> comparatorSetSix =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
-			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GamePlatformComparatorEqual(), 0.3));
+			comparatorSetSix.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorEqual(), 1.0));
 			comparatorSetsDict.put(6, comparatorSetSix);
 
 			List<HelperClassComparatorWeightPair> comparatorSetSeven =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
-			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameNameComparatorJaccard(), 0.7));
+			comparatorSetSeven.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetsDict.put(7, comparatorSetSeven);
 			
+			List<HelperClassComparatorWeightPair> comparatorSetEight =  new ArrayList<HelperClassComparatorWeightPair>();
+			comparatorSetEight.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			comparatorSetEight.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
+			comparatorSetsDict.put(8, comparatorSetEight);
+
 			List<HelperClassComparatorWeightPair> comparatorSetNine =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetNine.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
-			comparatorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparator3Years(), 0.3));
+			comparatorSetNine.add(new HelperClassComparatorWeightPair(new GameNameComparatorEqual(), 0.7));
+			comparatorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetsDict.put(9, comparatorSetNine);
 
 			List<HelperClassComparatorWeightPair> comparatorSetTen =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetTen.add(new HelperClassComparatorWeightPair(new GameNameComparatorLevenshtein(), 0.7));
+			comparatorSetTen.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorJaccard(), 0.7));
+			comparatorSetTen.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetsDict.put(10, comparatorSetTen);
 
 			List<HelperClassComparatorWeightPair> comparatorSetEleven =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetEleven.add(new HelperClassComparatorWeightPair(new GameNameComparatorJaccard(), 0.7));
+			comparatorSetEleven.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorLevenshtein(), 0.7));
+			comparatorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetsDict.put(11, comparatorSetEleven);
 
 			List<HelperClassComparatorWeightPair> comparatorSetTwelve =  new ArrayList<HelperClassComparatorWeightPair>();
-			comparatorSetTwelve.add(new HelperClassComparatorWeightPair(new GameNameComparatorEqual(), 0.7));
+			comparatorSetTwelve.add(new HelperClassComparatorWeightPair(new GameNamePreprocessedComparatorEqual(), 0.7));
+			comparatorSetNine.add(new HelperClassComparatorWeightPair(new GameDateComparatorYearEqual(), 0.3));
 			comparatorSetsDict.put(12, comparatorSetTwelve);
-
 
 
 			List<HelperClassComparatorWeightPair> chosenComparatorSet = comparatorSetsDict.get(comparatorSetChosenKey);
