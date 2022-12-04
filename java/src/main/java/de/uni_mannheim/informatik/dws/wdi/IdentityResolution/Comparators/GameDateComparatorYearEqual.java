@@ -11,6 +11,7 @@
  */
 package de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Comparators;
 
+import de.uni_mannheim.informatik.dws.wdi.IdentityResolution.Similarities.YearSimilarityEquals;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.Comparator;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.comparators.ComparatorLogger;
@@ -29,7 +30,7 @@ import de.uni_mannheim.informatik.dws.winter.similarity.date.YearSimilarity;
 public class GameDateComparatorYearEqual implements Comparator<Game, Attribute> {
 
 	private static final long serialVersionUID = 1L;
-	private YearSimilarity sim = new YearSimilarity(0);
+	private YearSimilarityEquals sim = new YearSimilarityEquals();
 	
 	private ComparatorLogger comparisonLog;
 
