@@ -17,11 +17,11 @@ import org.w3c.dom.Node;
 
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
-
+import org.w3c.dom.NodeList;
 
 
 /**
-* A {@link XMLMatchableReader} for {@link Actor}s.
+* A {@link XMLMatchableReader} for {@link Publisher}s.
 *
 * @author Oliver Lehmberg (oli@dwslab.de)
 *
@@ -32,14 +32,23 @@ public class PublisherXMLReader extends XMLMatchableReader<Publisher, Attribute>
 
    @Override
     public Publisher createModelFromElement(Node node, String provenanceInfo) {
-        String id = getValueFromChildElement(node, "id");
+       Node subnode = node.getChildNodes().item(0);
+       if (subnode != null) {
+           Node sibling = subnode.getNextSibling();
+           if (sibling != null){
+           Node siblingNodeList = sibling.getFirstChild();
+           if (siblingNodeList != null){
+           String publisherName = siblingNodeList.getNodeValue();
+           String id = publisherName;
 
-       // create the object with id and provenance information
-        Publisher publisher = new Publisher(id, provenanceInfo);
+           // create the object with id and provenance information
+           Publisher publisher = new Publisher(id, provenanceInfo);
 
-       // fill the attribute
-        publisher.setPublisherName(getValueFromChildElement(node, "publisherName"));
+           // fill the attribute
+           publisher.setPublisherName(publisherName);
 
-       return publisher;
-    }
-}
+           return publisher;
+       }}}
+       return null;
+
+}}

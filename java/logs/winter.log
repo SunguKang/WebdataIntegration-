@@ -434,3 +434,408 @@
 [TRACE] 2019-10-11 17:30:53.240 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] academy_awards_2620,actors_112
 [TRACE] 2019-10-11 17:30:53.240 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] academy_awards_1880,actors_126
 [TRACE] 2019-10-11 17:30:53.240 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] academy_awards_902,actors_141
+[INFO ] 2022-12-06 11:28:45.071 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading datasets	*
+[INFO ] 2022-12-06 11:28:45.078 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading from XML	*
+[INFO ] 2022-12-06 11:28:45.451 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 3817 elements from Dataset_B.xml
+[INFO ] 2022-12-06 11:28:46.192 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 18800 elements from Dataset_A.xml
+[INFO ] 2022-12-06 11:28:46.811 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 17416 elements from Dataset_C.xml
+[INFO ] 2022-12-06 11:28:47.150 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 9686 elements from Dataset_D.xml
+[INFO ] 2022-12-06 11:28:48.285 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 48205 elements from Dataset_E.xml
+[INFO ] 2022-12-06 11:28:48.889 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,75
+[INFO ] 2022-12-06 11:28:48.890 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:28:48.926 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:28:48.926 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:28:48.927 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:28:48.927 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:28:48.927 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:28:48.927 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:28:48.928 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:28:48.928 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:28:48.928 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:28:48.929 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:28:48.929 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,99
+[INFO ] 2022-12-06 11:28:48.930 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:28:48.936 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,67
+[INFO ] 2022-12-06 11:28:48.937 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:28:48.943 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:28:48.943 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:28:48.943 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:28:48.944 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:28:48.944 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:28:48.944 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:28:48.945 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:28:48.945 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:28:48.945 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:28:48.945 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:28:48.946 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:28:48.946 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:28:48.962 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,80
+[INFO ] 2022-12-06 11:28:48.963 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:28:48.985 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,59
+[INFO ] 2022-12-06 11:28:48.985 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:28:48.986 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:28:48.986 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:28:48.986 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 1,00
+[INFO ] 2022-12-06 11:28:48.986 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:28:48.986 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:28:48.986 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:28:48.987 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:28:48.987 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:28:48.987 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:28:48.987 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:28:48.993 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,66
+[INFO ] 2022-12-06 11:28:48.993 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:28:49.006 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:28:49.006 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:28:49.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:28:49.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:28:49.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:28:49.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:28:49.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:28:49.008 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:28:49.008 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:28:49.009 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:28:49.009 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:28:49.009 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 0,92
+[INFO ] 2022-12-06 11:28:49.040 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,73
+[INFO ] 2022-12-06 11:28:49.041 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:28:49.145 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,44
+[INFO ] 2022-12-06 11:28:49.146 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:28:49.146 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,30
+[INFO ] 2022-12-06 11:28:49.146 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:28:49.146 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:28:49.146 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:28:49.147 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:28:49.147 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:28:49.147 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:28:49.147 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:28:49.147 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:28:49.148 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:28:49.148 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading correspondences	*
+[INFO ] 2022-12-06 11:28:49.241 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Evaluating results	*
+[INFO ] 2022-12-06 11:28:49.247 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 21 elements from gold.xml
+[INFO ] 2022-12-06 11:28:49.248 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2412
+[INFO ] 2022-12-06 11:28:49.248 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales14427
+[INFO ] 2022-12-06 11:28:49.249 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales151
+[INFO ] 2022-12-06 11:28:49.249 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2015
+[INFO ] 2022-12-06 11:28:49.249 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5866
+[INFO ] 2022-12-06 11:28:49.250 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11696
+[INFO ] 2022-12-06 11:28:49.250 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11657
+[INFO ] 2022-12-06 11:28:49.250 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16810
+[INFO ] 2022-12-06 11:28:49.250 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales6532
+[INFO ] 2022-12-06 11:28:49.251 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7774
+[INFO ] 2022-12-06 11:28:49.251 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16644
+[INFO ] 2022-12-06 11:28:49.251 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7000
+[INFO ] 2022-12-06 11:28:49.251 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales81
+[INFO ] 2022-12-06 11:28:49.251 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales842
+[INFO ] 2022-12-06 11:28:49.252 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9980
+[INFO ] 2022-12-06 11:28:49.252 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9246
+[INFO ] 2022-12-06 11:28:49.252 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2929
+[INFO ] 2022-12-06 11:28:49.252 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales8765
+[INFO ] 2022-12-06 11:28:49.252 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2405
+[INFO ] 2022-12-06 11:28:49.252 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5628
+[INFO ] 2022-12-06 11:28:50.360 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Running data fusion	*
+[INFO ] 2022-12-06 11:28:53.645 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Accuracy: 0,27
+[INFO ] 2022-12-06 11:33:55.193 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading datasets	*
+[INFO ] 2022-12-06 11:33:55.202 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading from XML	*
+[INFO ] 2022-12-06 11:33:55.683 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 3817 elements from Dataset_B.xml
+[INFO ] 2022-12-06 11:33:56.514 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 18800 elements from Dataset_A.xml
+[INFO ] 2022-12-06 11:33:57.198 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 17416 elements from Dataset_C.xml
+[INFO ] 2022-12-06 11:33:57.625 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 9686 elements from Dataset_D.xml
+[INFO ] 2022-12-06 11:33:58.796 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 48205 elements from Dataset_E.xml
+[INFO ] 2022-12-06 11:33:59.658 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,75
+[INFO ] 2022-12-06 11:33:59.658 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:33:59.701 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:33:59.701 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:33:59.702 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:33:59.702 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:33:59.702 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:33:59.703 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:33:59.703 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:33:59.703 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:33:59.704 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:33:59.704 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:33:59.704 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,99
+[INFO ] 2022-12-06 11:33:59.705 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:33:59.716 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,67
+[INFO ] 2022-12-06 11:33:59.716 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:33:59.722 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:33:59.722 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:33:59.722 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:33:59.723 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:33:59.723 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:33:59.723 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:33:59.723 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:33:59.723 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:33:59.724 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:33:59.724 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:33:59.724 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:33:59.724 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:33:59.744 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,80
+[INFO ] 2022-12-06 11:33:59.745 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:33:59.767 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,59
+[INFO ] 2022-12-06 11:33:59.768 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:33:59.768 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:33:59.769 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:33:59.769 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 1,00
+[INFO ] 2022-12-06 11:33:59.769 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:33:59.770 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:33:59.770 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:33:59.770 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:33:59.771 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:33:59.771 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:33:59.771 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:33:59.775 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,66
+[INFO ] 2022-12-06 11:33:59.775 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:33:59.794 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:33:59.794 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:33:59.795 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:33:59.795 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:33:59.795 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:33:59.796 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:33:59.796 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:33:59.796 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:33:59.796 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:33:59.796 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:33:59.797 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:33:59.797 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 0,92
+[INFO ] 2022-12-06 11:33:59.835 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,73
+[INFO ] 2022-12-06 11:33:59.835 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:33:59.917 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,44
+[INFO ] 2022-12-06 11:33:59.918 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:33:59.918 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,30
+[INFO ] 2022-12-06 11:33:59.918 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:33:59.918 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:33:59.918 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:33:59.919 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:33:59.919 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:33:59.920 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:33:59.920 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:33:59.920 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:33:59.920 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:33:59.921 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading correspondences	*
+[INFO ] 2022-12-06 11:34:00.049 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Evaluating results	*
+[INFO ] 2022-12-06 11:34:00.057 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 21 elements from gold.xml
+[INFO ] 2022-12-06 11:34:00.059 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2412
+[INFO ] 2022-12-06 11:34:00.059 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales14427
+[INFO ] 2022-12-06 11:34:00.059 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales151
+[INFO ] 2022-12-06 11:34:00.060 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2015
+[INFO ] 2022-12-06 11:34:00.060 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5866
+[INFO ] 2022-12-06 11:34:00.060 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11696
+[INFO ] 2022-12-06 11:34:00.060 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11657
+[INFO ] 2022-12-06 11:34:00.060 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16810
+[INFO ] 2022-12-06 11:34:00.061 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales6532
+[INFO ] 2022-12-06 11:34:00.061 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7774
+[INFO ] 2022-12-06 11:34:00.062 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16644
+[INFO ] 2022-12-06 11:34:00.062 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7000
+[INFO ] 2022-12-06 11:34:00.064 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales81
+[INFO ] 2022-12-06 11:34:00.064 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales842
+[INFO ] 2022-12-06 11:34:00.065 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9980
+[INFO ] 2022-12-06 11:34:00.065 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9246
+[INFO ] 2022-12-06 11:34:00.065 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2929
+[INFO ] 2022-12-06 11:34:00.065 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales8765
+[INFO ] 2022-12-06 11:34:00.065 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2405
+[INFO ] 2022-12-06 11:34:00.065 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5628
+[INFO ] 2022-12-06 11:39:19.362 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading datasets	*
+[INFO ] 2022-12-06 11:39:19.369 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading from XML	*
+[INFO ] 2022-12-06 11:39:19.747 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 3817 elements from Dataset_B.xml
+[INFO ] 2022-12-06 11:39:20.641 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 18800 elements from Dataset_A.xml
+[INFO ] 2022-12-06 11:39:21.492 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 17416 elements from Dataset_C.xml
+[INFO ] 2022-12-06 11:39:21.898 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 9686 elements from Dataset_D.xml
+[INFO ] 2022-12-06 11:39:23.039 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 48205 elements from Dataset_E.xml
+[INFO ] 2022-12-06 11:39:23.619 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,75
+[INFO ] 2022-12-06 11:39:23.619 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:39:23.651 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:39:23.651 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:39:23.651 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:39:23.652 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:39:23.652 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:39:23.652 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:39:23.652 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:39:23.653 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:39:23.653 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:39:23.653 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:39:23.654 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,99
+[INFO ] 2022-12-06 11:39:23.654 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:39:23.659 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,67
+[INFO ] 2022-12-06 11:39:23.659 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:39:23.666 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:39:23.666 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:39:23.666 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:39:23.666 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:39:23.666 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:39:23.667 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:39:23.667 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:39:23.667 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:39:23.667 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:39:23.668 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:39:23.668 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:39:23.668 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:39:23.683 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,80
+[INFO ] 2022-12-06 11:39:23.683 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:39:23.734 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,59
+[INFO ] 2022-12-06 11:39:23.735 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:39:23.735 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:39:23.735 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:39:23.735 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 1,00
+[INFO ] 2022-12-06 11:39:23.735 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:39:23.736 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:39:23.736 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:39:23.736 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:39:23.736 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:39:23.736 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:39:23.737 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:39:23.741 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,66
+[INFO ] 2022-12-06 11:39:23.741 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:39:23.752 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:39:23.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:39:23.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:39:23.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:39:23.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:39:23.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:39:23.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:39:23.754 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:39:23.754 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:39:23.754 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:39:23.754 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:39:23.754 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 0,92
+[INFO ] 2022-12-06 11:39:23.779 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,73
+[INFO ] 2022-12-06 11:39:23.779 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:39:23.836 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,44
+[INFO ] 2022-12-06 11:39:23.837 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:39:23.837 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,30
+[INFO ] 2022-12-06 11:39:23.837 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:39:23.837 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:39:23.838 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:39:23.838 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:39:23.838 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:39:23.838 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:39:23.839 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:39:23.839 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:39:23.839 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:39:23.839 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading correspondences	*
+[INFO ] 2022-12-06 11:39:23.919 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Evaluating results	*
+[INFO ] 2022-12-06 11:39:23.924 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 21 elements from gold.xml
+[INFO ] 2022-12-06 11:39:23.925 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2412
+[INFO ] 2022-12-06 11:39:23.925 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales14427
+[INFO ] 2022-12-06 11:39:23.925 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales151
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2015
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5866
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11696
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11657
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16810
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales6532
+[INFO ] 2022-12-06 11:39:23.926 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7774
+[INFO ] 2022-12-06 11:39:23.927 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16644
+[INFO ] 2022-12-06 11:39:23.927 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7000
+[INFO ] 2022-12-06 11:39:23.927 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales81
+[INFO ] 2022-12-06 11:39:23.927 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales842
+[INFO ] 2022-12-06 11:39:23.927 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9980
+[INFO ] 2022-12-06 11:39:23.927 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9246
+[INFO ] 2022-12-06 11:39:23.928 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2929
+[INFO ] 2022-12-06 11:39:23.928 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales8765
+[INFO ] 2022-12-06 11:39:23.928 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2405
+[INFO ] 2022-12-06 11:39:23.928 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5628
+[INFO ] 2022-12-06 11:39:24.867 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Running data fusion	*
+[INFO ] 2022-12-06 11:40:11.411 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading datasets	*
+[INFO ] 2022-12-06 11:40:11.417 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading from XML	*
+[INFO ] 2022-12-06 11:40:11.792 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 3817 elements from Dataset_B.xml
+[INFO ] 2022-12-06 11:40:12.565 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 18800 elements from Dataset_A.xml
+[INFO ] 2022-12-06 11:40:13.181 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 17416 elements from Dataset_C.xml
+[INFO ] 2022-12-06 11:40:13.607 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 9686 elements from Dataset_D.xml
+[INFO ] 2022-12-06 11:40:14.759 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 48205 elements from Dataset_E.xml
+[INFO ] 2022-12-06 11:40:15.333 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,75
+[INFO ] 2022-12-06 11:40:15.333 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:40:15.369 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:40:15.370 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:40:15.371 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:40:15.371 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:40:15.371 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:40:15.371 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:40:15.371 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:40:15.372 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:40:15.372 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:40:15.372 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:40:15.372 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,99
+[INFO ] 2022-12-06 11:40:15.373 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:40:15.378 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,67
+[INFO ] 2022-12-06 11:40:15.378 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:40:15.385 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:40:15.385 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:40:15.386 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:40:15.386 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:40:15.386 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:40:15.387 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:40:15.387 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:40:15.387 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:40:15.388 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:40:15.388 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:40:15.388 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:40:15.388 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:40:15.406 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,80
+[INFO ] 2022-12-06 11:40:15.407 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:40:15.428 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,59
+[INFO ] 2022-12-06 11:40:15.428 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:40:15.428 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:40:15.428 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:40:15.429 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 1,00
+[INFO ] 2022-12-06 11:40:15.429 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:40:15.429 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:40:15.429 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:40:15.430 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:40:15.430 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:40:15.431 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:40:15.431 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:40:15.438 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,66
+[INFO ] 2022-12-06 11:40:15.438 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:40:15.454 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,00
+[INFO ] 2022-12-06 11:40:15.454 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:40:15.455 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,00
+[INFO ] 2022-12-06 11:40:15.455 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:40:15.455 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:40:15.456 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:40:15.456 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:40:15.456 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:40:15.456 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:40:15.456 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:40:15.456 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:40:15.457 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 0,92
+[INFO ] 2022-12-06 11:40:15.540 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,73
+[INFO ] 2022-12-06 11:40:15.540 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2022-12-06 11:40:15.578 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	rating: 0,44
+[INFO ] 2022-12-06 11:40:15.579 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	userScore: 1,00
+[INFO ] 2022-12-06 11:40:15.579 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	series: 0,30
+[INFO ] 2022-12-06 11:40:15.579 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	platform: 1,00
+[INFO ] 2022-12-06 11:40:15.579 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	globallySoldUnits: 0,00
+[INFO ] 2022-12-06 11:40:15.579 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	name: 1,00
+[INFO ] 2022-12-06 11:40:15.580 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publishers: 1,00
+[INFO ] 2022-12-06 11:40:15.580 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	developers: 1,00
+[INFO ] 2022-12-06 11:40:15.580 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	genres: 1,00
+[INFO ] 2022-12-06 11:40:15.580 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	criticScore: 1,00
+[INFO ] 2022-12-06 11:40:15.581 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	summary: 0,00
+[INFO ] 2022-12-06 11:40:15.582 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	publicationDate: 1,00
+[INFO ] 2022-12-06 11:40:15.582 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Loading correspondences	*
+[INFO ] 2022-12-06 11:40:15.664 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Evaluating results	*
+[INFO ] 2022-12-06 11:40:15.670 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 21 elements from gold.xml
+[INFO ] 2022-12-06 11:40:15.671 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2412
+[INFO ] 2022-12-06 11:40:15.672 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales14427
+[INFO ] 2022-12-06 11:40:15.672 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales151
+[INFO ] 2022-12-06 11:40:15.672 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2015
+[INFO ] 2022-12-06 11:40:15.672 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5866
+[INFO ] 2022-12-06 11:40:15.672 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11696
+[INFO ] 2022-12-06 11:40:15.672 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales11657
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16810
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales6532
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7774
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales16644
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales7000
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales81
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales842
+[INFO ] 2022-12-06 11:40:15.673 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9980
+[INFO ] 2022-12-06 11:40:15.674 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales9246
+[INFO ] 2022-12-06 11:40:15.674 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2929
+[INFO ] 2022-12-06 11:40:15.674 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales8765
+[INFO ] 2022-12-06 11:40:15.674 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales2405
+[INFO ] 2022-12-06 11:40:15.674 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - gs: Video_games_sales5628
+[INFO ] 2022-12-06 11:40:16.661 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Running data fusion	*
+[INFO ] 2022-12-06 11:40:19.832 [de.uni_mannheim.informatik.dws.wdi.DataFusion.Games_DataFusion_Main] - *	Accuracy: 0,21

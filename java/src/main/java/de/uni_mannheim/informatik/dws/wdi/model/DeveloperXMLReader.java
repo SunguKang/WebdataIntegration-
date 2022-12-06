@@ -26,15 +26,24 @@ public class DeveloperXMLReader extends XMLMatchableReader<Developer, Attribute>
 
 	@Override
 	public Developer createModelFromElement(Node node, String provenanceInfo) {
-		String id = getValueFromChildElement(node, "id");
+		Node subnode = node.getChildNodes().item(0);
+		if (subnode != null) {
+			Node sibling = subnode.getNextSibling();
+			if (sibling != null){
+				Node siblingNodeList = sibling.getFirstChild();
+				if (siblingNodeList != null){
+					String developerName = siblingNodeList.getNodeValue();
+					String id = developerName;
 
-		// create the object with id and provenance information
-		Developer developer = new Developer(id, provenanceInfo);
+					// create the object with id and provenance information
+					Developer developer = new Developer(id, provenanceInfo);
 
-		// fill the attributes
-		developer.setDeveloperName(getValueFromChildElement(node, "name"));
+					// fill the attribute
+					developer.setDeveloperName(developerName);
 
-		return developer;
+					return developer;
+				}}}
+		return null;
 	}
 
 }

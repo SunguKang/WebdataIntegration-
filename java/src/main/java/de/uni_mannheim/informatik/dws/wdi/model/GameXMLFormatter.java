@@ -88,10 +88,12 @@ public class GameXMLFormatter extends XMLFormatter<Game> {
 	publishersRoot.setAttribute("provenance",
 			record.getMergedAttributeProvenance(Game.PUBLISHERS));
 
-	for (Publisher p : record.getPublishers()) {
-		publishersRoot.appendChild(publisherFormatter
-				.createElementFromRecord(p, doc));
-	}
+		for (Publisher p : record.getPublishers()) {
+			Element publisherElement = publisherFormatter.createElementFromRecord(p, doc);
+			if (publisherElement != null) {
+				publishersRoot.appendChild(publisherElement);
+			}
+			}
 	
 		return publishersRoot;
 	}
@@ -115,8 +117,10 @@ public class GameXMLFormatter extends XMLFormatter<Game> {
 				record.getMergedAttributeProvenance(Game.DEVELOPERS));
 	
 		for (Developer d : record.getDevelopers()) {
-			developersRoot.appendChild(developerFormatter
-					.createElementFromRecord(d, doc));
+			Element developerElement = developerFormatter.createElementFromRecord(d, doc);
+			if (developerElement != null) {
+				developersRoot.appendChild(developerElement);
+			}
 		}
 	
 		return developersRoot;

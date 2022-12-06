@@ -31,10 +31,14 @@ public class PublisherXMLFormatter extends XMLFormatter<Publisher> {
 
 	@Override
 	public Element createElementFromRecord(Publisher record, Document doc) {
-		Element publisher = doc.createElement("publisher");
+		if (record != null && doc != null){ // record.hasValue(Publisher.PublisherName)){
+			Element publisher = doc.createElement("publisher");
 
-		publisher.appendChild(createTextElement("publisherName", record.getPublisherName(), doc));
-		return publisher;
+			publisher.appendChild(createTextElement("publisherName", record.getPublisherName(), doc));
+			return publisher;
+		}
+		else{
+			return null;
 	}
-
+	}
 }

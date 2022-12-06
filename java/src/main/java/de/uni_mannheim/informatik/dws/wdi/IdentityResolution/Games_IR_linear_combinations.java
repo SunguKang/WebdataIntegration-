@@ -236,16 +236,17 @@ private static final Logger logger = WinterLogManager.activateLogger("trace");
 
 			// Execute the matching
 			logger.info("*\tRunning identity resolution\t*");
-			Processable<Correspondence<Game, Attribute>> correspondencesA_B = engineA_B.runIdentityResolution(
-					data_A, data_B, null, matchingRuleA_B, blockerA_B);
-			Processable<Correspondence<Game, Attribute>> correspondencesA_D = engineA_D.runIdentityResolution(
-					data_A, data_D, null, matchingRuleA_D, blockerA_D);
-			Processable<Correspondence<Game, Attribute>> correspondencesB_C = engineB_C.runIdentityResolution(
-					data_B, data_C, null, matchingRuleB_C, blockerB_C);
-			Processable<Correspondence<Game, Attribute>> correspondencesC_D = engineC_D.runIdentityResolution(
-					data_C, data_D, null, matchingRuleC_D, blockerC_D);
-			Processable<Correspondence<Game, Attribute>> correspondencesC_E = engineC_E.runIdentityResolution(
-					data_C, data_E, null, matchingRuleC_E, blockerC_E);
+			Processable<Correspondence<Game, Attribute>> correspondencesA_B_tmp = engineA_B.runIdentityResolution(data_A, data_B, null, matchingRuleA_B, blockerA_B);
+			Processable<Correspondence<Game, Attribute>> correspondencesA_D_tmp = engineA_D.runIdentityResolution(data_A, data_D, null, matchingRuleA_D, blockerA_D);
+			Processable<Correspondence<Game, Attribute>> correspondencesB_C_tmp = engineB_C.runIdentityResolution(data_B, data_C, null, matchingRuleB_C, blockerB_C);
+			Processable<Correspondence<Game, Attribute>> correspondencesC_D_tmp = engineC_D.runIdentityResolution(data_C, data_D, null, matchingRuleC_D, blockerC_D);
+			Processable<Correspondence<Game, Attribute>> correspondencesC_E_tmp = engineC_E.runIdentityResolution(data_C, data_E, null, matchingRuleC_E, blockerC_E);
+
+			Processable<Correspondence<Game, Attribute>> correspondencesA_B = engineA_B.getTopKInstanceCorrespondences(correspondencesA_B_tmp, 1, 0.5);
+			Processable<Correspondence<Game, Attribute>> correspondencesA_D = engineA_B.getTopKInstanceCorrespondences(correspondencesA_D_tmp, 1, 0.5);
+			Processable<Correspondence<Game, Attribute>> correspondencesB_C = engineA_B.getTopKInstanceCorrespondences(correspondencesB_C_tmp, 1, 0.7);
+			Processable<Correspondence<Game, Attribute>> correspondencesC_D = engineA_B.getTopKInstanceCorrespondences(correspondencesC_D_tmp, 1, 0.4);
+			Processable<Correspondence<Game, Attribute>> correspondencesC_E = engineA_B.getTopKInstanceCorrespondences(correspondencesC_E_tmp, 1, 0.5);
 
 
 			// write the correspondences to the output file (in the data folder of the git repository)

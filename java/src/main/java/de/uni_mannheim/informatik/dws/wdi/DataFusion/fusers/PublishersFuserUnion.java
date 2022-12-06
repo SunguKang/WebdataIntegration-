@@ -1,6 +1,7 @@
 package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
+import de.uni_mannheim.informatik.dws.wdi.model.Genre;
 import de.uni_mannheim.informatik.dws.wdi.model.Publisher;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeFusionLogger;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
@@ -21,7 +22,8 @@ public class PublishersFuserUnion extends AttributeValueFuser<List<Publisher>, G
 	private ConflictResolutionFunction<List<Publisher>, Game, Attribute> conflictResolution;
 
    public PublishersFuserUnion() {
-	   super(new SmartUnion<Publisher, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
+	   //super(new SmartUnion<Publisher, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
+	   super(new Union<Publisher, Game, Attribute>());
 	}
 
     @Override

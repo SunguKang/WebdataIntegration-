@@ -47,7 +47,7 @@ public class Games_DataFusion_Main
 	 *
 	 */
 
-	private static final Logger logger = WinterLogManager.activateLogger("default");
+	private static final Logger logger = WinterLogManager.activateLogger("infoFile");
 	
 	public static void main( String[] args ) throws Exception
     {
@@ -153,7 +153,7 @@ public class Games_DataFusion_Main
 			// write debug results to file
 			strategy.activateDebugReport(debugResultsOutputPath + "debugResultsDatafusion.csv", -1, gs);
 
-			strategy.addAttributeFuser(Game.NAME, new NameFuserFavourSource(), new NameEvaluationRule());
+			strategy.addAttributeFuser(Game.NAME, new NameFuserLongestString(), new NameEvaluationRule());
 			strategy.addAttributeFuser(Game.PLATFORM, new PlatformFuserLongestString(), new PlatformEvaluationRule(1.0));
 			strategy.addAttributeFuser(Game.PUBLISHERS, new PublishersFuserUnion(), new PublishersEvaluationRule());
 			strategy.addAttributeFuser(Game.PUBLICATIONDATE, new DateFuserVoting(), new PublicationDateEvaluationRule());
@@ -169,7 +169,7 @@ public class Games_DataFusion_Main
 			// create the fusion engine
 			DataFusionEngine<Game, Attribute> engine = new DataFusionEngine<>(strategy);
 
-			engine.printClusterConsistencyReport(correspondences, null);
+			//engine.printClusterConsistencyReport(correspondences, null);
 
 			// print record groups sorted by consistency
 			engine.writeRecordGroupsByConsistency(new File(debugResultsOutputPath + "recordGroupConsistencies.csv"), correspondences, null);

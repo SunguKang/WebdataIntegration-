@@ -2,6 +2,7 @@ package de.uni_mannheim.informatik.dws.wdi.DataFusion.fusers;
 
 import de.uni_mannheim.informatik.dws.wdi.model.Developer;
 import de.uni_mannheim.informatik.dws.wdi.model.Game;
+import de.uni_mannheim.informatik.dws.wdi.model.Genre;
 import de.uni_mannheim.informatik.dws.wdi.model.Publisher;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.list.Union;
@@ -18,7 +19,8 @@ import java.util.List;
 public class DevelopersFuserUnion extends AttributeValueFuser<List<Developer>, Game, Attribute> {
 
     public DevelopersFuserUnion() {
-		super(new SmartUnion<Developer, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
+		//super(new SmartUnion<Developer, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
+		super(new Union<Developer, Game, Attribute>());
 	}
 
     @Override
@@ -30,7 +32,10 @@ public class DevelopersFuserUnion extends AttributeValueFuser<List<Developer>, G
   
     @Override
 	public boolean hasValue(Game record, Correspondence<Attribute, Matchable> correspondence) {
-		return record.hasValue(Game.DEVELOPERS);
+		boolean hasValue = record.hasValue(Game.DEVELOPERS);
+		if (hasValue)
+			System.out.println(record.getName());
+		return hasValue;
 	}
 
 	@Override

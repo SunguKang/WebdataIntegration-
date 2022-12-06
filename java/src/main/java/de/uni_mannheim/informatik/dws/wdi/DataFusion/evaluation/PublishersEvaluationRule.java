@@ -14,9 +14,18 @@ public class PublishersEvaluationRule extends EvaluationRule<Game, Attribute> {
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
         Set<String> attrListSet1 = new HashSet<>();
         Set<String> attrListSet2 = new HashSet<>();
-        record1.getPublishers().forEach((x) -> {attrListSet1.add(x.getPublisherName());});
-        record1.getPublishers().forEach((x) -> {attrListSet2.add(x.getPublisherName());});
-        return attrListSet1.containsAll(attrListSet2) && attrListSet2.containsAll(attrListSet1);
+        try {
+            record1.getPublishers().forEach((x) -> {
+                attrListSet1.add(x.getPublisherName());
+            });
+            record1.getPublishers().forEach((x) -> {
+                attrListSet2.add(x.getPublisherName());
+            });
+            return attrListSet1.containsAll(attrListSet2) && attrListSet2.containsAll(attrListSet1);
+        }
+        catch (NullPointerException e){
+                return false;
+            }
     }
 
     @Override

@@ -18,7 +18,8 @@ import java.util.List;
 public class GenresFuserUnion extends AttributeValueFuser<List<Genre>, Game, Attribute> {
 
     public GenresFuserUnion() {
-		super(new SmartUnion<Genre, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
+		//super(new SmartUnion<Genre, Game, Attribute>(new LevenshteinSimilarity(), 0.9));
+		super(new Union<Genre, Game, Attribute>());
 	}
     
     @Override

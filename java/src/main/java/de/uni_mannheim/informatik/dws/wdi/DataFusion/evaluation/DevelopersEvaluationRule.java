@@ -14,9 +14,14 @@ public class DevelopersEvaluationRule extends EvaluationRule<Game, Attribute> {
     public boolean isEqual(Game record1, Game record2, Attribute attribute) {
         Set<String> attrListSet1 = new HashSet<>();
         Set<String> attrListSet2 = new HashSet<>();
+        try{
         record1.getDevelopers().forEach((x) -> {attrListSet1.add(x.getDeveloperName());});
         record1.getDevelopers().forEach((x) -> {attrListSet2.add(x.getDeveloperName());});
         return attrListSet1.containsAll(attrListSet2) && attrListSet2.containsAll(attrListSet1);
+    }
+        catch (NullPointerException e){
+        return false;
+    }
     }
 
     @Override

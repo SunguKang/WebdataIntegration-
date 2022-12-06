@@ -31,10 +31,14 @@ public class DeveloperXMLFormatter extends XMLFormatter<Developer> {
 
 	@Override
 	public Element createElementFromRecord(Developer record, Document doc) {
-		Element developer = doc.createElement("developer");
+		if (record != null && doc != null) {
+			Element developer = doc.createElement("developer");
 
-		developer.appendChild(createTextElement("developerName", record.getDeveloperName(), doc));
-		return developer;
+			developer.appendChild(createTextElement("developerName", record.getDeveloperName(), doc));
+			return developer;
+		} else {
+			return null;
+		}
 	}
 
 }
