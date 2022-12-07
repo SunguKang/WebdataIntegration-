@@ -99,42 +99,9 @@
 		<series></series>
 	</videogame>
 	<videogame>
-		<id>Video_games_sales2412</id>
-		<name>Disney Infinity</name>
-		<platform>Playstation vita</platform>
-		<publishers>
-			<publisher>
-				<namePublisher>Disney Interactive Studios</namePublisher>
-			</publisher>
-		</publishers>
-		<publicationDate>2013-08-18</publicationDate>
-		<globallySoldUnits></globallySoldUnits>
-		<genres>
-			<genre>
-				<genreName>Action-adventure</genreName>
-			</genre>
-			<genre>
-				<genreName>Sandbox</genreName>
-			</genre>
-			<genre>
-				<genreName>Toys-to-life</genreName>
-			</genre>
-		</genres>
-		<criticScore></criticScore>
-		<userScore>7.5</userScore>
-		<developers>
-			<developer>
-				<nameDeveloper>Avalanche Software</nameDeveloper>
-			</developer>
-		</developers>
-		<summary></summary>
-		<rating>E</rating>
-		<series></series>
-	</videogame>
-	<videogame>
 		<id>Video_games_sales151</id>
 		<name>The Last of Us</name>
-		<platform>Playstation 3</platform>
+		<platform>PlayStation 3</platform>
 		<publishers>
 			<publisher>
 				<namePublisher>Sony Computer Entertainment</namePublisher>
@@ -188,7 +155,7 @@
 	<videogame>
 		<id>Video_games_sales16810</id>
 		<name>Score International: Baja 1000</name>
-		<platform>Playstation 2</platform>
+		<platform>PlayStation 2</platform>
 		<publishers>
 			<publisher>
 				<namePublisher>Activision</namePublisher>
